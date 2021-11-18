@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ScrapingData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,4336" sap2010:WorkflowViewState.IdRef="ScrapingData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ScrapingData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2475.2" sap2010:WorkflowViewState.IdRef="ScrapingData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,9 +62,10 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="958.4,4231.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="958.4,2370.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="JobTable" />
     </Sequence.Variables>
@@ -73,7 +74,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="916.8,4138.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="916.8,2277.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="FirstJobName" />
         <Variable x:TypeArguments="x:String" Name="SecondJobName" />
@@ -83,19 +84,19 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser '89000Deve Page'" sap:VirtualizedContainerService.HintSize="875.2,4045.6" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="5f833b232485fe63ad7b79562546bd00" Selector="&lt;html app='msedge.exe' omit:title='89,000+ Developer jobs in United States (2,739 new)' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser '89000Deve Page'" sap:VirtualizedContainerService.HintSize="875.2,2184.8" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="5f833b232485fe63ad7b79562546bd00" Selector="&lt;html app='msedge.exe' omit:title='89,000+ Developer jobs in United States (2,739 new)' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="841.6,3898.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="841.6,2037.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,3805.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,1944.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="Index" />
                   <Variable x:TypeArguments="sd:DataTable" Name="ExtractJobTitle" />
@@ -114,7 +115,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="758.4,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="758.4,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -126,7 +127,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd693a6a-8080-44e1-9a96-7e1b584aad18" InformativeScreenshot="3d094d4c045dd4c68c1642b6a8f46d5c" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd693a6a-8080-44e1-9a96-7e1b584aad18" InformativeScreenshot="7250ac0493d36df2822a4b5bfa813716" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -136,28 +137,6 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'DIV'" sap:VirtualizedContainerService.HintSize="758.4,107.2" sap2010:WorkflowViewState.IdRef="Hover_1">
-                  <ui:Hover.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Hover.CursorPosition>
-                  <ui:Hover.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5309861e-1dd6-4cc3-ba36-2e45feb2f3cf" InformativeScreenshot="7c342c3c29e5613243665f43f806c824" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div' omit:parentid='ember770' tag='DIV' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Hover.Target>
-                </ui:Hover>
                 <Assign sap:VirtualizedContainerService.HintSize="758.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[Bool_breakloop]</OutArgument>
@@ -183,7 +162,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[Int_LoopNum=8]" sap:VirtualizedContainerService.HintSize="681.6,498.4" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[Int_LoopNum=20]" sap:VirtualizedContainerService.HintSize="681.6,498.4" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
                           <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
@@ -209,7 +188,7 @@
                                 <InArgument x:TypeArguments="x:Int32">[Int_LoopNum + 1]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:SendHotkey Activate="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" DelayMS="400" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+                            <ui:SendHotkey Activate="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" DelayMS="300" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
                               <ui:SendHotkey.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="245b3ca310bfc5f99d6345e766a2d437" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
                                   <ui:Target.TimeoutMS>
@@ -236,90 +215,33 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
-                <Assign sap:VirtualizedContainerService.HintSize="758.4,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="s:String[]">[array_JobFunction]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="s:String[]">[{"Developer","Engineer"}]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="758.4,1274.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[array_JobFunction]">
-                  <ui:ForEach.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
+                <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='JobURL' attr2='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="758.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_10" MaxNumberOfResults="10" SimulateClick="True">
+                  <ui:ExtractData.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b0025f3-7c20-4fe9-a1e5-fe5bf60c4aee" InformativeScreenshot="98b9a5ecbbe9775411c51edc3310bbf2" Selector="&lt;webctrl parentid='main-content' tag='UL' /&gt;" WaitForReady="COMPLETE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:ExtractData.Target>
+                </ui:ExtractData>
+                <ui:ForEachRow CurrentIndex="[Index]" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="758.4,304" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1140" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  jobs-search-box-...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[item.toString]">
-                          <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6f4b1b9e-34c1-42f9-b2f9-f51cce49566c" InformativeScreenshot="a6726ab3b2ca07aa8633b8d70b8dc597" Selector="&lt;webctrl tag='INPUT' aaname='                        Search by title, skill, or company                                                  ' aria-label='Search by title, skill, or company' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:TypeInto.Target>
-                        </ui:TypeInto>
-                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT  jobs-search-box-...'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="enter" KeyModifiers="None" SpecialKey="True">
-                          <ui:SendHotkey.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f397ecf2-ecb6-4a20-8800-a3973a3a6ef2" InformativeScreenshot="90d057e7c84ac0fd6667c5ceba8dd449" Selector="&lt;webctrl tag='INPUT' aaname='                        Search by title, skill, or company                                                  ' class='jobs-search-box__text-input jobs-search-box__keyboard-text-input' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:SendHotkey.Target>
-                        </ui:SendHotkey>
-                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='JobURL' attr2='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_8" MaxNumberOfResults="100" SimulateClick="True">
-                          <ui:ExtractData.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21f709e8-9ddb-43e6-89f0-4cbc9c9ad4ed" InformativeScreenshot="b8d9af910e0d50b2317fc1d2beb21457" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;ul' tag='UL' /&gt;" WaitForReady="COMPLETE">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                            </ui:Target>
-                          </ui:ExtractData.Target>
-                        </ui:ExtractData>
-                        <ui:ForEachRow CurrentIndex="[Index]" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="333.6,304" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                          <ui:ForEachRow.Body>
-                            <ActivityAction x:TypeArguments="sd:DataRow">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="270.4,155.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[row(&quot;JobTitle&quot;).ToString  +&quot;  &quot;+index.ToString]" />
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:ForEachRow.Body>
-                        </ui:ForEachRow>
-                        <ui:ClearDataTable DataTable="[ExtractDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[row(&quot;JobTitle&quot;).tostring]" />
                       </Sequence>
                     </ActivityAction>
-                  </ui:ForEach.Body>
-                </ui:ForEach>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
+                <ui:ClearDataTable DataTable="[ExtractDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="758.4,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
                 <Assign sap:VirtualizedContainerService.HintSize="758.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[Bool_breakloop]</OutArgument>
@@ -328,89 +250,84 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="758.4,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="da2a901a-31be-4725-b229-06f02745562d" InformativeScreenshot="cf70d33963789f2b8d926c3cbb1698fa" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:InterruptibleDoWhile DisplayName="Zoom in" sap:VirtualizedContainerService.HintSize="758.4,758.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
-                  <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="723.2,591.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="758.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="800,851.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[Int_LoopNum=1]" sap:VirtualizedContainerService.HintSize="681.6,498.4" sap2010:WorkflowViewState.IdRef="If_2">
-                        <If.Then>
-                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:Boolean">[Bool_breakloop]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,348.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <ui:InterruptibleDoWhile DisplayName="Zoom in" sap:VirtualizedContainerService.HintSize="758.4,758.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                        <ui:InterruptibleDoWhile.Body>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="723.2,591.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="add" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
-                              <ui:SendHotkey.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="c45c8316a6d9f90ac1ae61b3b86cead6" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:SendHotkey.Target>
-                            </ui:SendHotkey>
-                            <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[Int_LoopNum]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[Int_LoopNum - 1]</InArgument>
-                              </Assign.Value>
-                            </Assign>
+                            <If Condition="[Int_LoopNum=1]" sap:VirtualizedContainerService.HintSize="681.6,498.4" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If.Then>
+                                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[Bool_breakloop]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,348.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" Activate="True" DelayMS="100" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="pgup" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="7250ac0493d36df2822a4b5bfa813716" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                  </ui:SendHotkey>
+                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[Int_LoopNum]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[Int_LoopNum - 1]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
                           </Sequence>
-                        </If.Else>
-                      </If>
+                        </ui:InterruptibleDoWhile.Body>
+                        <ui:InterruptibleDoWhile.Condition>
+                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Bool_breakloop" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                        </ui:InterruptibleDoWhile.Condition>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InterruptibleDoWhile>
                     </Sequence>
-                  </ui:InterruptibleDoWhile.Body>
-                  <ui:InterruptibleDoWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Bool_breakloop" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
-                  </ui:InterruptibleDoWhile.Condition>
+                  </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:InterruptibleDoWhile>
+                </ui:CommentOut>
               </Sequence>
             </Sequence>
           </ActivityAction>
