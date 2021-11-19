@@ -1,0 +1,451 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="JobtoJob" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1176,5254.4" sap2010:WorkflowViewState.IdRef="JobtoJob_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="JobtoJob" sap:VirtualizedContainerService.HintSize="931.2,5149.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_JobURL" />
+      <Variable x:TypeArguments="x:String" Name="STR_CompanyName" />
+      <Variable x:TypeArguments="x:String" Name="STR_CompanyLocale" />
+      <Variable x:TypeArguments="x:String" Name="STR_DatePosted" />
+      <Variable x:TypeArguments="x:String" Name="STR_TodaysDate" />
+      <Variable x:TypeArguments="x:Boolean" Name="Bool_CompanySize" />
+      <Variable x:TypeArguments="x:String" Name="STR_CompanySize" />
+      <Variable x:TypeArguments="x:Boolean" Name="Bool_JobContact" />
+      <Variable x:TypeArguments="x:String" Name="STR_JobContact" />
+      <Variable x:TypeArguments="x:Int32" Name="Int_LoopValue" />
+      <Variable x:TypeArguments="x:String" Name="STR_JobTitle" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[DT_JobURL]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="889.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:B" SheetName="Sheet1" WorkbookPath="JobTitle-JobURL.xlsx" />
+    <ui:ForEachRow CurrentIndex="[Int_LoopValue]" DataTable="[DT_JobURL]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="889.6,4928.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="840,4780" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="798.4,4687.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[row(&quot;JobURL&quot;).ToString]">
+              <ui:OpenBrowser.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="764.8,4584.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Initail Scrape" sap:VirtualizedContainerService.HintSize="723.2,2637.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Object" Name="STR_JobURL" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="681.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[STR_JobURL]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("JobURL").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="681.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[STR_JobTitle]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("JobTitle").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Company name" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9d52873-6736-4447-b0b2-7b80ef5b7859" InformativeScreenshot="271268d05c8c9deae536c5b1b500ca0f" Selector="&lt;html app='msedge.exe' omit:title='Junior Software Engineer | Telivy | LinkedIn' /&gt;&lt;webctrl tag='A' class='ember-view t-black t-normal' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;a' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[STR_CompanyName]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5413b43-475e-4880-baa6-8e8e3b4533f3" InformativeScreenshot="3e9c7a5bd413e5182552d9954c893b1e" Selector="&lt;html app='msedge.exe' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' isleaf='1' tag='SPAN' class='jobs-unified-top-card__bullet' idx='1' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[STR_CompanyLocale]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                      <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8cad7aec-4bd3-4f87-a45a-cccf25498a4c" InformativeScreenshot="91811576442cd2531d91088e58745ace" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' idx='3' isleaf='1' tag='SPAN' /&gt;" TimeoutMS="250">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[STR_DatePosted]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                      <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80eb2b58-052e-48da-82a2-9093dfe9fad4" InformativeScreenshot="d1b7c877c7ea913624178b83b9998c27" Selector="&lt;html app='msedge.exe' omit:title='(1) Software Engineer, Front End | Tesla | LinkedIn' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' isleaf='1' tag='SPAN' class='jobs-unified-top-card__posted-date&amp;#xA;              ' /&gt;" TimeoutMS="250">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[STR_DatePosted]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                      <Assign sap:VirtualizedContainerService.HintSize="681.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[STR_TodaysDate]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Now.ToString("MM/dd/yyyy")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:UiElementExists DisplayName="Element Exists 'PATH'" Exists="[Bool_CompanySize]" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c37f813d-b518-4190-961d-f8269e013717" InformativeScreenshot="dd76d51b721b9dae268158a1bb56c73a" Selector="&lt;html app='msedge.exe' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;li-icon&amp;gt;svg' tag='svg' parentclass='ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag display-flex&amp;#xA;    &amp;#xA;    ' idx='2' /&gt;" TimeoutMS="300">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <If Condition="[Bool_CompanySize = true]" sap:VirtualizedContainerService.HintSize="681.6,256.8" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                            <ui:GetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0713d606-6810-4b65-9a3a-7774207bbfa4" InformativeScreenshot="b9afe11757e566eaa1f21ee8f8e907f2" Selector="&lt;html app='msedge.exe' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' isleaf='1' tag='SPAN' parentclass='jobs-unified-top-card__job-insight' idx='2' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:GetValue.Target>
+                            <ui:GetValue.Value>
+                              <OutArgument x:TypeArguments="x:String">[STR_CompanySize]</OutArgument>
+                            </ui:GetValue.Value>
+                          </ui:GetValue>
+                        </If.Then>
+                        <If.Else>
+                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[STR_CompanySize]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                      <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[Bool_JobContact]" sap:VirtualizedContainerService.HintSize="681.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7f1d930-3f1f-441b-abc2-afb2d92ec8d0" InformativeScreenshot="f60cad5e46bab1065cf0d7678f04030a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" TimeoutMS="300">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <If Condition="[Bool_JobContact = true]" sap:VirtualizedContainerService.HintSize="681.6,644" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,494.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="412db6db-4237-4c01-9d98-8c8d0c030748" InformativeScreenshot="1c9521c6e1cf43cecff67c6300755522" Selector="&lt;html app='msedge.exe' omit:title='Junior Software Engineer | Telivy | LinkedIn' /&gt;&lt;webctrl parentid='ember580' tag='P' class='jobs-poster__name name t-16 t-black t-bold mb0' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;p' /&gt;" TimeoutMS="200">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'A  ember625'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88587821-6ab8-4840-a7fc-1f9ba15b1393" InformativeScreenshot="7df24f797517ffacb0067d89fec7475d" Selector="&lt;html app='msedge.exe' omit:title='Sheril V. | LinkedIn' /&gt;&lt;webctrl tag='A' aaname='           Contact info         ' parentclass='pv-text-details__separator t-black--light' /&gt;" TimeoutMS="200">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'A  https://www.linkedin...'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                              <ui:GetValue.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d42f99ea-5ecd-4e45-b8b4-92c7b2705ffa" InformativeScreenshot="c7b4c66d0ad5d72204e4a77c11fe8cbc" Selector="&lt;html app='msedge.exe' omit:title='Sheril V. | LinkedIn' /&gt;&lt;webctrl tag='A' class='pv-contact-info__contact-link link-without-visited-state t-14' parentclass='pv-contact-info__ci-container t-14' /&gt;" TimeoutMS="200">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:GetValue.Target>
+                              <ui:GetValue.Value>
+                                <OutArgument x:TypeArguments="x:String">[STR_JobContact]</OutArgument>
+                              </ui:GetValue.Value>
+                            </ui:GetValue>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[STR_JobContact]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="681.6,380.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="524.8,302.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[STR_JobContact = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If.Then>
+                                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[STR_JobContact]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                    </Sequence>
+                    <Sequence sap:VirtualizedContainerService.HintSize="723.2,1689.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Int32" Name="INT_cellValue" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelJobTitle" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelCompanyName" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelCompanySize" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelJobLocale" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelPostingDate" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelScrapeDate" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelJobPoster" />
+                        <Variable x:TypeArguments="x:String" Name="STR_excelJobSite" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="333.6,348.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Int32">[INT_cellValue]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Int32">[Int_LoopValue + 2]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelJobTitle]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["A" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelCompanyName]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["C" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelCompanySize]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["D" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelJobLocale]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["B" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelPostingDate]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["E" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelScrapeDate]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["F" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelJobPoster]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["G" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[STR_excelJobSite]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">["H" + INT_cellValue.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                      </ui:MultipleAssign>
+                      <ui:WriteCell Cell="[STR_excelJobTitle]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet2" Text="[STR_JobTitle]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelJobLocale]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet2" Text="[STR_CompanyLocale]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelCompanyName]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet2" Text="[STR_CompanyName]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelCompanySize]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Sheet2" Text="[STR_CompanySize]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelPostingDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet2" Text="[STR_DatePosted]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelScrapeDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet2" Text="[STR_TodaysDate]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelJobPoster]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Sheet2" Text="[STR_JobContact.ToString]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                      <ui:WriteCell Cell="[STR_excelJobsite]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Sheet2" Text="LinkedIn" WorkbookPath="JobTitle-JobURL.xlsx" />
+                    </Sequence>
+                    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="723.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="723.2,22.4" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:OpenBrowser.Body>
+            </ui:OpenBrowser>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
