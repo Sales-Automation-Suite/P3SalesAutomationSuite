@@ -7575,9 +7575,9 @@
     "restore": {
       "projectUniqueName": "MonsterDotCom",
       "projectName": "MonsterDotCom",
-      "projectPath": "C:\\Users\\aaron\\Documents\\UiPath\\MonsterDotCom\\.local",
+      "projectPath": "G:\\revature\\P3SalesAutomationSuite\\MonsterDotCom\\.local",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aaron\\Documents\\UiPath\\MonsterDotCom\\.local"
+      "outputPath": "G:\\revature\\P3SalesAutomationSuite\\MonsterDotCom\\.local"
     },
     "frameworks": {
       "net461": {
