@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1263.33333333333,3371.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1263.33333333333,4326" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
@@ -65,7 +65,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="920,3266.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="920,4221.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_jobSearch" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_MonsterData" />
@@ -84,19 +84,19 @@
         <InArgument x:TypeArguments="x:String">java</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="878,483.333333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="monster.com">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="878,995.333333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="monster.com">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,380.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.666666666667,892.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="type into Job Title" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[str_jobSearch+ &quot;[k(enter)]&quot;]">
+            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="type into Job Title" EmptyField="True" sap:VirtualizedContainerService.HintSize="436.666666666667,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[str_jobSearch+ &quot;[k(enter)]&quot;]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a693572-fa39-4fa2-8030-2163df8f131d" InformativeScreenshot="52c82e9c2f38a05b3af0332d93373f4c" Selector="&lt;html app='msedge.exe' title='Monster Jobs - Job Search, Career Advice &amp;amp; Hiring Resources | Monster.com' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -108,7 +108,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -137,61 +137,57 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,192.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="436.666666666667,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c675828-ae64-4dfd-a450-1bb8ba96c336" InformativeScreenshot="89b23d792438575474c244384f22a0fe" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="436.666666666667,155.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8913998e-ba3b-4b64-9a52-67438940c944" InformativeScreenshot="d4fb54e4f8c90bf53a6d88afcd32aaeb" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="878,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,488" sap2010:WorkflowViewState.IdRef="Sequence_14">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_13">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'MonsterJo Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="e9271f228e4cd43e2dcdebe73d806c50" Selector="&lt;html app='msedge.exe' title='Monster Jobs - Job Search, Career Advice &amp;amp; Hiring Resources | Monster.com' /&gt;">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dt_MonsterData]" DisplayName="Extract Job Posting" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
-                      <ui:ExtractData.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="26dbe9d1-82b4-455b-bc26-cbe1fe98296a" InformativeScreenshot="4b674c3c6eb3e1a6cba5f1d20ee46ae3" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;" WaitForReady="COMPLETE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
-                      </ui:ExtractData.Target>
-                    </ui:ExtractData>
-                  </Sequence>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="878,436" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="878,528.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       </Sequence.Variables>
@@ -201,53 +197,79 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'MonsterJo Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="c4ca58391cbacd7e0b04f8442943c9b1" Selector="&lt;html app='msedge.exe' title='Monster Jobs - Job Search, Career Advice &amp;amp; Hiring Resources | Monster.com' /&gt;" UiBrowser="[http_Edge]">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'MonsterJo Page'" sap:VirtualizedContainerService.HintSize="434,436.666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="c4ca58391cbacd7e0b04f8442943c9b1" Selector="&lt;html app='msedge.exe' title='Monster Jobs - Job Search, Career Advice &amp;amp; Hiring Resources | Monster.com' /&gt;" UiBrowser="[http_Edge]">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,290.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dt_MonsterData]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[dt_MonsterData]" DisplayName="Extract Job URL" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_7" MaxNumberOfResults="100" NextLinkSelector="&lt;webctrl aaname='Load more' parentid='card-scroll-container' tag='BUTTON' type='button' /&gt;" SimulateClick="True">
                 <ui:ExtractData.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a894ba2-858a-499c-b738-3ffb396066f4" InformativeScreenshot="cb3995e6ddeb9327d519147d3e971bc5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0a48355-a59d-4760-abba-5b27f320c489" InformativeScreenshot="c57dbdae950edaa9108b72055071c89e" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
                   </ui:Target>
                 </ui:ExtractData.Target>
               </ui:ExtractData>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dt_MonsterData]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
+                      <ui:ExtractData.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a894ba2-858a-499c-b738-3ffb396066f4" InformativeScreenshot="cb3995e6ddeb9327d519147d3e971bc5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;nav&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='card-scroll-container' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:ExtractData.Target>
+                    </ui:ExtractData>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
             </Sequence>
           </ActivityAction>
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <ui:WriteRange AddHeaders="False" DataTable="[dt_MonsterData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="878,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="monsterdata.xls" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_MonsterData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,1826" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:WriteRange AddHeaders="True" DataTable="[dt_MonsterData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="878,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="monsterdata.xls" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_MonsterData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,2268.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="844,1702" sap2010:WorkflowViewState.IdRef="Sequence_33">
+          <Sequence sap:VirtualizedContainerService.HintSize="844,2144.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_33">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="802,1610" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="802,2052.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:NavigateTo Browser="[http_Edge]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="760,58.6666666666667" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[CurrentRow.item(&quot;URL&quot;).ToString]" />
-              <Sequence DisplayName="Screen Scraping 1" sap:VirtualizedContainerService.HintSize="760,1419.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence DisplayName="Screen Scraping 1" sap:VirtualizedContainerService.HintSize="760,1862" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Default="Monster.com" Name="str_Source" />
                   <Variable x:TypeArguments="x:String" Default="[DateTime.Now.ToString(&quot;MM/dd/YYY&quot;)]" Name="str_ScrapeDate" />
@@ -258,19 +280,21 @@
                   <Variable x:TypeArguments="x:String" Name="str_CompanyName" />
                   <Variable x:TypeArguments="x:String" Name="str_JobTitle" />
                   <Variable x:TypeArguments="x:Boolean" Name="bool_SizeExists" />
+                  <Variable x:TypeArguments="x:Boolean" Name="bool_JobTypeExists" />
+                  <Variable x:TypeArguments="x:String" Name="str_JobType" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'MonsterJo Page'" sap:VirtualizedContainerService.HintSize="718,1224.66666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_7" InformativeScreenshot="3c315087c2157466a7b6d8f6d8bd7087" Selector="&lt;html app='msedge.exe' /&gt;">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'MonsterJo Page'" sap:VirtualizedContainerService.HintSize="718,1667.33333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_7" InformativeScreenshot="3c315087c2157466a7b6d8f6d8bd7087" Selector="&lt;html app='msedge.exe' /&gt;">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684,1078.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="684,1521.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -302,7 +326,7 @@
                         </ui:GetFullText>
                         <ui:GetFullText DisplayName="Get When Job Was Posted" sap:VirtualizedContainerService.HintSize="642,106" sap2010:WorkflowViewState.IdRef="GetFullText_7" IgnoreHidden="False">
                           <ui:GetFullText.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4e1513e-f4f1-477c-ae30-3dbd8f14a628" InformativeScreenshot="006a3744d4b46bfd883ac5efebffc1aa" Selector="&lt;html app='msedge.exe' omit:title='Junior Full Stack Java Developer - *' /&gt;&lt;webctrl aaname='POSTED' parentid='__next' tag='DIV' /&gt;&lt;nav up='9' /&gt;&lt;webctrl parentid='__next' tag='DIV' idx='1' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4e1513e-f4f1-477c-ae30-3dbd8f14a628" InformativeScreenshot="006a3744d4b46bfd883ac5efebffc1aa" Selector="&lt;webctrl aaname='*day*' parentid='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -362,11 +386,49 @@
                             </Assign>
                           </If.Else>
                         </If>
+                        <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[bool_JobTypeExists]" sap:VirtualizedContainerService.HintSize="642,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="83d222ee-f81d-4079-83a7-b2c6a53792d8" InformativeScreenshot="9062e01ddc74ff3785fdd625aa8ddc63" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='__next' tag='DIV' innertext='JOB TYPE*' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                        </ui:UiElementExists>
+                        <If Condition="[bool_JobTypeExists = True]" sap:VirtualizedContainerService.HintSize="642,256.666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <ui:GetFullText DisplayName="Get Job Type" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_10" IgnoreHidden="False">
+                              <ui:GetFullText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="147ddb7d-6d46-4f9f-9c22-86d8fe92318b" InformativeScreenshot="6498bee7e1d6fb897b29f92b5e6723ec" Selector="&lt;webctrl aaname='Full-time' parentid='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:GetFullText.Target>
+                              <ui:GetFullText.Text>
+                                <OutArgument x:TypeArguments="x:String">[str_JobType]</OutArgument>
+                              </ui:GetFullText.Text>
+                            </ui:GetFullText>
+                          </If.Then>
+                          <If.Else>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[str_JobType]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </If.Else>
+                        </If>
                       </Sequence>
                     </ActivityAction>
                   </ui:BrowserScope.Body>
                 </ui:BrowserScope>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="718,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[str_CompanyName + &quot; - &quot; + str_CompanySize]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="718,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[str_CompanyName + &quot; - &quot; + str_JobLocation+ &quot; - &quot; + str_CompanySize + &quot; - &quot; + str_JobTitle + &quot; - &quot; + str_PostDate + &quot; - &quot; + str_JobType]" />
               </Sequence>
             </Sequence>
           </Sequence>

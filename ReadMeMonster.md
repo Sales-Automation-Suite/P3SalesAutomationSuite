@@ -18,4 +18,11 @@ ReadMeMonster.md
     fixed selector issue
     added 'Element Exists' for company size
     fixed issue getting company size
+    now able to scrape first 9 job results
+    added scrape for 'Job Type'
+        used an if 'Element Exists'
+    added a click activity
+        clicks job card to allow scroll down
+    added a 'Send Hotkey' activity
+        to page down in order to get more results
     
