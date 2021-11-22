@@ -326,7 +326,7 @@
                         </ui:GetFullText>
                         <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[bool_SizeExists]" sap:VirtualizedContainerService.HintSize="642,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                           <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87d90346-ec3e-4538-9b7c-4aa7ecf0753c" InformativeScreenshot="d7ae2cf8dcc1c7542643b130bd3808c5" Selector="&lt;webctrl aaname='COMPANY SIZE' parentid='__next' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='*' parentid='__next' tag='DIV' idx='1' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87d90346-ec3e-4538-9b7c-4aa7ecf0753c" InformativeScreenshot="d7ae2cf8dcc1c7542643b130bd3808c5" Selector="&lt;webctrl aaname='* employees' parentid='__next' tag='DIV' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -340,7 +340,7 @@
                           <If.Then>
                             <ui:GetFullText DisplayName="Get Company Size" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_9" IgnoreHidden="False">
                               <ui:GetFullText.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3a58406-01fa-479f-a536-20c8adde8800" InformativeScreenshot="fd9162019f66fb0ce5208cb9d4e90027" Selector="&lt;webctrl aaname='*' parentid='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3a58406-01fa-479f-a536-20c8adde8800" InformativeScreenshot="fd9162019f66fb0ce5208cb9d4e90027" Selector="&lt;webctrl aaname='* employees' parentid='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>

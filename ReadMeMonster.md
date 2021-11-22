@@ -6,7 +6,6 @@ ReadMeMonster.md
     no links to job page available in scrape
     output is to excel file monsterdata.xls
         not .xlsx as i do not have access to Excel
-<<<<<<< HEAD
     
 # 11/19/2021
     changed data scrape
@@ -15,5 +14,8 @@ ReadMeMonster.md
     only getting 9 results
         need to get more results
         
-=======
->>>>>>> 9eb45f2bbb080138dc8c48263186a1285a589699
+# 11/22/2021
+    fixed selector issue
+    added 'Element Exists' for company size
+    fixed issue getting company size
+    
