@@ -25,4 +25,6 @@ ReadMeMonster.md
         clicks job card to allow scroll down
     added a 'Send Hotkey' activity
         to page down in order to get more results
-    
+    now able to get 99 job results
+    changed 'str_JobSearch' from variable to arguement
+    is now considered finished
