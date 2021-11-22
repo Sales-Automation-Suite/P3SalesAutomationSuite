@@ -1,6 +1,7 @@
 Create table Indeed
 (
     id serial primary key,
+    keyword varchar (100),
     JobTitles varchar(100),
     CompanyName varchar(100),
     JobLocation varchar(100),
@@ -10,19 +11,20 @@ Create table Indeed
     PostDate varchar(100),
     SearchDate varchar(100),
     source varchar(20),
-    URLlink varchar(1000)
+    URLlink varchar(2000)
 
 );
 Create table Dice
 (
     id serial primary key,
+    keyword varchar(100),
     JobTitles varchar(100),
     CompanyName varchar(100),
     JobLocation varchar(100),
     PostDate varchar(100),
     SearchDate varchar(100),
     JobType Varchar (100),
-    URLlink varchar(1000), 
+    URLlink varchar(2000), 
     NumberOfJobs varchar(100),
     Source varchar(20)
     
