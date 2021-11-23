@@ -5105,15 +5105,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JP\\.nuget\\packages\\": {}
+    "C:\\Users\\donation\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "CareerBuilder",
       "projectName": "CareerBuilder",
-      "projectPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local",
-      "packagesPath": "C:\\Users\\JP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local"
+      "projectPath": "C:\\Users\\donation\\Desktop\\P3SalesAutomationSuite\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local",
+      "packagesPath": "C:\\Users\\donation\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\donation\\Desktop\\P3SalesAutomationSuite\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local"
     },
     "frameworks": {
       "net461": {
