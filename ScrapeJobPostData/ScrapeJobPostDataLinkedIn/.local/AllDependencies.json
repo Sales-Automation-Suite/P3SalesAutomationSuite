@@ -5103,15 +5103,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aaron\\.nuget\\packages\\": {}
+    "C:\\Users\\JP\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "ScrapeJobPostDataLinkedIn",
       "projectName": "ScrapeJobPostDataLinkedIn",
-      "projectPath": "G:\\revature\\P3SalesAutomationSuite\\ScrapeJobPostData\\ScrapeJobPostDataLinkedIn\\.local",
-      "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "G:\\revature\\P3SalesAutomationSuite\\ScrapeJobPostData\\ScrapeJobPostDataLinkedIn\\.local"
+      "projectPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\P3SalesAutomationSuite\\ScrapeJobPostData\\ScrapeJobPostDataLinkedIn\\.local",
+      "packagesPath": "C:\\Users\\JP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\P3SalesAutomationSuite\\ScrapeJobPostData\\ScrapeJobPostDataLinkedIn\\.local"
     },
     "frameworks": {
       "net461": {
