@@ -3534,5 +3534,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\ScrapeJobPostData\\ScrapeJobPostDataLinkedIn\\.local\\nuget.cache : Invalid property identifier character: <. Path '', line 2, position 0."
+    }
+  ]
 }
