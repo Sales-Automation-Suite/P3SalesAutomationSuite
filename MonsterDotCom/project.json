@@ -1,7 +1,7 @@
 {
   "name": "MonsterDotCom",
   "description": "Get job data from Monster.com",
-  "main": "Main.xaml",
+  "main": "Monster.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.2]",
@@ -44,8 +44,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "5dc3552d-e404-4b38-be09-92683ae0c90c",
+      "filePath": "Monster.xaml",
+      "uniqueId": "9467d53f-b89e-468c-b5ae-eac9555b4fc5",
       "input": [],
       "output": []
     }
