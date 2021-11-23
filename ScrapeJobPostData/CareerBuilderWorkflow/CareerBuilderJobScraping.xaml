@@ -312,7 +312,7 @@
                                       </ui:CommentOut.Body>
                                     </ui:CommentOut>
                                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="761,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[str_companyNameLocationJobType]" />
-                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'H2'" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_12">
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Job Name" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_12">
                                       <ui:GetValue.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a048b3c3-6b9b-4ce5-acb2-6b7483a514cb" InformativeScreenshot="ce35494041a699305dc119ac25f08b98" Selector="&lt;webctrl parentid='jdp-data' tag='H2' aaname='*' /&gt;&#xD;&#xA;">
                                           <ui:Target.TimeoutMS>
@@ -327,7 +327,7 @@
                                         <OutArgument x:TypeArguments="x:String">[jobName]</OutArgument>
                                       </ui:GetValue.Value>
                                     </ui:GetValue>
-                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_9">
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Company Name" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_9">
                                       <ui:GetValue.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0348f4f-c7d9-43b3-ba46-bf148ed98233" InformativeScreenshot="ff089098b261ad15213fac021f002d26" Selector="&lt;webctrl aaname='*' parentid='jdp-data' tag='SPAN' /&gt;&#xD;&#xA;">
                                           <ui:Target.TimeoutMS>
@@ -342,7 +342,7 @@
                                         <OutArgument x:TypeArguments="x:String">[jobCompany]</OutArgument>
                                       </ui:GetValue.Value>
                                     </ui:GetValue>
-                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_10">
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Company Location" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_10">
                                       <ui:GetValue.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b50e29d-068c-4b65-a025-3ec44aa4f9bb" InformativeScreenshot="28a4ddcd741c6b7937eb32dbff004a09" Selector="&lt;webctrl aaname='*' parentid='jdp-data' tag='SPAN' /&gt;&#xD;&#xA;">
                                           <ui:Target.TimeoutMS>
@@ -357,7 +357,7 @@
                                         <OutArgument x:TypeArguments="x:String">[jobLocation]</OutArgument>
                                       </ui:GetValue.Value>
                                     </ui:GetValue>
-                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_11">
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Job Type" sap:VirtualizedContainerService.HintSize="761,106" sap2010:WorkflowViewState.IdRef="GetValue_11">
                                       <ui:GetValue.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0e0a4f2-6ad8-4514-aa8c-83a032144886" InformativeScreenshot="43bfa522fc2468054e01952bed363eec" Selector="&lt;webctrl aaname='*' parentid='jdp-data' tag='SPAN' /&gt;&#xD;&#xA;">
                                           <ui:Target.TimeoutMS>
