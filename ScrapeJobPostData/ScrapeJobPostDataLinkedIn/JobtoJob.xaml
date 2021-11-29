@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="JobtoJob" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1331.2,9528.8" sap2010:WorkflowViewState.IdRef="JobtoJob_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="JobtoJob" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Keyword" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1331.2,9524.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>JobtoJob_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -36,7 +44,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -67,6 +75,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -75,7 +84,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="JobtoJob" sap:VirtualizedContainerService.HintSize="1341.6,9424" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JobtoJob" sap:VirtualizedContainerService.HintSize="1341.6,9460" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DT_JobURL" />
       <Variable x:TypeArguments="x:String" Name="STR_CompanyName" />
@@ -98,7 +107,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[DT_JobURL]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1300,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:C" SheetName="Sheet1" WorkbookPath="JobTitle-JobURL.xlsx" />
+    <ui:ReadRange AddHeaders="True" DataTable="[DT_JobURL]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1300,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:C" SheetName="Sheet1" WorkbookPath="C:\revature\Project 3\excelsheet\JobTitle-JobURL.xlsx" />
     <Assign sap:VirtualizedContainerService.HintSize="1300,60" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[Bool_ForEach]</OutArgument>
@@ -107,26 +116,26 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe  New tab'" sap:VirtualizedContainerService.HintSize="1300,9000.8" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="8efcfc28f8ce768cfe2d66569b49e6f9" Selector="&lt;html app='msedge.exe' omit:title='New tab' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe  New tab'" sap:VirtualizedContainerService.HintSize="1300,9046.4" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="8efcfc28f8ce768cfe2d66569b49e6f9" Selector="&lt;html app='msedge.exe' omit:title='New tab' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1266.4,8853.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence sap:VirtualizedContainerService.HintSize="1266.4,8899.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1224.8,8698.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1224.8,8744" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1183.2,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1183.2,193.6" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1183.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
@@ -137,27 +146,33 @@
                     <ui:HideWindow Window="{x:Null}" DisplayName="Hide Window" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="HideWindow_1" />
                   </Sequence>
                 </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:ForEachRow CurrentIndex="[Int_LoopValue]" DataTable="[DT_JobURL]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1183.2,8309.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="[Int_LoopValue]" DataTable="[DT_JobURL]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1183.2,8496" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1133.6,8160.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1133.6,8347.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1092,8068" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1092,8254.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap:VirtualizedContainerService.HintSize="1050.4,7975.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence sap:VirtualizedContainerService.HintSize="1050.4,8161.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="STR_UniqueJobsEdited" />
                           </Sequence.Variables>
@@ -180,13 +195,31 @@
                               <ui:Break sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Break_2" />
                             </If.Then>
                             <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[Int_LoopValue.ToString]" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[Int_LoopValue.ToString]" />
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
                               </Sequence>
                             </If.Else>
                           </If>
@@ -200,7 +233,7 @@
                               </ui:Target>
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
-                          <If Condition="[Bool_ForEach = True]" sap:VirtualizedContainerService.HintSize="1008.8,4378.4" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If Condition="[Bool_ForEach = True]" sap:VirtualizedContainerService.HintSize="1008.8,4535.2" sap2010:WorkflowViewState.IdRef="If_4">
                             <If.Then>
                               <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -212,7 +245,7 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Initail Scrape" sap:VirtualizedContainerService.HintSize="723.2,4228.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence DisplayName="Initail Scrape" sap:VirtualizedContainerService.HintSize="723.2,4376" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Boolean" Name="Bool_JobType" />
                                 </Sequence.Variables>
@@ -249,7 +282,7 @@
                                     <OutArgument x:TypeArguments="x:String">[STR_CompanyName]</OutArgument>
                                   </ui:GetValue.Value>
                                 </ui:GetValue>
-                                <If Condition="[STR_CompanyName = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,209.6" sap2010:WorkflowViewState.IdRef="If_6">
+                                <If Condition="[STR_CompanyName = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,239.2" sap2010:WorkflowViewState.IdRef="If_6">
                                   <If.Then>
                                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                       <Assign.To>
@@ -273,7 +306,7 @@
                                     <OutArgument x:TypeArguments="x:String">[STR_CompanyLocale]</OutArgument>
                                   </ui:GetValue.Value>
                                 </ui:GetValue>
-                                <If Condition="[STR_CompanyLocale = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,209.6" sap2010:WorkflowViewState.IdRef="If_7">
+                                <If Condition="[STR_CompanyLocale = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,239.2" sap2010:WorkflowViewState.IdRef="If_7">
                                   <If.Then>
                                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                                       <Assign.To>
@@ -326,7 +359,7 @@
                                     </ui:Target>
                                   </ui:UiElementExists.Target>
                                 </ui:UiElementExists>
-                                <If Condition="[Bool_JobType = True]" sap:VirtualizedContainerService.HintSize="681.6,256.8" sap2010:WorkflowViewState.IdRef="If_10">
+                                <If Condition="[Bool_JobType = True]" sap:VirtualizedContainerService.HintSize="681.6,266.4" sap2010:WorkflowViewState.IdRef="If_10">
                                   <If.Then>
                                     <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_8">
                                       <ui:GetValue.Target>
@@ -352,7 +385,7 @@
                                     </Assign>
                                   </If.Else>
                                 </If>
-                                <If Condition="[STR_JobType = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,209.6" sap2010:WorkflowViewState.IdRef="If_11">
+                                <If Condition="[STR_JobType = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,239.2" sap2010:WorkflowViewState.IdRef="If_11">
                                   <If.Then>
                                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                                       <Assign.To>
@@ -373,7 +406,7 @@
                                     </ui:Target>
                                   </ui:UiElementExists.Target>
                                 </ui:UiElementExists>
-                                <If Condition="[Bool_CompanySize = true]" sap:VirtualizedContainerService.HintSize="681.6,256.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If Condition="[Bool_CompanySize = true]" sap:VirtualizedContainerService.HintSize="681.6,266.4" sap2010:WorkflowViewState.IdRef="If_1">
                                   <If.Then>
                                     <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
                                       <ui:GetValue.Target>
@@ -399,7 +432,7 @@
                                     </Assign>
                                   </If.Else>
                                 </If>
-                                <If Condition="[STR_CompanySize = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,209.6" sap2010:WorkflowViewState.IdRef="If_12">
+                                <If Condition="[STR_CompanySize = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="681.6,239.2" sap2010:WorkflowViewState.IdRef="If_12">
                                   <If.Then>
                                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_18">
                                       <Assign.To>
@@ -435,7 +468,7 @@
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7f1d930-3f1f-441b-abc2-afb2d92ec8d0" InformativeScreenshot="f60cad5e46bab1065cf0d7678f04030a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h3' tag='H3' /&gt;" TimeoutMS="300" WaitForReady="COMPLETE" />
                                   </ui:UiElementExists.Target>
                                 </ui:UiElementExists>
-                                <If Condition="[Bool_JobContact = true]" sap:VirtualizedContainerService.HintSize="681.6,524.8" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If Condition="[Bool_JobContact = true]" sap:VirtualizedContainerService.HintSize="681.6,534.4" sap2010:WorkflowViewState.IdRef="If_2">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,375.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -525,7 +558,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bacd9f5f-1391-416a-868b-7597cd046313" InformativeScreenshot="9fa0da51a2361a0e5b2071f675e0baeb" Selector="&lt;webctrl aria-role='tab' aaname='             Jobs           ' class='t-16 t-bold t-black--light org-page-navigation__item-anchor ember-view pv3 ph4' innertext='             Jobs           ' parentclass='org-page-navigation__item m0' /&gt;">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bacd9f5f-1391-416a-868b-7597cd046313" InformativeScreenshot="4a5e53936491745ebe42c15c24090db2" Selector="&lt;html app='msedge.exe' omit:title='(11) Avanade: Life | LinkedIn' /&gt;&lt;webctrl aria-role='tab' tag='A' aaname='             Jobs           ' innertext='             Jobs           ' isleaf='1' parentclass='org-page-navigation__item m0' /&gt;">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
@@ -550,15 +583,15 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1008.8,380.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1008.8,410.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="524.8,302.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="524.8,332" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[STR_UniqueJobs = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_9">
+                                <If Condition="[STR_UniqueJobs = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="483.2,239.2" sap2010:WorkflowViewState.IdRef="If_9">
                                   <If.Then>
                                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                                       <Assign.To>
@@ -703,17 +736,17 @@
                                 </scg:List>
                               </ui:MultipleAssign.AssignOperations>
                             </ui:MultipleAssign>
-                            <ui:WriteCell Cell="[STR_excelJobTitle]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet2" Text="[STR_JobTitle]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelJobLocale]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet2" Text="[STR_CompanyLocale]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelCompanyName]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet2" Text="[STR_CompanyName]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelCompanySize]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Sheet2" Text="[STR_CompanySize]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelPostingDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet2" Text="[STR_DatePosted]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelScrapeDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet2" Text="[STR_TodaysDate]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelJobPoster]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Sheet2" Text="[STR_JobContact.ToString]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelJobsite]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Sheet2" Text="LinkedIn" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelUniqueJobs]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="Sheet2" Text="[STR_UniqueJobsEdited]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelURLLinke]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="Sheet2" Text="[STR_JobURL.ToString]" WorkbookPath="JobTitle-JobURL.xlsx" />
-                            <ui:WriteCell Cell="[STR_excelJobType]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="Sheet2" Text="[STR_JobType]" WorkbookPath="JobTitle-JobURL.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelJobTitle]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_JobTitle]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelJobLocale]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_CompanyLocale]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelCompanyName]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_CompanyName]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelCompanySize]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_CompanySize]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelPostingDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_DatePosted]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelScrapeDate]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_TodaysDate]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelJobPoster]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_JobContact.ToString]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelJobsite]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="LinkedIn" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelUniqueJobs]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_UniqueJobsEdited]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelURLLinke]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_JobURL.ToString]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
+                            <ui:WriteCell Cell="[STR_excelJobType]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="[&quot;LinkedIn &quot; +Keyword]" Text="[STR_JobType]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
                           </Sequence>
                         </Sequence>
                       </Sequence>
@@ -733,6 +766,23 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1300,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="JobToJob done" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1300,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="JobToJob done" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
   </Sequence>
 </Activity>
