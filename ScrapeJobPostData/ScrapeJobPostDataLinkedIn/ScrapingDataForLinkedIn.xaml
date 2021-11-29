@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1881.6,2710.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1881.6,2731.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ScrapingDataForLinkedIn_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -74,7 +74,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapingDataForLinkedIn" sap:VirtualizedContainerService.HintSize="1892,2645.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapingDataForLinkedIn" sap:VirtualizedContainerService.HintSize="1892,2626.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Int_CellCounter" />
       <Variable x:TypeArguments="x:Int32" Name="INT_JobCouter" />
@@ -84,7 +84,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="1850.4,2552.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="1850.4,2533.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="INT_LoopVal" />
       </Sequence.Variables>
@@ -93,7 +93,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1808.8,2460" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="1808.8,2440.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Int32" Name="Int_LoopNum" />
         </Sequence.Variables>
@@ -102,19 +102,19 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser '89000Deve Page'" sap:VirtualizedContainerService.HintSize="1767.2,2367.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ec33b5a4816642395aafc41c3febc8a6" Selector="&lt;html app='msedge.exe' /&gt;">
+        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser '89000Deve Page'" sap:VirtualizedContainerService.HintSize="1767.2,2348" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ec33b5a4816642395aafc41c3febc8a6" Selector="&lt;html app='msedge.exe' /&gt;">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1733.6,2220" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1733.6,2200.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1692,2127.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1692,2108" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
                     <Variable x:TypeArguments="x:Boolean" Name="Bool_breakloop" />
@@ -162,24 +162,24 @@
                       <InArgument x:TypeArguments="x:Int32">1</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:InterruptibleDoWhile DisplayName="Zoom out" sap:VirtualizedContainerService.HintSize="1650.4,1128.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                  <ui:InterruptibleDoWhile DisplayName="Zoom out" sap:VirtualizedContainerService.HintSize="1650.4,1109.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                     <ui:InterruptibleDoWhile.Body>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,961.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1615.2,942.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[numberofjobs &lt; 4]" sap:VirtualizedContainerService.HintSize="1573.6,868.8" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[numberofjobs &lt; 4]" sap:VirtualizedContainerService.HintSize="1573.6,849.6" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="764.8,709.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence sap:VirtualizedContainerService.HintSize="764.8,700" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[Int_LoopNum=numberofjobs]" sap:VirtualizedContainerService.HintSize="723.2,616.8" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If Condition="[Int_LoopNum=numberofjobs]" sap:VirtualizedContainerService.HintSize="723.2,607.2" sap2010:WorkflowViewState.IdRef="If_1">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="304,215.2" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -305,13 +305,13 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="764.8,709.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <Sequence sap:VirtualizedContainerService.HintSize="764.8,700" sap2010:WorkflowViewState.IdRef="Sequence_19">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[Int_LoopNum=math.Ceiling(numberofjobs/4)]" sap:VirtualizedContainerService.HintSize="723.2,616.8" sap2010:WorkflowViewState.IdRef="If_6">
+                              <If Condition="[Int_LoopNum=math.Ceiling(numberofjobs/4)]" sap:VirtualizedContainerService.HintSize="723.2,607.2" sap2010:WorkflowViewState.IdRef="If_6">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="304,215.2" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -458,7 +458,7 @@
                       </ui:Target>
                     </ui:ExtractData.Target>
                   </ui:ExtractData>
-                  <ui:AppendRange DataTable="[ExtractDataTable]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="1650.4,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="C:\revature\Project 3\excelsheet\JobTitle-JobURL.xlsx" />
+                  <ui:AppendRange DataTable="[ExtractDataTable]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="1650.4,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="JobTitle-JobURL.xlsx" />
                   <ui:ClearDataTable DataTable="[ExtractDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="1650.4,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
                   <Assign sap:VirtualizedContainerService.HintSize="1650.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
