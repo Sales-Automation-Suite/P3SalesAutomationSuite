@@ -113,9 +113,6 @@
         "Version": "20.10.9"
       },
       "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\aforge/2.2.5\\lib/AForge.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\aforge.imaging/2.2.5\\lib/AForge.Imaging.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\aforge.math/2.2.5\\lib/AForge.Math.dll",
         "C:\\Users\\JP\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
         "C:\\Users\\JP\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
         "C:\\Users\\JP\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
@@ -124,16 +121,14 @@
         "C:\\Users\\JP\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.Toolkit.dll",
         "C:\\Users\\JP\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
         "C:\\Users\\JP\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\nlog/4.5.11\\lib/net45/NLog.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\system.collections.immutable/1.5.0\\lib/netstandard2.0/System.Collections.Immutable.dll",
         "C:\\Users\\JP\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
         "C:\\Users\\JP\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\JP\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\JP\\.nuget\\packages\\uipath/20.10.7641.24102\\lib/UiPath.Interop.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Activities.Design.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Activities.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Core.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts/2.7.1\\lib/net461/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.Design.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Core.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts/2.9.1\\lib/net461/UiPath.OCR.Contracts.dll",
         "C:\\Users\\JP\\.nuget\\packages\\uipath.platform/20.10.4\\lib/net461/UiPath.Platform.dll",
         "C:\\Users\\JP\\.nuget\\packages\\uipath.telemetry.client/1.2.20\\lib/net461/TelemetryClient.dll",
         "C:\\Users\\JP\\.nuget\\packages\\uipath.uiautomation.activities/20.10.9\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
@@ -166,39 +161,23 @@
         "C:\\Users\\JP\\.nuget\\packages\\uipath.vision/2.2.0\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.uiautomation.activities\\20.10.9"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.OCR.Activities",
+        "Version": "3.3.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.Design.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Core.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts/2.9.1\\lib/net461/UiPath.OCR.Contracts.dll"
+      ],
+      "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\3.3.2"
     }
   ],
   "Conflicts": [],
   "ResolvedDependencies": {
-    "AForge": {
-      "Id": "AForge",
-      "Version": "2.2.5",
-      "Dependencies": []
-    },
-    "AForge.Imaging": {
-      "Id": "AForge.Imaging",
-      "Version": "2.2.5",
-      "Dependencies": [
-        {
-          "Item1": "AForge",
-          "Item2": "[2.2.5, )"
-        },
-        {
-          "Item1": "AForge.Math",
-          "Item2": "[2.2.5, )"
-        }
-      ]
-    },
-    "AForge.Math": {
-      "Id": "AForge.Math",
-      "Version": "2.2.5",
-      "Dependencies": [
-        {
-          "Item1": "AForge",
-          "Item2": "[2.2.5, )"
-        }
-      ]
-    },
     "AvalonEdit": {
       "Id": "AvalonEdit",
       "Version": "5.0.3",
@@ -618,11 +597,6 @@
       "Version": "11.0.2",
       "Dependencies": []
     },
-    "NLog": {
-      "Id": "NLog",
-      "Version": "4.5.11",
-      "Dependencies": []
-    },
     "NPOI": {
       "Id": "NPOI",
       "Version": "2.4.1",
@@ -641,11 +615,6 @@
     "System.Buffers": {
       "Id": "System.Buffers",
       "Version": "4.5.1",
-      "Dependencies": []
-    },
-    "System.Collections.Immutable": {
-      "Id": "System.Collections.Immutable",
-      "Version": "1.5.0",
       "Dependencies": []
     },
     "System.ComponentModel.Annotations": {
@@ -869,37 +838,17 @@
     },
     "UiPath.OCR.Activities": {
       "Id": "UiPath.OCR.Activities",
-      "Version": "2.4.1",
+      "Version": "3.3.2",
       "Dependencies": [
         {
           "Item1": "UiPath.OCR.Contracts",
-          "Item2": "[2.7.1, )"
-        },
-        {
-          "Item1": "AForge.Imaging",
-          "Item2": "[2.2.5, )"
-        },
-        {
-          "Item1": "Newtonsoft.Json",
-          "Item2": "[11.0.2, )"
-        },
-        {
-          "Item1": "NLog",
-          "Item2": "[4.5.11, )"
-        },
-        {
-          "Item1": "System.Collections.Immutable",
-          "Item2": "[1.5.0, )"
-        },
-        {
-          "Item1": "System.ValueTuple",
-          "Item2": "[4.5.0, )"
+          "Item2": "[2.9.1, )"
         }
       ]
     },
     "UiPath.OCR.Contracts": {
       "Id": "UiPath.OCR.Contracts",
-      "Version": "2.7.1",
+      "Version": "2.9.1",
       "Dependencies": []
     },
     "UiPath.Platform": {
@@ -1054,36 +1003,6 @@
     }
   },
   "AllPackages": [
-    {
-      "Package": {
-        "Id": "AForge",
-        "Version": "2.2.5"
-      },
-      "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\aforge\\2.2.5\\lib\\AForge.dll"
-      ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\aforge\\2.2.5"
-    },
-    {
-      "Package": {
-        "Id": "AForge.Imaging",
-        "Version": "2.2.5"
-      },
-      "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\aforge.imaging\\2.2.5\\lib\\AForge.Imaging.dll"
-      ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\aforge.imaging\\2.2.5"
-    },
-    {
-      "Package": {
-        "Id": "AForge.Math",
-        "Version": "2.2.5"
-      },
-      "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\aforge.math\\2.2.5\\lib\\AForge.Math.dll"
-      ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\aforge.math\\2.2.5"
-    },
     {
       "Package": {
         "Id": "AvalonEdit",
@@ -1473,16 +1392,6 @@
     },
     {
       "Package": {
-        "Id": "NLog",
-        "Version": "4.5.11"
-      },
-      "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\nlog\\4.5.11\\lib\\net45\\NLog.dll"
-      ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\nlog\\4.5.11"
-    },
-    {
-      "Package": {
         "Id": "NPOI",
         "Version": "2.4.1"
       },
@@ -1513,16 +1422,6 @@
         "C:\\Users\\JP\\.nuget\\packages\\system.buffers\\4.5.1\\lib\\net461\\System.Buffers.dll"
       ],
       "Path": "C:\\Users\\JP\\.nuget\\packages\\system.buffers\\4.5.1"
-    },
-    {
-      "Package": {
-        "Id": "System.Collections.Immutable",
-        "Version": "1.5.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\system.collections.immutable\\1.5.0\\lib\\netstandard2.0\\System.Collections.Immutable.dll"
-      ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\system.collections.immutable\\1.5.0"
     },
     {
       "Package": {
@@ -1683,24 +1582,24 @@
     {
       "Package": {
         "Id": "UiPath.OCR.Activities",
-        "Version": "2.4.1"
+        "Version": "3.3.2"
       },
       "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\2.4.1\\lib\\net461\\UiPath.OCR.Activities.Design.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\2.4.1\\lib\\net461\\UiPath.OCR.Activities.dll",
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\2.4.1\\lib\\net461\\UiPath.OCR.Core.dll"
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\lib\\net461\\UiPath.OCR.Activities.Design.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\lib\\net461\\UiPath.OCR.Activities.dll",
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\lib\\net461\\UiPath.OCR.Core.dll"
       ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\2.4.1"
+      "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.activities\\3.3.2"
     },
     {
       "Package": {
         "Id": "UiPath.OCR.Contracts",
-        "Version": "2.7.1"
+        "Version": "2.9.1"
       },
       "Assemblies": [
-        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts\\2.7.1\\lib\\net461\\UiPath.OCR.Contracts.dll"
+        "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\lib\\net461\\UiPath.OCR.Contracts.dll"
       ],
-      "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts\\2.7.1"
+      "Path": "C:\\Users\\JP\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1"
     },
     {
       "Package": {
