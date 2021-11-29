@@ -1,19 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="JobSearch" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="JobSearch" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="numberofjobs" Type="InArgument(x:Int32)" />
     <x:Property Name="inputjob" Type="InArgument(x:String)" />
-    <x:Property Name="serverDB1" Type="InArgument(ui:DatabaseConnection)" />
   </x:Members>
-  <this:JobSearch.numberofjobs>
-    <InArgument x:TypeArguments="x:Int32" />
-  </this:JobSearch.numberofjobs>
-  <this:JobSearch.inputjob>
-    <InArgument x:TypeArguments="x:String" />
-  </this:JobSearch.inputjob>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2134.4,4847.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>4316.8,5556</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>JobSearch_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
@@ -61,7 +54,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -95,10 +88,9 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="JobSearch" sap:VirtualizedContainerService.HintSize="2144.8,4782.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JobSearch" sap:VirtualizedContainerService.HintSize="4327.2,5491.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataCompanyName" />
       <Variable x:TypeArguments="x:String" Name="Location" />
@@ -112,26 +104,34 @@
       <Variable x:TypeArguments="sd:DataTable" Name="TableforJobTitle" />
       <Variable x:TypeArguments="sd:DataTable" Name="TableforCompanyName" />
       <Variable x:TypeArguments="sd:DataTable" Name="tableforall" />
-      <Variable x:TypeArguments="x:String" Default="No Contact is found on Dice" Name="Contact" />
+      <Variable x:TypeArguments="x:String" Default="N/A" Name="Contact" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tb_date" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_contactandsource" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_URL" />
+      <Variable x:TypeArguments="x:String" Default="N/A" Name="Companysize" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tableforall1" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tableforall2" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tableforall3" />
+      <Variable x:TypeArguments="x:String" Name="test" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Search Jobs | Dice.com" sap:VirtualizedContainerService.HintSize="2103.2,4689.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Search Jobs | Dice.com" sap:VirtualizedContainerService.HintSize="4285.6,5398.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Under the Browser" sap:VirtualizedContainerService.HintSize="2069.6,4472.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Under the Browser" sap:VirtualizedContainerService.HintSize="4252,5141.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2028,4378.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="4210.4,5047.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="text" />
                 <Variable x:TypeArguments="x:Boolean" Name="nomatch" />
@@ -141,24 +141,49 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT typeaheadInput'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1986.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Text="[&quot;Entry Level &quot; +inputjob]" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT typeaheadInput'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="4168.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Text="[&quot;Entry Level &quot; +inputjob]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="https://www.dice.com/jobs?location=United%20States&amp;latitude=37.09024&amp;longitude=-95.712891&amp;countryCode=US&amp;locationPrecision=Country&amp;radius=30&amp;radiusUnit=mi&amp;page=1&amp;pageSize=20&amp;language=en&amp;eid=S2Q_,AQ_1" DesignTimeRectangle="343, 201, 499, 53" ElementType="InputBox" FriendlyName="'INPUT typeaheadInput'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='Search Term Input' /&gt;" Guid="db20c1f3-88ee-4f6f-977d-6ac74641da02" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfcAAAA5CAYAAAAr4GJXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATMSURBVHhe7di9TmM7FAZQXpqSkkfgDXgDSkpqpkBTTTNiEApCFEhIUKFztXPZyOOxTxIEIbHWkraAcxz/UXx2DiYAYCjCHQAGI9wBYDAHP37+mqJ+X/+Zbm9vlVJKKbUndXd3Nz08PEzPz89vsf6/95t7NAIA9svT09N0f3+/DPkk3AFgz72+vi4DPm/wwh0ABhA3+Ly9C3cAGMRisVj+FO4AMIjMcuEOAIMQ7gAwGOEOAIMR7gAwGOEOAIMR7gAwGOEOAIMR7gAwGOEOAIMR7gAwGOEOAIP5tnB/fHycjo+Pp8PDw7/q/Pz8rcX+iDkfHR1N19fXb082c3p6+s8+9CraAsCcbwn3q6urZnBlnZycTC8vL2+td1vMM+YbB5U4sGwqP9/ah1bt4+EHgO3aeriXN/YI+VL5bl9CLOf8mQeSPPy4pQPwEVsP9/jqOr7C7oX3V4TlV8r1fGYQx960Dj8AsI5vC/deGPa+5m59fd07ILTa1v2FnEuEaP4ebTNUW/3UgZu37LqPVtt1xd5EP9Ffbd196K3t8vLyr/2NsbKf/J/UY3zmwQWAr7f1cC+DY93QqEOzrLqPvPm32taBGaEYzy4uLt77z9DL0G5VGdrZx9nZ2T/t6vHWkfszdxipx4mq96G3tpubm+XPaB9V9xPraI3x0YMKANu39XAPdQBHmEWotZRty4DJEKwDNAOrDqMIu3he3nKjbXw++i+fl2OWzzPwc77lQaUeszePVTLA6z35yD601lYeEOJdHiBybVHl2Pm87AOA3fYt4Z7KQIkqwyZFqMS7Vkjm5/NdBFL9+dRqm8FcB1eO2Qq0CM2cZy9ww9y85+Q8e3Nq9ZefyXdza8u29eFh1fPWXgCwm7413FMZklGtkJqrXhC2KvvOMesDRY5ZP2/p3bJD3pzL2/Q6WiG+6T701hZ63yi0xg295wDsrp0I9xQBEkGSYVl+hTxXGTyr2pdhm20zEFMGY4TgKjnfuo8M41bor9I6FHx0H3rz6oV+73k9HwB229bCfd3QLMMkQ2rVZ0J5u63bt8K2dyPdZMzooxV8m/RRyj2qQ3bT/npry/7rQ0drf0LvOQC7bWvhnkHRuh2mus1cqNXvesEV8oZd9hO/t+YyN2Y8i3fRZm49vRv9Kr2xN9mHEL9vsraPjAvA7tpauIe8UbaCJ8OyDOHyWRmUGZ4RPBFAIcO9fBaybdlH9ts6CGQ/0b68+cac4lnOLdu1+ohx6nmso3co2GQf5tbW63/T5wDstq2GexlSvapDKQOmVfGuFCHUapeVIZXB3LuR9vopDyW9W22usWy7rhy3XldYdx/m1hb9tw4dvXHn5gPA7tpquKdeUPVCJIM0280FZ96ws+LvOojz7wivnnqOdVjm+3rOGa6tm/OcPBS0wjetsw9za4s1tD6z6XMAdtu3hDsA8HWEOwAMRrgDwGCEOwAMRrgDwGCEOwAMRrgDwGCEOwAMRrgDwGCEOwAMRrgDwGCEOwAMRrgDwGCEOwAMRrgDwGCEOwAM5u7ubvlTuAPAAJ6enqaHh4fl78IdAPbc6+vrdH9/Pz0/Py//Fu4AsMfixh7Bnrf2cPDj568p6vf1n2XAK6WUUmo/arFYLEM9b+zp/eYOAIxBuAPAUKbpP408xu9Uh+2UAAAAAElFTkSuQmCC" InformativeScreenshot="2d39af751649496b9a2dfe308b89942d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search Jobs | Dice.com' /&gt;" SearchSteps="FuzzySelector, Image" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1986.4,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)][d(hk)][k(pgdn)][u(hk)]" Version="V1" />
-              <uix:NClick ClickType="Single" DisplayName="Click 'Employer Type'" sap:VirtualizedContainerService.HintSize="1986.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Version="V1">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://www.dice.com/jobs?q=engineer&amp;location=United%20States&amp;latitude=37.09024&amp;longitude=-95.712891&amp;countryCode=US&amp;locationPrecision=Country&amp;radius=30&amp;radiusUnit=mi&amp;page=1&amp;pageSize=20&amp;language=en&amp;eid=S2Q_,AQ_1" DesignTimeRectangle="288, 752, 18, 22" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;dhi-js-dice-client&amp;gt;div&amp;gt;dhi-search-page-container&amp;gt;dhi-search-page&amp;gt;div&amp;gt;dhi-search-page-results&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dhi-filters-widget&amp;gt;div&amp;gt;section&amp;gt;dhi-accordion&amp;gt;div&amp;gt;div&amp;gt;js-multi-select-filter&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span&amp;gt;button&amp;gt;i' idx='5' parentid='facets' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='facets' tag='I' /&gt;" Guid="fdad428f-ad4c-4127-a967-742be0cd030f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAaCAYAAACzdqxAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADsSURBVEhL7ZQhCwIxGIb3M1YPLILB6F/QODC4ahLjuCA2Mcl+gnUGg+3iJcFoNQh3wWC8aHzd3G5wcgeeaNsDX9i+7eHbwkvwJ4LYUxFnB4FRh4CQdhUNBdTl4SwWL852HPR1aI7lRkJ+XALMDEMZtlcn0zjxCWuqm2OFzG60o0ggzP04RTm3Fd8UmJ6W7e6vZXseSGM7WGn4kVi/eRXEjiD2BLHnT+ICyaxOjDNk3za+CqFcgesQoov3ENLc9zY2aY9D1MZjQ8UcXZNslEPlTqbxYkNxlJgOotowby6K7kQiffvFiviXBLEDeAL0VOepcEt+/gAAAABJRU5ErkJggg==" InformativeScreenshot="ac2aed7ce709e8256070f38955005f58.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search Jobs | Dice.com' /&gt;" SearchSteps="FuzzySelector, Image">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="278, 687, 146, 30" ElementType="Text" FriendlyName="'Employer Type'" FullSelectorArgument="&lt;webctrl aaname='Employer Type' parentid='facets' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Employer Type' parentid='facets' tag='DIV' type='' check:text='Employer Type' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAeCAYAAADHCUctAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMFSURBVHhe7ZdtbqswEEXfnrKusBWUnaQrqbKMStkDjw9j3xnfMYQ6BKo5kv8EbGYuxy791zlOBVwkpwouklMFF8mpgovkVMFFcqrgIjlVcJGcKrhIThVcJKcKLpJTBSnSz71rLpfusmK032HOx3h07VzP9d49w69n53GTORfH7RFmfR4X6WC4SLvjIp1DpAMVyfmbImV8t1Gc5uu4Xf5epNho091/8h0VTy4IZBhZKCqw51dTvn9RpGd3v6b502j7WYlU61S7BOfLeboXOl9libm8JAQTaek9ZXN0L5Bd/I1BMjS8qCiSPZqrlCL+joGuWEfWVBAJ+yAjyg33ZS/XyEILjkP8uTdrYNIWYCL1JDFzCfINwjaVHrouLRsMsnG3fSPhQkKAVIx5ouAzzHUwNNlQelmWSBgahoPrzOHDvSqcVD+sQcXTuz2gstz8TWmIhL/LtaHPuAG0SKlO8Z4gAyqqVUtPXZHwxLCEwUaNIrPTkF4zRCo0y65RYTD4pXAHoFd22sn+X8TshwnTA/cnwazNNUCuQe06w5iB6qmqSOKhuJYQw9jBJQGoNFyk/FhHyBwWGg1S72o+2BrZxniFQi5MbC67kXkAT6VRPnimPeQ6Vb+RRKNnEQnrCb8tnlKlMfe6g0h4bTp9oL81mQe2iSTzdZEG4rOHOVDfCy8jYw+RsKbhGaKPcMvIdpHyZ3IOKZJ4yQN4La61JAUJwbyW1mpubaw7fWNMlCVV7CISStB27Vyfzk9krvvCa6GvDbVv+0YaxvwAq9HfiNSPtBZpdMQQCX+37ie7Mkli3yNqhGdSwXYSib2z/D4pkpl7rNMQr9DTYUWiQ6xjidSz0Ic+aUb081VQM7lwMHBOIfSXWBIpk4SdlvoeNtS8Yob5Mw4p0riOerF5iAWRAtlLN+6bMHYhQ0vH7t9NpB6sh/aoM9dikdN3hAhoZChF+iRrAnsrhuBnYDG79/fmIgXwP5fPiLyV8rffhIv0dlZ9ZB8R8hli5+YivR0p0kkkGlAilTN7t0hd9x/7VXaVPs/kIwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NClick.Target>
-              </uix:NClick>
-              <ui:UiElementExists sap2010:Annotation.AnnotationText="Check if job is fail to be found. " DisplayName="Element Exists " Exists="[nomatch]" sap:VirtualizedContainerService.HintSize="1986.4,138.4" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="4168.8,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+              <Sequence DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="4168.8,423.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,328.8" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,250.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Employer Type'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="671b6ecc-77ec-40e5-afc7-6fb6201b316b" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.dice.com/jobs?q=engineer&amp;location=United%20States&amp;latitude=37.09024&amp;longitude=-95.712891&amp;countryCode=US&amp;locationPrecision=Country&amp;radius=30&amp;radiusUnit=mi&amp;page=1&amp;pageSize=20&amp;language=en&amp;eid=S2Q_,AQ_1" DesignTimeRectangle="288, 752, 18, 22" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;dhi-js-dice-client&amp;gt;div&amp;gt;dhi-search-page-container&amp;gt;dhi-search-page&amp;gt;div&amp;gt;dhi-search-page-results&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dhi-filters-widget&amp;gt;div&amp;gt;section&amp;gt;dhi-accordion&amp;gt;div&amp;gt;div&amp;gt;js-multi-select-filter&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span&amp;gt;button&amp;gt;i' idx='5' parentid='facets' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='facets' tag='I' /&gt;" Guid="fdad428f-ad4c-4127-a967-742be0cd030f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAaCAYAAACzdqxAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADsSURBVEhL7ZQhCwIxGIb3M1YPLILB6F/QODC4ahLjuCA2Mcl+gnUGg+3iJcFoNQh3wWC8aHzd3G5wcgeeaNsDX9i+7eHbwkvwJ4LYUxFnB4FRh4CQdhUNBdTl4SwWL852HPR1aI7lRkJ+XALMDEMZtlcn0zjxCWuqm2OFzG60o0ggzP04RTm3Fd8UmJ6W7e6vZXseSGM7WGn4kVi/eRXEjiD2BLHnT+ICyaxOjDNk3za+CqFcgesQoov3ENLc9zY2aY9D1MZjQ8UcXZNslEPlTqbxYkNxlJgOotowby6K7kQiffvFiviXBLEDeAL0VOepcEt+/gAAAABJRU5ErkJggg==" InformativeScreenshot="ac2aed7ce709e8256070f38955005f58.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search Jobs | Dice.com' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="278, 687, 146, 30" ElementType="Text" FriendlyName="'Employer Type'" FullSelectorArgument="&lt;webctrl aaname='Employer Type' parentid='facets' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Employer Type' parentid='facets' tag='DIV' type='' check:text='Employer Type' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAeCAYAAADHCUctAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMFSURBVHhe7ZdtbqswEEXfnrKusBWUnaQrqbKMStkDjw9j3xnfMYQ6BKo5kv8EbGYuxy791zlOBVwkpwouklMFF8mpgovkVMFFcqrgIjlVcJGcKrhIThVcJKcKLpJTBSnSz71rLpfusmK032HOx3h07VzP9d49w69n53GTORfH7RFmfR4X6WC4SLvjIp1DpAMVyfmbImV8t1Gc5uu4Xf5epNho091/8h0VTy4IZBhZKCqw51dTvn9RpGd3v6b502j7WYlU61S7BOfLeboXOl9libm8JAQTaek9ZXN0L5Bd/I1BMjS8qCiSPZqrlCL+joGuWEfWVBAJ+yAjyg33ZS/XyEILjkP8uTdrYNIWYCL1JDFzCfINwjaVHrouLRsMsnG3fSPhQkKAVIx5ouAzzHUwNNlQelmWSBgahoPrzOHDvSqcVD+sQcXTuz2gstz8TWmIhL/LtaHPuAG0SKlO8Z4gAyqqVUtPXZHwxLCEwUaNIrPTkF4zRCo0y65RYTD4pXAHoFd22sn+X8TshwnTA/cnwazNNUCuQe06w5iB6qmqSOKhuJYQw9jBJQGoNFyk/FhHyBwWGg1S72o+2BrZxniFQi5MbC67kXkAT6VRPnimPeQ6Vb+RRKNnEQnrCb8tnlKlMfe6g0h4bTp9oL81mQe2iSTzdZEG4rOHOVDfCy8jYw+RsKbhGaKPcMvIdpHyZ3IOKZJ4yQN4La61JAUJwbyW1mpubaw7fWNMlCVV7CISStB27Vyfzk9krvvCa6GvDbVv+0YaxvwAq9HfiNSPtBZpdMQQCX+37ie7Mkli3yNqhGdSwXYSib2z/D4pkpl7rNMQr9DTYUWiQ6xjidSz0Ic+aUb081VQM7lwMHBOIfSXWBIpk4SdlvoeNtS8Yob5Mw4p0riOerF5iAWRAtlLN+6bMHYhQ0vH7t9NpB6sh/aoM9dikdN3hAhoZChF+iRrAnsrhuBnYDG79/fmIgXwP5fPiLyV8rffhIv0dlZ9ZB8R8hli5+YivR0p0kkkGlAilTN7t0hd9x/7VXaVPs/kIwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+              </Sequence>
+              <ui:UiElementExists sap2010:Annotation.AnnotationText="Check if job is fail to be found. " DisplayName="Element Exists " Exists="[nomatch]" sap:VirtualizedContainerService.HintSize="4168.8,96.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0eaeb18-89a7-4c14-bd53-7f3ce72ee0e3" InformativeScreenshot="5bf9303388276f0a13fddfcdfa2176b1" Selector="&lt;webctrl parentid='searchDisplay-div' tag='P' aaname='Sorry, we were unable to find any results that matched your search. ' /&gt;" TimeoutMS="2000">
                     <ui:Target.WaitForReady>
@@ -169,10 +194,12 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:UiElementExists>
-              <If sap2010:Annotation.AnnotationText="if JOBS fail to be found, &#xA;go to &quot;then&quot;. Opposite, go to &quot;else&quot;&#xA;" Condition="[nomatch]" DisplayName="Check element exist" sap:VirtualizedContainerService.HintSize="1986.4,3455.2" sap2010:WorkflowViewState.IdRef="If_1">
+              <If sap2010:Annotation.AnnotationText="if JOBS fail to be found, &#xA;go to &quot;then&quot;. Opposite, go to &quot;else&quot;&#xA;" Condition="[nomatch]" DisplayName="Check element exist" sap:VirtualizedContainerService.HintSize="4168.8,3900" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,7 +208,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="971.2,85.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence sap:VirtualizedContainerService.HintSize="2062.4,85.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,13 +217,17 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="971.2,3234.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence sap:VirtualizedContainerService.HintSize="2062.4,3679.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Default="[new System.data.DataTable]" Name="joinedtable" />
+                      <Variable x:TypeArguments="sd:DataTable" Default="[new System.data.DataTable]" Name="joinedtable_new" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Parallel sap:VirtualizedContainerService.HintSize="929.6,153.6" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                    <Parallel sap:VirtualizedContainerService.HintSize="2020.8,153.6" sap2010:WorkflowViewState.IdRef="Parallel_1">
                       <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataJobTitle]" DisplayName="Extract Structured Data - JobTitle" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='JobTitle' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='dhi-search-card' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="[numberofjobs]" NextLinkSelector="&lt;webctrl aaname='»' parentid='pagination_2' tag='A' /&gt;" SimulateClick="True">
                         <ui:ExtractData.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="abea5a61-7f5f-4b2e-a153-64ab7399fb53" InformativeScreenshot="2fd5769e30a7c98f591e9ee7cc85c771" Selector="&lt;webctrl css-selector='body&amp;gt;dhi-js-dice-client&amp;gt;div&amp;gt;dhi-search-page-container&amp;gt;dhi-search-page&amp;gt;div&amp;gt;dhi-search-page-results&amp;gt;div&amp;gt;div&amp;gt;js-search-display&amp;gt;div&amp;gt;div&amp;gt;dhi-search-cards-widget&amp;gt;div' parentid='searchDisplay-div' tag='DIV' /&gt;" WaitForReady="COMPLETE">
@@ -216,29 +247,50 @@
                         </ui:ExtractData.Target>
                       </ui:ExtractData>
                     </Parallel>
-                    <Parallel sap:VirtualizedContainerService.HintSize="929.6,137.6" sap2010:WorkflowViewState.IdRef="Parallel_2">
-                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="JobTitle is a variable refer to the extractData" DataTable="[TableforJobTitle]" DisplayName="Table For JobTitle" sap:VirtualizedContainerService.HintSize="333.6,91.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Keyword&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;JobTitles&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;jobLocation&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;PostDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;SearchDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;JobType&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Contact&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;URLlink&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+                    <Parallel DisplayName="Parallel - Tables" sap:VirtualizedContainerService.HintSize="2020.8,150.4" sap2010:WorkflowViewState.IdRef="Parallel_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="JobTitle is a variable refer to the extractData" DataTable="[TableforJobTitle]" DisplayName="Table For JobTitle" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Keyword&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;JobTitles&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;jobLocation&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;JobType&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CompanySize&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:BuildDataTable>
-                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="CompanyName is a variable refer to the extracData" DataTable="[TableforCompanyName]" DisplayName="Table For CompanyName" sap:VirtualizedContainerService.HintSize="333.6,91.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NumberofJobs&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Source&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="CompanyName is a variable refer to the extracData" DataTable="[TableforCompanyName]" DisplayName="Table For CompanyName" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NumberofJobs&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:BuildDataTable>
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="this table is for post date and search date" DataTable="[tb_date]" DisplayName="Table-Date" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;PostDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SearchDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:BuildDataTable>
+                      <ui:BuildDataTable sap2010:Annotation.AnnotationText="This table is for Contact and Source&#xA;" DataTable="[dt_contactandsource]" DisplayName="Table- Contact" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Contact&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Source&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:BuildDataTable>
+                      <ui:BuildDataTable DataTable="[dt_URL]" DisplayName=" Table-URL" sap:VirtualizedContainerService.HintSize="333.6,104" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
                     </Parallel>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This for Each Row activity is getting Company Name, Location, Times, and Job Type." DataTable="[ExtractDataJobTitle]" DisplayName="For Each Row - Job title" sap:VirtualizedContainerService.HintSize="929.6,1145.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This for Each Row activity is getting Company Name, Location, Times, and Job Type." DataTable="[ExtractDataJobTitle]" DisplayName="For Each Row - Job title" sap:VirtualizedContainerService.HintSize="2020.8,1601.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,979.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1435.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -294,7 +346,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <TryCatch.Try>
-                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,201.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -302,10 +354,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                                     <ui:GetValue.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a7783142-3e6d-43f0-81e2-2fc656dde3f4" InformativeScreenshot="3af27ed824fb85a53f0dfd5860355b3d" Selector="&lt;html app='msedge.exe' title='*' /&gt;&lt;webctrl aaname='*' parentid='testing' tag='SPAN' parentclass='location' /&gt;">
-                                        <ui:Target.TimeoutMS>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:Target.TimeoutMS>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a7783142-3e6d-43f0-81e2-2fc656dde3f4" InformativeScreenshot="3af27ed824fb85a53f0dfd5860355b3d" Selector="&lt;html app='msedge.exe' title='*' /&gt;&lt;webctrl aaname='*' parentid='testing' tag='SPAN' parentclass='location' /&gt;" TimeoutMS="2000">
                                         <ui:Target.WaitForReady>
                                           <InArgument x:TypeArguments="ui:WaitForReady" />
                                         </ui:Target.WaitForReady>
@@ -329,7 +378,7 @@
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                     </ActivityAction.Argument>
-                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[Location]</OutArgument>
                                       </Assign.To>
@@ -349,21 +398,36 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <TryCatch.Try>
-                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
-                                  <ui:GetValue.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd90d117-da1b-44e3-84cc-bf34b44e5ae5" InformativeScreenshot="e47b3101c7f62406cfd2fff0259f25f1" Selector="&lt;html app='msedge.exe' title='*' /&gt;&lt;webctrl aaname='*' parentid='testing' tag='SPAN' parentclass='posted ' /&gt;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:GetValue.Target>
-                                  <ui:GetValue.Value>
-                                    <OutArgument x:TypeArguments="x:String">[postTime]</OutArgument>
-                                  </ui:GetValue.Value>
-                                </ui:GetValue>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,303.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                                    <ui:GetValue.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd90d117-da1b-44e3-84cc-bf34b44e5ae5" InformativeScreenshot="056bea94ba8deb221114aaf2550f1335" Selector="&lt;html app='msedge.exe' title='*Dice.com' /&gt;&lt;webctrl aaname='Originally Posted*' parentid='bd' tag='DIV' class='col-md-12' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:GetValue.Target>
+                                    <ui:GetValue.Value>
+                                      <OutArgument x:TypeArguments="x:String">[postTime]</OutArgument>
+                                    </ui:GetValue.Value>
+                                  </ui:GetValue>
+                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[postTime]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[postTime.replace("Originally Posted : ","")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
                               </TryCatch.Try>
                               <TryCatch.Catches>
                                 <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
@@ -459,7 +523,7 @@
                                 <InArgument x:TypeArguments="x:Int32">[id +1]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{id,inputjob,row.Item(&quot;Jobtitle&quot;).ToString,companyname,location,postTime,searchtime,jobtype,contact,row.Item(&quot;URL&quot;).ToString}]" DataTable="[TableforJobTitle]" DisplayName="Add Data Row to TableinJOBTITLE" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{id,inputjob,row.Item(&quot;Jobtitle&quot;).ToString,companyname,location,jobtype,companysize}]" DataTable="[TableforJobTitle]" DisplayName="Add Data Row to TableinJOBTITLE" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -467,6 +531,8 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:AddDataRow>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{id,postTime,searchtime}]" DataTable="[tb_date]" DisplayName="Add Data Row to tb_date" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{row.Item(&quot;URL&quot;).ToString}]" DataTable="[dt_URL]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
@@ -478,17 +544,24 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataCompanyName]" DisplayName="For Each Row - CompanyName" sap:VirtualizedContainerService.HintSize="929.6,1020.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:WriteRange AddHeaders="True" DataTable="[dt_URL]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="2020.8,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[&quot;Dice &quot; + inputjob]" StartingCell="L1" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteRange>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataCompanyName]" DisplayName="For Each Row - CompanyName" sap:VirtualizedContainerService.HintSize="2020.8,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,898.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1126.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="numberOfJobs" />
                               <Variable x:TypeArguments="x:String" Name="source" />
-                              <Variable x:TypeArguments="x:String" Name="variable1e" />
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -567,7 +640,7 @@
                                 <InArgument x:TypeArguments="x:Int32">[newid+1]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{newid,numberOfJobs, source}]" DataTable="[TableforCompanyName]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{newid,numberOfJobs}]" DataTable="[TableforCompanyName]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,66 +648,229 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:AddDataRow>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{newid,Contact,source}]" DataTable="[dt_contactandsource]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
-                    <ui:JoinDataTables DataTable1="[TableforJobTitle]" DataTable2="[TableforCompanyName]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="929.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[tableforall]">
-                      <ui:JoinDataTables.Arguments>
-                        <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
-                          <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
-                            <ui:JoinOperationArgument.Column1>
-                              <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                            </ui:JoinOperationArgument.Column1>
-                            <ui:JoinOperationArgument.Column2>
-                              <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
-                            </ui:JoinOperationArgument.Column2>
-                          </ui:JoinOperationArgument>
-                        </scg:List>
-                      </ui:JoinDataTables.Arguments>
+                    <Sequence DisplayName="Column A-G" sap:VirtualizedContainerService.HintSize="2020.8,588.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:JoinDataTables>
-                    <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID" DataTable="[tableforall]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="929.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:RemoveDataColumn>
-                    <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID_1" DataTable="[tableforall]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="929.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:RemoveDataColumn>
-                    <ui:RemoveDuplicateRows DataTable="[tableforall]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="929.6,80.8" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[tableforall]" />
-                    <ui:WriteRange AddHeaders="True" DataTable="[tableforall]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="929.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[&quot;Dice &quot; + inputjob]" WorkbookPath="Job.xlsx">
-                      <ui:WriteRange.StartingCell>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" Value="" />
-                        </InArgument>
-                      </ui:WriteRange.StartingCell>
+                      <ui:JoinDataTables DataTable1="[TableforJobTitle]" DataTable2="[TableforCompanyName]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_2" JoinType="Inner" OutputDataTable="[tableforall]">
+                        <ui:JoinDataTables.Arguments>
+                          <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
+                            <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
+                              <ui:JoinOperationArgument.Column1>
+                                <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                              </ui:JoinOperationArgument.Column1>
+                              <ui:JoinOperationArgument.Column2>
+                                <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                              </ui:JoinOperationArgument.Column2>
+                            </ui:JoinOperationArgument>
+                          </scg:List>
+                        </ui:JoinDataTables.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:JoinDataTables>
+                      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID_1" DataTable="[tableforall]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:RemoveDataColumn>
+                      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID" DataTable="[tableforall]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:RemoveDataColumn>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="324.8,173.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RemoveDuplicateRows DataTable="[tableforall]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[tableforall]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:WriteRange AddHeaders="True" DataTable="[tableforall]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[&quot;Dice &quot; + inputjob]" StartingCell="A:G" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:WriteRange>
+                    </Sequence>
+                    <Sequence DisplayName="Column H-L" sap:VirtualizedContainerService.HintSize="2020.8,588.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:WriteRange>
+                      <ui:JoinDataTables DataTable1="[tb_date]" DataTable2="[dt_contactandsource]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_3" JoinType="Inner" OutputDataTable="[tableforall1]">
+                        <ui:JoinDataTables.Arguments>
+                          <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
+                            <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
+                              <ui:JoinOperationArgument.Column1>
+                                <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                              </ui:JoinOperationArgument.Column1>
+                              <ui:JoinOperationArgument.Column2>
+                                <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                              </ui:JoinOperationArgument.Column2>
+                            </ui:JoinOperationArgument>
+                          </scg:List>
+                        </ui:JoinDataTables.Arguments>
+                      </ui:JoinDataTables>
+                      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID_1" DataTable="[tableforall1]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:RemoveDataColumn>
+                      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID" DataTable="[tableforall1]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:RemoveDataColumn>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="324.8,173.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RemoveDuplicateRows OutputDataTable="{x:Null}" DataTable="[tableforall1]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_2" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:WriteRange AddHeaders="True" DataTable="[tableforall1]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[&quot;Dice &quot; + inputjob]" StartingCell="H:K" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:WriteRange>
+                    </Sequence>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2020.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,161.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[joinedtable]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[tableforall]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[joinedtable_new]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[tableforall1]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:JoinDataTables DataTable1="[joinedtable]" DataTable2="[joinedtable_new]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_4" JoinType="Inner" OutputDataTable="[tableforall2]">
+                              <ui:JoinDataTables.Arguments>
+                                <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
+                                  <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
+                                    <ui:JoinOperationArgument.Column1>
+                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                                    </ui:JoinOperationArgument.Column1>
+                                    <ui:JoinOperationArgument.Column2>
+                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                                    </ui:JoinOperationArgument.Column2>
+                                  </ui:JoinOperationArgument>
+                                </scg:List>
+                              </ui:JoinDataTables.Arguments>
+                            </ui:JoinDataTables>
+                            <ui:OutputDataTable DataTable="[tableforall2]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[test]" />
+                            <ui:JoinDataTables DataTable1="[tableforall2]" DataTable2="[dt_URL]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_5" JoinType="Inner" OutputDataTable="[tableforall3]">
+                              <ui:JoinDataTables.Arguments>
+                                <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
+                                  <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
+                                    <ui:JoinOperationArgument.Column1>
+                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                                    </ui:JoinOperationArgument.Column1>
+                                    <ui:JoinOperationArgument.Column2>
+                                      <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+                                    </ui:JoinOperationArgument.Column2>
+                                  </ui:JoinOperationArgument>
+                                </scg:List>
+                              </ui:JoinDataTables.Arguments>
+                            </ui:JoinDataTables>
+                            <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID_1" DataTable="[tableforall]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RemoveDataColumn>
+                          </Sequence>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
                   </Sequence>
                 </If.Else>
               </If>

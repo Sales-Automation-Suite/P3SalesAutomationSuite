@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1487.2,8515.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1440.8,11606.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ZipRecruiterDataScrapeandWrite_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -45,6 +45,7 @@
       <x:String>UiPath.Database.Activities</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -80,15 +81,14 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ZipRecruiterDataScrapeandWrite" sap:VirtualizedContainerService.HintSize="1497.6,8450.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ZipRecruiterDataScrapeandWrite" sap:VirtualizedContainerService.HintSize="1451.2,11541.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="forEachCounter" />
       <Variable x:TypeArguments="x:String" Name="str_UniqueTotalJobs" />
@@ -109,7 +109,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="No need to use SQL connect &#xA;" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1456,96.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="No need to use SQL connect &#xA;" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1409.6,275.2" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
@@ -128,7 +128,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1456,8220.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1409.6,11133.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="datatable_title" />
       </Sequence.Variables>
@@ -137,7 +137,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="1414.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign sap:VirtualizedContainerService.HintSize="1368,60" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[forEachCounter]</OutArgument>
         </Assign.To>
@@ -145,7 +145,7 @@
           <InArgument x:TypeArguments="x:Int32">2</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="1414.4,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+      <Assign sap:VirtualizedContainerService.HintSize="1368,60" sap2010:WorkflowViewState.IdRef="Assign_14">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[counter_PostDate]</OutArgument>
         </Assign.To>
@@ -153,7 +153,7 @@
           <InArgument x:TypeArguments="x:Int32">2</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="1414.4,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+      <Assign sap:VirtualizedContainerService.HintSize="1368,60" sap2010:WorkflowViewState.IdRef="Assign_16">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[counter_JobLocation]</OutArgument>
         </Assign.To>
@@ -161,13 +161,13 @@
           <InArgument x:TypeArguments="x:Int32">2</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1414.4,6684.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.ziprecruiter.com/">
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1368,8780" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.ziprecruiter.com/">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="1380.8,6582.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence sap:VirtualizedContainerService.HintSize="1334.4,8677.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_JobLocation" />
               </Sequence.Variables>
@@ -176,7 +176,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1339.2,657.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1292.8,1090.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -212,7 +212,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="403.2,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -223,7 +223,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:NullReferenceException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Fatal" Message="[&quot;Cannot use null value as seach term&quot;]">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Fatal" Message="[&quot;Cannot use null value as seach term&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -233,7 +233,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -263,7 +263,7 @@
                   </ui:Click>
                 </TryCatch.Finally>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1339.2,477.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1292.8,974.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -316,7 +316,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="1259.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="1259.2,415.2" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -327,7 +327,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Exception for empty data tables" sap:VirtualizedContainerService.HintSize="752.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Exception for empty data tables" sap:VirtualizedContainerService.HintSize="752.8,344.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -347,7 +347,7 @@
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1339.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1292.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416.8,613.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                     <sap:WorkflowViewStateService.ViewState>
@@ -371,11 +371,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1339.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1292.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
                     <sap:WorkflowViewStateService.ViewState>
@@ -396,11 +396,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:WriteRange AddHeaders="False" DataTable="[datatable_TotalJobData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1339.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="ZipDuplicates" StartingCell="[&quot;B&quot; + counter_JobLocation.ToString]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx">
+              <ui:WriteRange AddHeaders="False" DataTable="[datatable_TotalJobData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1292.8,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="ZipDuplicates" StartingCell="[&quot;B&quot; + counter_JobLocation.ToString]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -408,7 +408,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WriteRange>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add Location to the new sheet." DataTable="[datatable_TotalJobData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1339.2,96.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add Location to the new sheet." DataTable="[datatable_TotalJobData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1292.8,912.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -450,11 +450,11 @@
                                 <InArgument x:TypeArguments="x:String">N/A</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:WriteCell Cell="[&quot;D&quot; + counter_JobLocation.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="ZipDuplicates" Text="[str_JobLocation]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
+                            <ui:WriteCell Cell="[&quot;D&quot; + counter_JobLocation.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="ZipDuplicates" Text="[str_JobLocation]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <ui:WriteCell Cell="[&quot;D&quot; + counter_JobLocation.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="ZipDuplicates" Text="[str_JobLocation]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
+                          <ui:WriteCell Cell="[&quot;D&quot; + counter_JobLocation.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="ZipDuplicates" Text="[str_JobLocation]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
                         </If.Else>
                       </If>
                       <Assign sap:VirtualizedContainerService.HintSize="752.8,60" sap2010:WorkflowViewState.IdRef="Assign_19">
@@ -476,14 +476,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ClearDataTable DataTable="[datatable_TotalJobData]" DisplayName="Clear datatable_TotalJobDat" sap:VirtualizedContainerService.HintSize="1339.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_JobPostUrl]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1339.2,2216.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ClearDataTable DataTable="[datatable_TotalJobData]" DisplayName="Clear datatable_TotalJobDat" sap:VirtualizedContainerService.HintSize="1292.8,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_JobPostUrl]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1292.8,2321.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1305.6,2096" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="914.4,2200.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="str_JobPostDate" />
                         <Variable x:TypeArguments="x:Boolean" Name="bool_PostDateExist" />
@@ -494,7 +494,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="1264,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign sap:VirtualizedContainerService.HintSize="872.8,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[str_GetJobPostDate]</OutArgument>
                         </Assign.To>
@@ -502,16 +502,16 @@
                           <InArgument x:TypeArguments="x:String">[row("UrlForJobPostDate").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="1264,60" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[str_GetJobPostDate]" />
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1264,1079.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                      <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="872.8,60" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[str_GetJobPostDate]" />
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="872.8,1184" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                         <TryCatch.Try>
-                          <Sequence sap:VirtualizedContainerService.HintSize="1227.2,848" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence sap:VirtualizedContainerService.HintSize="836,708" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[bool_PostDateExist]" sap:VirtualizedContainerService.HintSize="1185.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                            <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[bool_PostDateExist]" sap:VirtualizedContainerService.HintSize="794.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                               <ui:UiElementExists.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84b561f0-63e5-43f5-808d-194a1f6c5fc5" InformativeScreenshot="0da47ea279263b3c7f46452f4de9dfc5" Selector="&lt;webctrl aaname='Posted date:' parentid='main' tag='SPAN' /&gt;" TimeoutMS="2000">
                                   <ui:Target.WaitForReady>
@@ -520,53 +520,86 @@
                                 </ui:Target>
                               </ui:UiElementExists.Target>
                             </ui:UiElementExists>
-                            <If Condition="[bool_PostDateExist = True]" sap:VirtualizedContainerService.HintSize="1185.6,608" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If Condition="[bool_PostDateExist = True]" sap:VirtualizedContainerService.HintSize="794.4,468" sap2010:WorkflowViewState.IdRef="If_2">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="766.4,448.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,301.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,200" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
-                                    <ui:AnchorBase.Action>
-                                      <ActivityAction x:TypeArguments="ui:Anchor">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
-                                        </ActivityAction.Argument>
-                                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
-                                          <ui:GetValue.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19390115-eb0b-4b47-82bc-06e4a43a7bc2" InformativeScreenshot="922b22237bcd056c80a52daa29b96ec7" Selector="&lt;webctrl tag='SPAN' /&gt;">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:GetValue.Target>
-                                          <ui:GetValue.Value>
-                                            <OutArgument x:TypeArguments="x:String">[str_JobPostDate]</OutArgument>
-                                          </ui:GetValue.Value>
-                                        </ui:GetValue>
-                                      </ActivityAction>
-                                    </ui:AnchorBase.Action>
-                                    <ui:AnchorBase.AnchorProvider>
-                                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
-                                        <ui:WaitUiElementAppear.Target>
-                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="658ad7bd-5378-47f4-8bb9-eeba502fff06" InformativeScreenshot="1f50a92ce53f43d7be36834eb1f9c20c" Selector="&lt;webctrl aaname='Posted date:' parentid='main' tag='SPAN' /&gt;">
-                                            <ui:Target.TimeoutMS>
-                                              <InArgument x:TypeArguments="x:Int32" />
-                                            </ui:Target.TimeoutMS>
-                                            <ui:Target.WaitForReady>
-                                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                                            </ui:Target.WaitForReady>
-                                          </ui:Target>
-                                        </ui:WaitUiElementAppear.Target>
-                                      </ui:WaitUiElementAppear>
-                                    </ui:AnchorBase.AnchorProvider>
-                                  </ui:AnchorBase>
-                                  <ui:WriteCell Cell="[&quot;F&quot; + counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="724.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="ZipDuplicates" Text="[str_JobPostDate]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch.Try>
+                                      <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                                        <ui:AnchorBase.Action>
+                                          <ActivityAction x:TypeArguments="ui:Anchor">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                            </ActivityAction.Argument>
+                                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                                              <ui:GetValue.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19390115-eb0b-4b47-82bc-06e4a43a7bc2" InformativeScreenshot="922b22237bcd056c80a52daa29b96ec7" Selector="&lt;webctrl tag='SPAN' /&gt;" TimeoutMS="2000">
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:GetValue.Target>
+                                              <ui:GetValue.Value>
+                                                <OutArgument x:TypeArguments="x:String">[str_JobPostDate]</OutArgument>
+                                              </ui:GetValue.Value>
+                                            </ui:GetValue>
+                                          </ActivityAction>
+                                        </ui:AnchorBase.Action>
+                                        <ui:AnchorBase.AnchorProvider>
+                                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'P'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                                            <ui:WaitUiElementAppear.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="658ad7bd-5378-47f4-8bb9-eeba502fff06" InformativeScreenshot="1f50a92ce53f43d7be36834eb1f9c20c" Selector="&lt;webctrl aaname='Posted date:' parentid='main' tag='SPAN' /&gt;" TimeoutMS="2000">
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:WaitUiElementAppear.Target>
+                                          </ui:WaitUiElementAppear>
+                                        </ui:AnchorBase.AnchorProvider>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:AnchorBase>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="403.2,130.4" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:TimeoutException">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[str_JobPostDate]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                  <ui:WriteCell Cell="[&quot;F&quot; + counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="ZipDuplicates" Text="[str_JobPostDate]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -584,14 +617,14 @@
                                       <InArgument x:TypeArguments="x:String">N/A</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:WriteCell Cell="[&quot;F&quot; + counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="ZipDuplicates" Text="[str_JobPostDate]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
+                                  <ui:WriteCell Cell="[&quot;F&quot; + counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="ZipDuplicates" Text="[str_JobPostDate]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
                                 </Sequence>
                               </If.Else>
                             </If>
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="1230.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="839.2,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -607,11 +640,11 @@
                           </Catch>
                         </TryCatch.Catches>
                       </TryCatch>
-                      <ui:WriteCell Cell="[&quot;H&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1264,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="ZipDuplicates" Text="Zip Recruiter" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
-                      <ui:WriteCell Cell="[&quot;G&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1264,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="ZipDuplicates" Text="[now.AddDays(0).ToString(&quot;MM/dd/yyyy&quot;)]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
-                      <ui:WriteCell Cell="[&quot;A&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1264,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="ZipDuplicates" Text="[keyword]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
-                      <ui:WriteCell Cell="[&quot;I&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1264,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="ZipDuplicates" Text="[str_GetJobPostDate]" WorkbookPath="excelsheet\ZipRepcruiter.xlsx" />
-                      <Assign sap:VirtualizedContainerService.HintSize="1264,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <ui:WriteCell Cell="[&quot;H&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="872.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="ZipDuplicates" Text="Zip Recruiter" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
+                      <ui:WriteCell Cell="[&quot;G&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="872.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="ZipDuplicates" Text="[now.AddDays(0).ToString(&quot;MM/dd/yyyy&quot;)]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
+                      <ui:WriteCell Cell="[&quot;A&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="872.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="ZipDuplicates" Text="[keyword]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
+                      <ui:WriteCell Cell="[&quot;I&quot;+ counter_PostDate.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="872.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="ZipDuplicates" Text="[str_GetJobPostDate]" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx" />
+                      <Assign sap:VirtualizedContainerService.HintSize="872.8,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[counter_PostDate]</OutArgument>
                         </Assign.To>
@@ -623,13 +656,13 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueJobs]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1339.2,1756" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueJobs]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1292.8,2000.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="478.4,1635.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="478.4,1880" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -645,18 +678,18 @@
                       </Assign>
                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.8,233.6" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="270.4,155.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[str_WebUrl]" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[str_WebUrl]" />
                           </Sequence>
                         </ui:CommentOut.Body>
                       </ui:CommentOut>
                       <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="436.8,60" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[str_WebUrl]" />
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,338.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,583.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                         <TryCatch.Try>
                           <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'H1'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                             <ui:GetValue.Target>
@@ -675,7 +708,7 @@
                           </ui:GetValue>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -686,7 +719,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                               </ActivityAction.Argument>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Selector not found for Unique Job String&quot;]">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Selector not found for Unique Job String&quot;]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -722,7 +755,7 @@
                           <InArgument x:TypeArguments="x:String">[str_splitNumJob(0).ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436.8,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="excelsheet\ZipRepcruiter.xlsx">
+                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436.8,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx">
                         <ui:ExcelApplicationScope.Body>
                           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                             <ActivityAction.Argument>
@@ -751,21 +784,21 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1339.2,233.6" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1292.8,233.6" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="270.4,155.2" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="228.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[keyword.ToString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[keyword.ToString]" />
                   </Sequence>
                 </ui:CommentOut.Body>
               </ui:CommentOut>
-              <ui:ClearDataTable DataTable="[datatable_TotalJobData]" DisplayName="Clear TotalJob Data Table" sap:VirtualizedContainerService.HintSize="1339.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
-              <ui:ClearDataTable DataTable="[dt_UniqueJobs]" DisplayName="Clear UniqueJobs Data Table" sap:VirtualizedContainerService.HintSize="1339.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_3" />
-              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe 1,557,162+'" sap:VirtualizedContainerService.HintSize="1339.2,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="aab61d342869fb1b0d72084215372d76" WaitForReady="INTERACTIVE" />
+              <ui:ClearDataTable DataTable="[datatable_TotalJobData]" DisplayName="Clear TotalJob Data Table" sap:VirtualizedContainerService.HintSize="1292.8,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+              <ui:ClearDataTable DataTable="[dt_UniqueJobs]" DisplayName="Clear UniqueJobs Data Table" sap:VirtualizedContainerService.HintSize="1292.8,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_3" />
+              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe 1,557,162+'" sap:VirtualizedContainerService.HintSize="1292.8,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="aab61d342869fb1b0d72084215372d76" WaitForReady="INTERACTIVE" />
             </Sequence>
           </ActivityAction>
         </ui:OpenBrowser.Body>
@@ -776,8 +809,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:OpenBrowser>
-      <ui:BuildDataTable DataTable="[datatable_title]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1414.4,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;KeyWord&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;JobTitle&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;JobLocation&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;UniqueJobs&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DatePosted&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DateRetrieved&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;WebsiteName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Keyword&quot;,&quot;CompanyName&quot;,&quot;Jobtitle&quot;,&quot;Joblocation&quot;,&quot;UniqueJobs&quot;,&quot;PostedDate&quot;,&quot;SearchedDate&quot;,&quot;Source&quot;,&quot;URL&quot;}]" DataTable="[datatable_title]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="1414.4,52.8" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+      <ui:BuildDataTable DataTable="[datatable_title]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1368,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;KeyWord&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;JobTitle&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;JobLocation&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;UniqueJobs&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DatePosted&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DateRetrieved&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;WebsiteName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;Keyword&quot;,&quot;CompanyName&quot;,&quot;Jobtitle&quot;,&quot;Joblocation&quot;,&quot;UniqueJobs&quot;,&quot;PostedDate&quot;,&quot;SearchedDate&quot;,&quot;Source&quot;,&quot;URL&quot;}]" DataTable="[datatable_title]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="1368,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -785,29 +818,29 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataRow>
-      <ui:WriteRange AddHeaders="False" DataTable="[datatable_title]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1414.4,52.8" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="ZipDuplicates" StartingCell="A1" WorkbookPath="excelsheet\ZipRepcruiter.xlsx">
+      <ui:WriteRange AddHeaders="False" DataTable="[datatable_title]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1368,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="ZipDuplicates" StartingCell="A1" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:WriteRange>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Filter for ExcelDuplicates" sap:VirtualizedContainerService.HintSize="1414.4,661.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="excelsheet\ZipRepcruiter.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Filter for ExcelDuplicates" sap:VirtualizedContainerService.HintSize="1368,1280.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\revature\Project 3\excelsheet\ZipRepcruiter.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,552" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,1171.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[datatable_FilteredJobTitles]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="ZipDuplicates" />
-              <ui:RemoveDuplicateRows DataTable="[datatable_FilteredJobTitles]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[datatable_FilteredJobTitles]" />
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[datatable_FilteredJobTitles]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="ZipDuplicates" />
+              <ui:RemoveDuplicateRows DataTable="[datatable_FilteredJobTitles]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[datatable_FilteredJobTitles]" />
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,259.2" sap2010:WorkflowViewState.IdRef="CommentOut_16">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
                     <sap:WorkflowViewStateService.ViewState>
@@ -825,7 +858,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,259.2" sap2010:WorkflowViewState.IdRef="CommentOut_15">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
                     <sap:WorkflowViewStateService.ViewState>
@@ -849,7 +882,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,259.2" sap2010:WorkflowViewState.IdRef="CommentOut_12">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
                     <sap:WorkflowViewStateService.ViewState>
@@ -877,7 +910,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[datatable_FilteredJobTitles]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1414.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[&quot;ZipRecruiter &quot; + keyword]" WorkbookPath="Job.xlsx" />
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[datatable_FilteredJobTitles]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1368,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[&quot;ZipRecruiter &quot; + keyword]" WorkbookPath="C:\revature\Project 3\excelsheet\Job.xlsx" />
     </Sequence>
   </Sequence>
 </Activity>
