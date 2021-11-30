@@ -14,3 +14,8 @@ There is a 15 second delay in place between company search and scrape
     this solves issue with a delay in information updating
         this delay had been rather lengthy
 
+Tried to swap delay with 'Element Attribute Change Trigger' activity
+    did not work
+
+Tried to use simulated click/type
+    did not work
