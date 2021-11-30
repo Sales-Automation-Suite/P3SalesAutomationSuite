@@ -7587,9 +7587,9 @@
     "restore": {
       "projectUniqueName": "BlankProcess1",
       "projectName": "BlankProcess1",
-      "projectPath": "C:\\Users\\aaron\\Documents\\UiPath\\BlankProcess1\\.local",
+      "projectPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aaron\\Documents\\UiPath\\BlankProcess1\\.local"
+      "outputPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local"
     },
     "frameworks": {
       "net461": {
