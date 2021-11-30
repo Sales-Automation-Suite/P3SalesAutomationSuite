@@ -1,0 +1,16 @@
+EMSIReadMeFirst.md
+
+Element Exists was created as a library to deal with a popup
+    library is in the 'Libraries' directory
+
+Library files are included
+    in EMSIpopUp directory
+
+Do While loops have been put in place for Element Exists
+    this solves issue with a delay in the site loading
+    also solves issue with a dealy in finding the company
+
+There is a 15 second delay in place between company search and scrape
+    this solves issue with a delay in information updating
+        this delay had been rather lengthy
+

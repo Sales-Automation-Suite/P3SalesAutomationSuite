@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ywVBG7IxK73AC9KbtsYWf8XRMAN8XhHG7kFZ+CBLo4Sw8Y3Eab2k8LAOK8fDIf1nuuouqfMC8y1OC+aSHX9A3Q==",
+  "dgSpecHash": "TEYyjtk6qXTSiFyt+mNOEa8ctJNRqyNo4dxcaRG6iyBvgoMD9yhrQgLrxkI4rB5z0y40MMQ0Ml2Fs2SmwEEqgw==",
   "success": true,
-  "projectFilePath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local\\",
+  "projectFilePath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\EMSIpopUp\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\aaron\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
-    "C:\\Users\\aaron\\.nuget\\packages\\emsipopup\\1.1.0\\emsipopup.1.1.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\google.apis\\1.43.0\\google.apis.1.43.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\google.apis.auth\\1.43.0\\google.apis.auth.1.43.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\google.apis.calendar.v3\\1.43.0.1872\\google.apis.calendar.v3.1.43.0.1872.nupkg.sha512",

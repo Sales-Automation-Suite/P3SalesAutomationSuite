@@ -1,19 +1,18 @@
 {
-  "name": "EMSIAutomation",
-  "description": "Gets data from the EMSI website",
-  "main": "EMSI-Data.xaml",
+  "name": "EMSIpopUp",
+  "description": "clears popup from the EMSI site",
+  "main": "NewActivity.xaml",
   "dependencies": {
-    "EMSIpopUp": "[1.1.0]",
-    "UiPath.Excel.Activities": "[2.11.4]",
-    "UiPath.Mail.Activities": "[1.12.3]",
-    "UiPath.System.Activities": "[21.10.2]",
-    "UiPath.UIAutomation.Activities": "[21.11.0-preview]"
+    "UiPath.Excel.Activities": "2.11.4",
+    "UiPath.Mail.Activities": "1.12.3",
+    "UiPath.System.Activities": "21.10.2",
+    "UiPath.UIAutomation.Activities": "21.11.0-preview"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.10.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.1.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -31,7 +30,7 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -43,14 +42,6 @@
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
-  "entryPoints": [
-    {
-      "filePath": "EMSI-Data.xaml",
-      "uniqueId": "96272424-980f-4ade-88dd-af4b9451d7f6",
-      "input": [],
-      "output": []
-    }
-  ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},

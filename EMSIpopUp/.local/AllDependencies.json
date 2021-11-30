@@ -36,22 +36,6 @@
           "lib/DocumentFormat.OpenXml.dll": {}
         }
       },
-      "EMSIpopUp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.11.4",
-          "UiPath.Mail.Activities": "1.12.3",
-          "UiPath.System.Activities": "21.10.2",
-          "UiPath.UIAutomation.Activities": "21.11.0-preview"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/EMSIpopUp.dll": {},
-          "lib/net45/EMSIpopUp_Expressions_38839134.dll": {}
-        }
-      },
       "Google.Apis/1.43.0": {
         "type": "package",
         "dependencies": {
@@ -2080,22 +2064,6 @@
         },
         "runtime": {
           "lib/DocumentFormat.OpenXml.dll": {}
-        }
-      },
-      "EMSIpopUp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.11.4",
-          "UiPath.Mail.Activities": "1.12.3",
-          "UiPath.System.Activities": "21.10.2",
-          "UiPath.UIAutomation.Activities": "21.11.0-preview"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/EMSIpopUp.dll": {},
-          "lib/net45/EMSIpopUp_Expressions_38839134.dll": {}
         }
       },
       "Google.Apis/1.43.0": {
@@ -4127,28 +4095,6 @@
         "documentformat.openxml.2.5.0.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "lib/DocumentFormat.OpenXml.dll"
-      ]
-    },
-    "EMSIpopUp/1.1.0": {
-      "sha512": "+EyXCIk2iDQHW6kprABHxWy0qKhQsgEMW5EDiyNa7LxYGx+QbC8xD9y7sspDMCvAD6WqHC1RE+KCxdWehI20bA==",
-      "type": "package",
-      "path": "emsipopup/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        "emsipopup.1.1.0.nupkg.sha512",
-        "emsipopup.nuspec",
-        "lib/net45/.settings/Design/settings-afad0842.json",
-        "lib/net45/.settings/Release/settings-1a5b880a.json",
-        "lib/net45/.settings/Release/settings-5190454b.json",
-        "lib/net45/.settings/Release/settings-590bb27b.json",
-        "lib/net45/.settings/Release/settings-9e9290da.json",
-        "lib/net45/.settings/Release/settings-a1b2dac1.json",
-        "lib/net45/.settings/Release/settings-afad0842.json",
-        "lib/net45/EMSIpopUp.dll",
-        "lib/net45/EMSIpopUp.xaml",
-        "lib/net45/EMSIpopUp_Expressions_38839134.dll",
-        "lib/net45/bindings.json",
-        "lib/net45/project.json"
       ]
     },
     "Google.Apis/1.43.0": {
@@ -7628,7 +7574,6 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "EMSIpopUp >= 1.1.0 <= 1.1.0",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.System.Activities >= 21.10.2 <= 21.10.2",
@@ -7640,20 +7585,15 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "EMSIAutomation",
-      "projectName": "EMSIAutomation",
-      "projectPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local",
+      "projectUniqueName": "EMSIpopUp",
+      "projectName": "EMSIpopUp",
+      "projectPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\EMSIpopUp\\.local",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-      "outputPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local"
+      "outputPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\EMSIpopUp\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
-          "EMSIpopUp": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.1.0, 1.1.0]"
-          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
