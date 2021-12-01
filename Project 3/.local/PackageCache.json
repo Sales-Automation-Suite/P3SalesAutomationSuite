@@ -325,6 +325,18 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3"
+    },
+    {
+      "Package": {
+        "Id": "ScrollActivity",
+        "Version": "1.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\scrollactivity/1.0.2\\lib/net461/ScrollActivity.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\scrollactivity\\1.0.2"
     }
   ],
   "Conflicts": [],
@@ -469,6 +481,11 @@
           "Item2": "[2.10.0, )"
         }
       ]
+    },
+    "Microsoft.Activities.Extensions": {
+      "Id": "Microsoft.Activities.Extensions",
+      "Version": "2.0.6.9",
+      "Dependencies": []
     },
     "Microsoft.AspNet.SignalR.Client": {
       "Id": "Microsoft.AspNet.SignalR.Client",
@@ -1016,6 +1033,16 @@
       "Id": "Portable.BouncyCastle",
       "Version": "1.8.8",
       "Dependencies": []
+    },
+    "ScrollActivity": {
+      "Id": "ScrollActivity",
+      "Version": "1.0.2",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Activities.Extensions",
+          "Item2": "[2.0.6.9, )"
+        }
+      ]
     },
     "SharpZipLib": {
       "Id": "SharpZipLib",
@@ -1639,6 +1666,17 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.Activities.Extensions",
+        "Version": "2.0.6.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.AspNet.SignalR.Client",
         "Version": "2.4.0"
       },
@@ -2096,6 +2134,16 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\portable.bouncycastle\\1.8.8\\lib\\net40\\BouncyCastle.Crypto.dll"
       ],
       "Path": "C:\\Users\\Aaron\\.nuget\\packages\\portable.bouncycastle\\1.8.8"
+    },
+    {
+      "Package": {
+        "Id": "ScrollActivity",
+        "Version": "1.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\scrollactivity\\1.0.2\\lib\\net461\\ScrollActivity.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\scrollactivity\\1.0.2"
     },
     {
       "Package": {

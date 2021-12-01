@@ -91,6 +91,7 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Indeed and Dice" sap:VirtualizedContainerService.HintSize="739.2,1128" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -198,14 +199,30 @@
                     <av:PointCollection x:Key="ConnectorLocation">530,183.6 530,138.9 400,138.9</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="476.8,747.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="324.8,668.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Indeed" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.indeed.com">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LinkedIn workflow" sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="LinkedIn.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="Keyword">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="keywordstoqueue.SpecificContent(&quot;JobTitle&quot;).ToString" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="numberofJob">
+                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Convert.ToInt32(keywordstoqueue.SpecificContent(&quot;Number_Of_Job_Search&quot;))" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser - Indeed" sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.indeed.com">
                     <ui:OpenBrowser.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -225,8 +242,12 @@
                           </ui:InvokeWorkflowFile>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke BrowsingJobIndeed workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="BrowsingJobIndeed.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="Numberofjobs">[Convert.ToInt32(keywordstoqueue.SpecificContent("Number_Of_Job_Search"))]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="Keyword">[keywordstoqueue.SpecificContent("JobTitle").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="Numberofjobs">
+                                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Convert.ToInt32(keywordstoqueue.SpecificContent(&quot;Number_Of_Job_Search&quot;))" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Keyword">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="keywordstoqueue.SpecificContent(&quot;JobTitle&quot;).ToString" />
+                              </InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </Sequence>
@@ -239,7 +260,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:OpenBrowser>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dice" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="DiceSearch.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dice" sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="DiceSearch.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Int32" x:Key="numberofjobs">[Convert.ToInt32(keywordstoqueue.SpecificContent("Number_Of_Job_Search"))]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="inputjob">[keywordstoqueue.SpecificContent("JobTitle").ToString]</InArgument>
@@ -251,7 +272,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Monster " sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Monster.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Monster " sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Monster.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="str_jobSearch">[keywordstoqueue.SpecificContent("JobTitle").ToString]</InArgument>
                       <InArgument x:TypeArguments="x:Int32" x:Key="nb_jobsearch">[Convert.ToInt32(keywordstoqueue.SpecificContent("Number_Of_Job_Search"))]</InArgument>
@@ -263,30 +284,23 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,224" sap2010:WorkflowViewState.IdRef="CommentOut_23">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ZipRecruiterDataScrapeandWrite workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="ZipRecruiterDataScrapeandWrite.xaml">
-                          <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:Int32" x:Key="numberofjob">[Convert.ToInt32(keywordstoqueue.SpecificContent("Number_Of_Job_Search"))]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="keyword">[keywordstoqueue.SpecificContent("JobTitle").ToString]</InArgument>
-                          </ui:InvokeWorkflowFile.Arguments>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:InvokeWorkflowFile>
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                  </ui:CommentOut>
-                  <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Status="Successful" TransactionItem="[keywordstoqueue]">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ZipRecruiterDataScrapeandWrite workflow" sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="ZipRecruiterDataScrapeandWrite.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="numberofjob">
+                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Convert.ToInt32(keywordstoqueue.SpecificContent(&quot;Number_Of_Job_Search&quot;))" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="keyword">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="keywordstoqueue.SpecificContent(&quot;JobTitle&quot;).ToString" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Status="Successful" TransactionItem="[keywordstoqueue]">
                     <ui:SetTransactionStatus.Analytics>
                       <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                     </ui:SetTransactionStatus.Analytics>

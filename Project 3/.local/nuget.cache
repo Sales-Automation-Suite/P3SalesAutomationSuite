@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lqQ2yyAbt2kZOsg7t6EWUKu9pDOASpyjiDKUpWlCpreUhjj/vprSuQtwbmNGLUq5iG+Uo67Mz/hN5BgX0c9EXg==",
+  "dgSpecHash": "GpouKCoi/tYGnH4jHvwVZNdt5OdbvU6BKi5ui0lQM73CVKbZ2ql5zMsh8rGQ8lTlh2x0ZNCr4IrEpB6mXJ+x1Q==",
   "success": true,
   "projectFilePath": "C:\\revature\\P3\\Indeed\\Project 3\\.local\\",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Aaron\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2\\login.1.1.2.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
+    "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
@@ -61,6 +62,7 @@
     "C:\\Users\\Aaron\\.nuget\\packages\\nito.disposables\\2.2.0\\nito.disposables.2.2.0.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\portable.bouncycastle\\1.8.8\\portable.bouncycastle.1.8.8.nupkg.sha512",
+    "C:\\Users\\Aaron\\.nuget\\packages\\scrollactivity\\1.0.2\\scrollactivity.1.0.2.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Aaron\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",

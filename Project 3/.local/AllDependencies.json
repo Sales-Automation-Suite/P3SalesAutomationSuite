@@ -166,6 +166,19 @@
           "lib/net46/MailKit.dll": {}
         }
       },
+      "Microsoft.Activities.Extensions/2.0.6.9": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Activities"
+        ],
+        "compile": {
+          "lib/Net45/_._": {}
+        },
+        "runtime": {
+          "lib/Net45/Microsoft.Activities.Extensions.Design.dll": {},
+          "lib/Net45/Microsoft.Activities.Extensions.dll": {}
+        }
+      },
       "Microsoft.AspNet.SignalR.Client/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -892,6 +905,18 @@
         },
         "runtime": {
           "lib/net40/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "ScrollActivity/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Activities.Extensions": "2.0.6.9"
+        },
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/ScrollActivity.dll": {}
         }
       },
       "SharpZipLib/1.2.0": {
@@ -2261,6 +2286,19 @@
           "lib/net46/MailKit.dll": {}
         }
       },
+      "Microsoft.Activities.Extensions/2.0.6.9": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Activities"
+        ],
+        "compile": {
+          "lib/Net45/_._": {}
+        },
+        "runtime": {
+          "lib/Net45/Microsoft.Activities.Extensions.Design.dll": {},
+          "lib/Net45/Microsoft.Activities.Extensions.dll": {}
+        }
+      },
       "Microsoft.AspNet.SignalR.Client/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -2984,6 +3022,18 @@
         },
         "runtime": {
           "lib/net40/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "ScrollActivity/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Activities.Extensions": "2.0.6.9"
+        },
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/ScrollActivity.dll": {}
         }
       },
       "SharpZipLib/1.2.0": {
@@ -4431,6 +4481,28 @@
         "mailkit.nuspec"
       ]
     },
+    "Microsoft.Activities.Extensions/2.0.6.9": {
+      "sha512": "yGwK3gYUzzGIzgybBtXsCbcWIj+Dv+gadnaWkmG0WpBs22AV8ZS7deFhAb2pznDoGz0Pj4M7Tt9RwK9VrNzf4A==",
+      "type": "package",
+      "path": "microsoft.activities.extensions/2.0.6.9",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "help/Microsoft.Activities.Extensions Documentation.chm",
+        "lib/Net40/Microsoft.Activities.Extensions.Design.dll",
+        "lib/Net40/Microsoft.Activities.Extensions.dll",
+        "lib/Net401/Microsoft.Activities.Extensions.Design.dll",
+        "lib/Net401/Microsoft.Activities.Extensions.dll",
+        "lib/Net45/Microsoft.Activities.Extensions.Design.dll",
+        "lib/Net45/Microsoft.Activities.Extensions.dll",
+        "microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
+        "microsoft.activities.extensions.nuspec",
+        "tools/Microsoft.Activities.Extensions.NuGet.dll",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Microsoft.AspNet.SignalR.Client/2.4.0": {
       "sha512": "xGoQq9dEsBU49U1Whl0To2JyRQePmo8ayYS8VNruLlQaX+fQBzYyLJeMlW9r7mlt8Vc9JP+083m9pKrfYpdDbg==",
       "type": "package",
@@ -5710,6 +5782,18 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.8.8.nupkg.sha512",
         "portable.bouncycastle.nuspec"
+      ]
+    },
+    "ScrollActivity/1.0.2": {
+      "sha512": "ETsveSJzZInICJGEF6F0SdnEB0oeYCvxMb36QGPsMmzriLc1jVZ9CJQziBKkLBklTNNuhXu0GoEhkU1+AhcE5g==",
+      "type": "package",
+      "path": "scrollactivity/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/ScrollActivity.dll",
+        "scrollactivity.1.0.2.nupkg.sha512",
+        "scrollactivity.nuspec"
       ]
     },
     "SharpZipLib/1.2.0": {
@@ -7745,6 +7829,7 @@
     "": [],
     ".NETFramework,Version=v4.6.1": [
       "LogIn >= 1.1.2 <= 1.1.2",
+      "ScrollActivity >= 1.0.2 <= 1.0.2",
       "UiPath.Database.Activities >= 1.4.0 <= 1.4.0",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.12.2 <= 1.12.2",
@@ -7770,6 +7855,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[1.1.2, 1.1.2]"
+          },
+          "ScrollActivity": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.2, 1.0.2]"
           },
           "UiPath.Database.Activities": {
             "include": "Runtime",
