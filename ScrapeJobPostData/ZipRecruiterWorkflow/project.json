@@ -1,13 +1,13 @@
 {
-  "name": "CareerBuilder",
-  "description": "data scraping for career builder",
+  "name": "Garbonzo Beans",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.11.4]",
-    "UiPath.Mail.Activities": "[1.9.5]",
-    "UiPath.OCR.Activities": "[3.3.2]",
-    "UiPath.System.Activities": "[20.10.4]",
-    "UiPath.UIAutomation.Activities": "[20.10.9]"
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.System.Activities": "[21.10.2]",
+    "UiPath.UIAutomation.Activities": "[21.10.3]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -46,7 +46,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "11818bab-36b5-4259-a41f-11f97928e410",
+      "uniqueId": "89397889-4227-4e1a-862e-4b91426fec04",
       "input": [],
       "output": []
     }

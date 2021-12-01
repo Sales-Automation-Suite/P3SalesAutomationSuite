@@ -1232,6 +1232,47 @@
           "lib/net461/ConnectionClient.dll": {}
         }
       },
+      "UiPath.Database.Activities/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/_._": {}
+        },
+        "runtime": {
+          "lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll": {},
+          "lib/net452/UiPath.Database.Activities.Design.dll": {},
+          "lib/net452/UiPath.Database.Activities.dll": {},
+          "lib/net452/UiPath.Database.dll": {}
+        },
+        "resource": {
+          "lib/net452/fr/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
       "UiPath.Excel.Activities/2.11.4": {
         "type": "package",
         "dependencies": {
@@ -1364,7 +1405,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.12.2": {
+      "UiPath.Mail.Activities/1.12.3": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.43.0.1872",
@@ -3247,6 +3288,47 @@
           "lib/net461/ConnectionClient.dll": {}
         }
       },
+      "UiPath.Database.Activities/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/_._": {}
+        },
+        "runtime": {
+          "lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll": {},
+          "lib/net452/UiPath.Database.Activities.Design.dll": {},
+          "lib/net452/UiPath.Database.Activities.dll": {},
+          "lib/net452/UiPath.Database.dll": {}
+        },
+        "resource": {
+          "lib/net452/fr/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
       "UiPath.Excel.Activities/2.11.4": {
         "type": "package",
         "dependencies": {
@@ -3379,7 +3461,7 @@
           "lib/net461/UiPath.ImageProcessingInterop.dll": {}
         }
       },
-      "UiPath.Mail.Activities/1.12.2": {
+      "UiPath.Mail.Activities/1.12.3": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.43.0.1872",
@@ -6388,6 +6470,30 @@
         "uipath.connectionclient.nuspec"
       ]
     },
+    "UiPath.Database.Activities/1.4.0": {
+      "sha512": "NcuWj42NzxFqoA0tB6MPewAwTPpaifdGBTLQCS2KmFPIKMPl9t3dq5iAG63gOv/gJbKNItDjHBnsRT9Gjo3hJg==",
+      "type": "package",
+      "path": "uipath.database.activities/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "lib/net452/UiPath.Database.Activities.Design.dll",
+        "lib/net452/UiPath.Database.Activities.dll",
+        "lib/net452/UiPath.Database.dll",
+        "lib/net452/fr/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/fr/UiPath.Database.Activities.resources.dll",
+        "lib/net452/fr/UiPath.Database.resources.dll",
+        "lib/net452/ja/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/ja/UiPath.Database.Activities.resources.dll",
+        "lib/net452/ja/UiPath.Database.resources.dll",
+        "lib/net452/ru/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/ru/UiPath.Database.Activities.resources.dll",
+        "lib/net452/ru/UiPath.Database.resources.dll",
+        "uipath.database.activities.1.4.0.nupkg.sha512",
+        "uipath.database.activities.nuspec"
+      ]
+    },
     "UiPath.Excel.Activities/2.11.4": {
       "sha512": "PYSWoOW7ftcjeUE2m1e+gNFNuYrrKQN3tygoDbNVFsQYyJPIe2YnhHO7kW+Svn0NlLO91APHzNKKGkiD+L8FrA==",
       "type": "package",
@@ -6504,10 +6610,10 @@
         "uipath.imageprocessing.nuspec"
       ]
     },
-    "UiPath.Mail.Activities/1.12.2": {
-      "sha512": "3gTMxrCVnIjRqpkwJIe0bq36WE2e1tskHu+etId1snputOSrR455XpzYRVVFqziOcnqelxoMPehkF7EhRx2DXA==",
+    "UiPath.Mail.Activities/1.12.3": {
+      "sha512": "QBTeCxDkp4aX0LhObhLxsttmBj4uZYQYibj0uuP5fWW4eS1Q4ZJbzhkx323YC3hEB1iDX/1fCCS0TSOENVZPYQ==",
       "type": "package",
-      "path": "uipath.mail.activities/1.12.2",
+      "path": "uipath.mail.activities/1.12.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -6743,7 +6849,7 @@
         "tools/net461/MainSessionServer/UiPath.Mail.MainSessionServer.exe",
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.dll",
         "tools/net461/MainSessionServer/netstandard.dll",
-        "uipath.mail.activities.1.12.2.nupkg.sha512",
+        "uipath.mail.activities.1.12.3.nupkg.sha512",
         "uipath.mail.activities.nuspec"
       ]
     },
@@ -7558,9 +7664,9 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "UiPath.Database.Activities >= 1.4.0 <= 1.4.0",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
-      "UiPath.Mail.Activities >= 1.12.2 <= 1.12.2",
-      "UiPath.OCR.Activities >= 3.3.2 <= 3.3.2",
+      "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.System.Activities >= 21.10.2 <= 21.10.2",
       "UiPath.UIAutomation.Activities >= 21.10.3 <= 21.10.3"
     ]
@@ -7570,15 +7676,20 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "CareerBuilder",
-      "projectName": "CareerBuilder",
-      "projectPath": "C:\\Revature\\Projects\\P3SalesAutomationSuite\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local",
+      "projectUniqueName": "Garbonzo Beans",
+      "projectName": "Garbonzo Beans",
+      "projectPath": "C:\\Revature\\Projects\\P3SalesAutomationSuite\\ScrapeJobPostData\\ZipRecruiterWorkflow\\.local",
       "packagesPath": "C:\\Users\\klkil\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\Projects\\P3SalesAutomationSuite\\ScrapeJobPostData\\CareerBuilderWorkflow\\.local"
+      "outputPath": "C:\\Revature\\Projects\\P3SalesAutomationSuite\\ScrapeJobPostData\\ZipRecruiterWorkflow\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
+          "UiPath.Database.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.4.0, 1.4.0]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -7587,12 +7698,7 @@
           "UiPath.Mail.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.12.2, 1.12.2]"
-          },
-          "UiPath.OCR.Activities": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[3.3.2, 3.3.2]"
+            "version": "[1.12.3, 1.12.3]"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",
