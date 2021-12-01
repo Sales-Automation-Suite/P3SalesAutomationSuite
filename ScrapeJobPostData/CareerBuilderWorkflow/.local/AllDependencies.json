@@ -32,13 +32,18 @@
           "lib/net40/ClosedXML.dll": {}
         }
       },
-      "CsvHelper/2.13.5": {
+      "CsvHelper/15.0.5": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.2",
+          "System.ValueTuple": "4.4.0"
+        },
         "compile": {
-          "lib/net40-client/_._": {}
+          "lib/net45/_._": {}
         },
         "runtime": {
-          "lib/net40-client/CsvHelper.dll": {}
+          "lib/net45/CsvHelper.dll": {}
         }
       },
       "DocumentFormat.OpenXml/2.5.0": {
@@ -345,6 +350,18 @@
           "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
       "Microsoft.Exchange.WebServices/2.2.0": {
         "type": "package",
         "compile": {
@@ -505,13 +522,13 @@
           "lib/net461/Microsoft.Rest.ClientRuntime.dll": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
+      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
         "type": "package",
         "compile": {
-          "lib/_._": {}
+          "lib/net45/_._": {}
         },
         "runtime": {
-          "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
+          "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -746,21 +763,24 @@
           "build/_._": {}
         }
       },
-      "UiPath.Excel.Activities/2.9.5": {
+      "UiPath.Excel.Activities/2.11.4": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
-          "CsvHelper": "2.13.5",
+          "CsvHelper": "15.0.5",
           "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
-          "NPOI": "2.4.1",
-          "SharpZipLib": "1.0.0"
+          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
+          "NPOI": "2.4.1"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net461/Microsoft.Vbe.Interop.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
+          "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
           "lib/net461/UiPath.Excel.dll": {}
         },
@@ -1571,13 +1591,18 @@
           "lib/net40/ClosedXML.dll": {}
         }
       },
-      "CsvHelper/2.13.5": {
+      "CsvHelper/15.0.5": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.2",
+          "System.ValueTuple": "4.4.0"
+        },
         "compile": {
-          "lib/net40-client/_._": {}
+          "lib/net45/_._": {}
         },
         "runtime": {
-          "lib/net40-client/CsvHelper.dll": {}
+          "lib/net45/CsvHelper.dll": {}
         }
       },
       "DocumentFormat.OpenXml/2.5.0": {
@@ -1884,6 +1909,18 @@
           "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
       "Microsoft.Exchange.WebServices/2.2.0": {
         "type": "package",
         "compile": {
@@ -2044,13 +2081,13 @@
           "lib/net461/Microsoft.Rest.ClientRuntime.dll": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
+      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
         "type": "package",
         "compile": {
-          "lib/_._": {}
+          "lib/net45/_._": {}
         },
         "runtime": {
-          "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
+          "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -2285,21 +2322,24 @@
           "build/_._": {}
         }
       },
-      "UiPath.Excel.Activities/2.9.5": {
+      "UiPath.Excel.Activities/2.11.4": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.87.1",
-          "CsvHelper": "2.13.5",
+          "CsvHelper": "15.0.5",
           "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.VisualStudio.OLE.Interop": "7.10.6071",
-          "NPOI": "2.4.1",
-          "SharpZipLib": "1.0.0"
+          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
+          "NPOI": "2.4.1"
         },
         "compile": {
           "lib/net461/_._": {}
         },
         "runtime": {
+          "lib/net461/Microsoft.Office.Interop.Excel.dll": {},
+          "lib/net461/Microsoft.Vbe.Interop.dll": {},
+          "lib/net461/Office.dll": {},
           "lib/net461/UiPath.Excel.Activities.Design.dll": {},
+          "lib/net461/UiPath.Excel.Activities.Package.dll": {},
           "lib/net461/UiPath.Excel.Activities.dll": {},
           "lib/net461/UiPath.Excel.dll": {}
         },
@@ -3126,27 +3166,24 @@
         "lib/net40/ClosedXML.xml"
       ]
     },
-    "CsvHelper/2.13.5": {
-      "sha512": "fC8DPi/YTcZ8uXFiAeuT9EpsR2TE5cSJ2jg/4tht/Oen6az/djebpYoCQEtI33RfNrSZ533SedOknlWtUTX3fw==",
+    "CsvHelper/15.0.5": {
+      "sha512": "HPoE5nASoFXqoXKSi5yEBam7TzDrtC8WESA4xq53JtPKV8Mm+IKRuN+FJyMoJg1Whv/NG4JiCUs9yUcaSY/ziQ==",
       "type": "package",
-      "path": "csvhelper/2.13.5",
+      "path": "csvhelper/15.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "csvhelper.2.13.5.nupkg.sha512",
+        "Icon.png",
+        "csvhelper.15.0.5.nupkg.sha512",
         "csvhelper.nuspec",
-        "lib/net20/CsvHelper.dll",
-        "lib/net20/CsvHelper.pdb",
-        "lib/net20/CsvHelper.xml",
-        "lib/net35-client/CsvHelper.dll",
-        "lib/net35-client/CsvHelper.pdb",
-        "lib/net35-client/CsvHelper.xml",
-        "lib/net40-client/CsvHelper.dll",
-        "lib/net40-client/CsvHelper.pdb",
-        "lib/net40-client/CsvHelper.xml",
-        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.dll",
-        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.pdb",
-        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.xml"
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
     "DocumentFormat.OpenXml/2.5.0": {
@@ -3553,6 +3590,74 @@
         "version.txt"
       ]
     },
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.Exchange.WebServices/2.2.0": {
       "sha512": "NlkaTD0uWtg9VbiWq0VDWMBPzHFknH3tmstrxt0acrT09LBGqATTjRpsGOODz6tUdX7/dehBinxsf75U5Uw/+A==",
       "type": "package",
@@ -3776,16 +3881,20 @@
         "microsoft.rest.clientruntime.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.OLE.Interop/7.10.6071": {
-      "sha512": "PuINhJH41DbKfkNU+qcyC4Wlt/z0DgI/ViZv6gjUclylnFbUIpCdqm4fK+PKJDfiarHTKnGWkxjKuOIS1Bqs5Q==",
+    "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
+      "sha512": "82RWNPPaQRfFlEtkRQZgSo16a6WpHgL2gfeXbo/ISFHHJWNg/vtyKQrAW7iAsDNp5f3uiZP+9pQWxShAFrlbMw==",
       "type": "package",
-      "path": "microsoft.visualstudio.ole.interop/7.10.6071",
+      "path": "microsoft.visualstudio.ole.interop/16.7.30328.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/Microsoft.VisualStudio.OLE.Interop.dll",
-        "lib/Microsoft.VisualStudio.OLE.Interop.xml",
-        "microsoft.visualstudio.ole.interop.7.10.6071.nupkg.sha512",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
+        "lib/net45/Microsoft.VisualStudio.OLE.Interop.xml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.xml",
+        "microsoft.visualstudio.ole.interop.16.7.30328.74.nupkg.sha512",
         "microsoft.visualstudio.ole.interop.nuspec"
       ]
     },
@@ -4363,14 +4472,18 @@
         "uipath.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.9.5": {
-      "sha512": "tx8DWPOzMeTq15wy6afo8u6dmD0y4XfQG49WsEKDEinysY8zJc1/92Rnf9tdlwng2SpWCJ6PTlDEpfU/SX1k3A==",
+    "UiPath.Excel.Activities/2.11.4": {
+      "sha512": "PYSWoOW7ftcjeUE2m1e+gNFNuYrrKQN3tygoDbNVFsQYyJPIe2YnhHO7kW+Svn0NlLO91APHzNKKGkiD+L8FrA==",
       "type": "package",
-      "path": "uipath.excel.activities/2.9.5",
+      "path": "uipath.excel.activities/2.11.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net461/Microsoft.Office.Interop.Excel.dll",
+        "lib/net461/Microsoft.Vbe.Interop.dll",
+        "lib/net461/Office.dll",
         "lib/net461/UiPath.Excel.Activities.Design.dll",
+        "lib/net461/UiPath.Excel.Activities.Package.dll",
         "lib/net461/UiPath.Excel.Activities.dll",
         "lib/net461/UiPath.Excel.dll",
         "lib/net461/de/UiPath.Excel.Activities.Design.resources.dll",
@@ -4406,7 +4519,47 @@
         "lib/net461/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.9.5.nupkg.sha512",
+        "lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "lib/net5.0-windows7.0/Office.dll",
+        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
+        "lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
+        "lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
+        "lib/net5.0-windows7.0/UiPath.Excel.dll",
+        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/de/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/de/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/es-MX/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/es/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/es/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/fr/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/fr/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ja/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ja/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ko/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ko/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/pt-BR/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/pt/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/pt/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ru/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ru/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/tr/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/tr/UiPath.Excel.resources.dll",
+        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.Activities.resources.dll",
+        "lib/net5.0-windows7.0/zh-CN/UiPath.Excel.resources.dll",
+        "uipath.excel.activities.2.11.4.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -5032,7 +5185,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "UiPath.Excel.Activities >= 2.9.5 <= 2.9.5",
+      "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.9.5 <= 1.9.5",
       "UiPath.OCR.Activities >= 3.3.2 <= 3.3.2",
       "UiPath.System.Activities >= 20.10.4 <= 20.10.4",
@@ -5056,7 +5209,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.9.5, 2.9.5]"
+            "version": "[2.11.4, 2.11.4]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
