@@ -189,7 +189,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <State.Transitions>
-          <Transition DisplayName="T1" sap:VirtualizedContainerService.HintSize="448.8,509.6" sap2010:WorkflowViewState.IdRef="Transition_1">
+          <Transition DisplayName="T1" sap:VirtualizedContainerService.HintSize="448.8,511.2" sap2010:WorkflowViewState.IdRef="Transition_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:PointCollection x:Key="ConnectorLocation">303.12,249.3 303.12,279.3 466.68,279.3 466.68,291.2</av:PointCollection>
@@ -199,7 +199,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <Transition.Condition>[seleted = True]</Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Read data and make sure the data is corrected.&#xA;" DisplayName="Add Data to Queue State" sap:VirtualizedContainerService.HintSize="133.6,137.6" sap2010:WorkflowViewState.IdRef="State_2">
+              <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Read data and make sure the data is corrected.&#xA;" DisplayName="Add Data to Queue State" sap:VirtualizedContainerService.HintSize="461.6,880.8" sap2010:WorkflowViewState.IdRef="State_2">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="416.8,448" sap2010:WorkflowViewState.IdRef="Sequence_27">
                     <sap:WorkflowViewStateService.ViewState>
@@ -218,7 +218,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ReadRange AddHeaders="True" DataTable="[KeywordstoQueue]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A:B" SheetName="Sheet1" WorkbookPath="[selectfile]">
+                      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[KeywordstoQueue]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[selectfile]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -264,9 +264,7 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">35</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EndProgram = True" />
-                    </Transition.Condition>
+                    <Transition.Condition>[EndProgram = True]</Transition.Condition>
                     <Transition.To>
                       <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="End Program&#xA;" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="133.6,105.6" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
                         <sap:WorkflowViewStateService.ViewState>
@@ -288,11 +286,9 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EndProgram = False" />
-                    </Transition.Condition>
+                    <Transition.Condition>[EndProgram = False]</Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="Scraping data state. &#xD;&#xA;" DisplayName="Scrape data" sap:VirtualizedContainerService.HintSize="133.6,121.6" sap2010:WorkflowViewState.IdRef="State_4">
+                      <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="Scraping data state. &#xA;" DisplayName="Scrape data" sap:VirtualizedContainerService.HintSize="133.6,121.6" sap2010:WorkflowViewState.IdRef="State_4">
                         <State.Entry>
                           <Flowchart sap:VirtualizedContainerService.HintSize="874.4,724" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                             <sap:WorkflowViewStateService.ViewState>
@@ -385,17 +381,21 @@
                                           <av:PointCollection x:Key="ConnectorLocation">530,353.6 530,260 400,260</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="200,112.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                      <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="324.8,668.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LinkedIn workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="LinkedIn.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LinkedIn workflow" sap:VirtualizedContainerService.HintSize="283.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="LinkedIn.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
-                                            <InArgument x:TypeArguments="x:String" x:Key="Keyword">[KeywordstoQueue1.SpecificContent("JobTitle").ToString]</InArgument>
-                                            <InArgument x:TypeArguments="x:Int32" x:Key="numberofJob">[Convert.ToInt32(KeywordstoQueue1.SpecificContent("Number_Of_Job_Search"))]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="Keyword">
+                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="KeywordstoQueue1.SpecificContent(&quot;JobTitle&quot;).ToString" />
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:Int32" x:Key="numberofJob">
+                                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Convert.ToInt32(KeywordstoQueue1.SpecificContent(&quot;Number_Of_Job_Search&quot;))" />
+                                            </InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -530,9 +530,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID6</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EndProgram = True" />
-                            </Transition.Condition>
+                            <Transition.Condition>[EndProgram = True]</Transition.Condition>
                           </Transition>
                         </State.Transitions>
                       </State>
