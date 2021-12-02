@@ -7838,15 +7838,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aaron\\.nuget\\packages\\": {}
+    "C:\\Users\\JP\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Project 3",
       "projectName": "Project 3",
-      "projectPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local",
-      "packagesPath": "C:\\Users\\Aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local"
+      "projectPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\P3SalesAutomationSuite\\Project 3\\.local",
+      "packagesPath": "C:\\Users\\JP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JP\\Desktop\\Programming\\Revature\\Revature UIPath Batch\\P3 Sales\\P3SalesAutomationSuite\\Project 3\\.local"
     },
     "frameworks": {
       "net461": {
