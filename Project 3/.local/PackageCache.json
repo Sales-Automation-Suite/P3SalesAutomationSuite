@@ -2,11 +2,12 @@
   "Packages": [
     {
       "Package": {
-        "Id": "LogIn",
-        "Version": "1.1.2"
+        "Id": "login",
+        "Version": "1.0.1"
       },
       "Assemblies": [
         "C:\\Users\\Aaron\\.nuget\\packages\\closedxml/0.87.1\\lib/net40/ClosedXML.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\csvhelper/16.0.0\\lib/net45/CsvHelper.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
@@ -17,9 +18,7 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\google.apis.peopleservice.v1/1.43.0.1876\\lib/net45/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\login/1.1.2\\lib/net45/LogIn.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\login/1.1.2\\lib/net45/LogIn_Expressions_12420524.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\login/1.1.2\\lib/net45/LogIn_Expressions_4307190.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\login/1.0.1\\lib/net45/login.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\mailkit/2.10.0\\lib/net46/MailKit.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions/3.1.6\\lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
@@ -89,6 +88,7 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath/21.10.30.58966\\lib/net45/UiPath.Interop.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.activities.runtimegovernance/1.1.3\\lib/net461/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.connectionclient/1.0.0-20210921.1\\lib/net461/ConnectionClient.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Office.Interop.Excel.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Vbe.Interop.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Office.dll",
@@ -97,15 +97,15 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.imageprocessing/21.10.2\\lib/net461/UiPath.ImageProcessingInterop.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Interop.Domino.UiPath.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Office.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Package.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Interop.Domino.UiPath.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Office.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.Design.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Activities.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.ocr.activities/3.3.2\\lib/net461/UiPath.OCR.Core.dll",
@@ -132,7 +132,7 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.0.1"
     },
     {
       "Package": {
@@ -149,15 +149,23 @@
     {
       "Package": {
         "Id": "UiPath.Database.Activities",
-        "Version": "1.4.0"
+        "Version": "1.5.0"
       },
       "Assemblies": [
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+        "C:\\Users\\Aaron\\.nuget\\packages\\oracle.manageddataaccess/19.11.0\\lib/net40/Oracle.ManagedDataAccess.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.buffers/4.5.1\\lib/net461/System.Buffers.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.data.sqlclient/4.8.2\\runtimes/win/lib/net461/System.Data.SqlClient.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.memory/4.5.4\\lib/net461/System.Memory.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.numerics.vectors/4.5.0\\lib/net46/System.Numerics.Vectors.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.resources.extensions/5.0.0\\lib/net461/System.Resources.Extensions.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.runtime.compilerservices.unsafe/4.7.1\\lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.5.0\\lib/net461/UiPath.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.5.0\\lib/net461/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.5.0\\lib/net461/UiPath.Database.Activities.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.5.0\\lib/net461/UiPath.Database.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities/1.5.0\\lib/net461/runtimes/win-x86/native/sni.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0"
     },
     {
       "Package": {
@@ -188,7 +196,7 @@
     {
       "Package": {
         "Id": "UiPath.Mail.Activities",
-        "Version": "1.12.2"
+        "Version": "1.12.3"
       },
       "Assemblies": [
         "C:\\Users\\Aaron\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
@@ -229,19 +237,19 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.activities.runtimegovernance/1.1.3\\lib/net461/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.connectionclient/1.0.0-20210921.1\\lib/net461/ConnectionClient.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Interop.Domino.UiPath.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Office.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Package.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Interop.Domino.UiPath.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/Office.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.Mail.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities/1.12.3\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.platform/21.10.0\\lib/net461/UiPath.Platform.dll",
         "C:\\Users\\Aaron\\.nuget\\packages\\uipath.telemetry.client/1.5.3\\lib/net461/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3"
     },
     {
       "Package": {
@@ -351,6 +359,11 @@
         }
       ]
     },
+    "CredentialManagement": {
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
+      "Dependencies": []
+    },
     "CsvHelper": {
       "Id": "CsvHelper",
       "Version": "16.0.0",
@@ -450,25 +463,29 @@
         }
       ]
     },
-    "LogIn": {
-      "Id": "LogIn",
-      "Version": "1.1.2",
+    "login": {
+      "Id": "login",
+      "Version": "1.0.1",
       "Dependencies": [
         {
+          "Item1": "UiPath.Credentials.Activities",
+          "Item2": "[1.1.6479.13204, )"
+        },
+        {
           "Item1": "UiPath.Excel.Activities",
-          "Item2": "[2.11.4, )"
+          "Item2": "[2.5.3, )"
         },
         {
           "Item1": "UiPath.Mail.Activities",
-          "Item2": "[1.12.2, )"
+          "Item2": "[1.4.0, )"
         },
         {
           "Item1": "UiPath.System.Activities",
-          "Item2": "[21.10.2, )"
+          "Item2": "[19.4.0, )"
         },
         {
           "Item1": "UiPath.UIAutomation.Activities",
-          "Item2": "[21.10.3, )"
+          "Item2": "[19.4.1, )"
         }
       ]
     },
@@ -1029,6 +1046,11 @@
         }
       ]
     },
+    "Oracle.ManagedDataAccess": {
+      "Id": "Oracle.ManagedDataAccess",
+      "Version": "19.11.0",
+      "Dependencies": []
+    },
     "Portable.BouncyCastle": {
       "Id": "Portable.BouncyCastle",
       "Version": "1.8.8",
@@ -1072,6 +1094,11 @@
     "System.Data.DataSetExtensions": {
       "Id": "System.Data.DataSetExtensions",
       "Version": "4.5.0",
+      "Dependencies": []
+    },
+    "System.Data.SqlClient": {
+      "Id": "System.Data.SqlClient",
+      "Version": "4.8.2",
       "Dependencies": []
     },
     "System.IO.Abstractions": {
@@ -1132,6 +1159,16 @@
         {
           "Item1": "System.Collections.Immutable",
           "Item2": "[5.0.0, )"
+        }
+      ]
+    },
+    "System.Resources.Extensions": {
+      "Id": "System.Resources.Extensions",
+      "Version": "5.0.0",
+      "Dependencies": [
+        {
+          "Item1": "System.Memory",
+          "Item2": "[4.5.4, )"
         }
       ]
     },
@@ -1285,10 +1322,33 @@
         }
       ]
     },
+    "UiPath.Credentials.Activities": {
+      "Id": "UiPath.Credentials.Activities",
+      "Version": "1.1.6479.13204",
+      "Dependencies": [
+        {
+          "Item1": "CredentialManagement",
+          "Item2": "[1.0.2, )"
+        }
+      ]
+    },
     "UiPath.Database.Activities": {
       "Id": "UiPath.Database.Activities",
-      "Version": "1.4.0",
-      "Dependencies": []
+      "Version": "1.5.0",
+      "Dependencies": [
+        {
+          "Item1": "Oracle.ManagedDataAccess",
+          "Item2": "[19.11.0, )"
+        },
+        {
+          "Item1": "System.Data.SqlClient",
+          "Item2": "[4.8.2, )"
+        },
+        {
+          "Item1": "System.Resources.Extensions",
+          "Item2": "[5.0.0, )"
+        }
+      ]
     },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
@@ -1323,7 +1383,7 @@
     },
     "UiPath.Mail.Activities": {
       "Id": "UiPath.Mail.Activities",
-      "Version": "1.12.2",
+      "Version": "1.12.3",
       "Dependencies": [
         {
           "Item1": "Google.Apis.Calendar.v3",
@@ -1562,6 +1622,16 @@
     },
     {
       "Package": {
+        "Id": "CredentialManagement",
+        "Version": "1.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\credentialmanagement\\1.0.2\\lib\\net35\\CredentialManagement.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\credentialmanagement\\1.0.2"
+    },
+    {
+      "Package": {
         "Id": "CsvHelper",
         "Version": "16.0.0"
       },
@@ -1644,15 +1714,13 @@
     },
     {
       "Package": {
-        "Id": "LogIn",
-        "Version": "1.1.2"
+        "Id": "login",
+        "Version": "1.0.1"
       },
       "Assemblies": [
-        "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2\\lib\\net45\\LogIn.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2\\lib\\net45\\LogIn_Expressions_12420524.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2\\lib\\net45\\LogIn_Expressions_4307190.dll"
+        "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.0.1\\lib\\net45\\login.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.1.2"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\login\\1.0.1"
     },
     {
       "Package": {
@@ -2127,6 +2195,16 @@
     },
     {
       "Package": {
+        "Id": "Oracle.ManagedDataAccess",
+        "Version": "19.11.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\oracle.manageddataaccess\\19.11.0\\lib\\net40\\Oracle.ManagedDataAccess.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\oracle.manageddataaccess\\19.11.0"
+    },
+    {
+      "Package": {
         "Id": "Portable.BouncyCastle",
         "Version": "1.8.8"
       },
@@ -2197,6 +2275,16 @@
     },
     {
       "Package": {
+        "Id": "System.Data.SqlClient",
+        "Version": "4.8.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\lib\\net461\\System.Data.SqlClient.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\system.data.sqlclient\\4.8.2"
+    },
+    {
+      "Package": {
         "Id": "System.IO.Abstractions",
         "Version": "3.0.10"
       },
@@ -2254,6 +2342,16 @@
         "C:\\Users\\Aaron\\.nuget\\packages\\system.reflection.metadata\\5.0.0\\lib\\net461\\System.Reflection.Metadata.dll"
       ],
       "Path": "C:\\Users\\Aaron\\.nuget\\packages\\system.reflection.metadata\\5.0.0"
+    },
+    {
+      "Package": {
+        "Id": "System.Resources.Extensions",
+        "Version": "5.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\system.resources.extensions\\5.0.0\\lib\\net461\\System.Resources.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\system.resources.extensions\\5.0.0"
     },
     {
       "Package": {
@@ -2397,16 +2495,26 @@
     },
     {
       "Package": {
-        "Id": "UiPath.Database.Activities",
-        "Version": "1.4.0"
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
       },
       "Assemblies": [
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\Microsoft.Data.ConnectionUI.Dialog.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.Design.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.dll"
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204\\lib\\net40-client\\UiPath.Credentials.Activities.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.5.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0\\lib\\net461\\UiPath.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0\\lib\\net461\\UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0\\lib\\net461\\UiPath.Database.Activities.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0\\lib\\net461\\UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.database.activities\\1.5.0"
     },
     {
       "Package": {
@@ -2437,20 +2545,20 @@
     {
       "Package": {
         "Id": "UiPath.Mail.Activities",
-        "Version": "1.12.2"
+        "Version": "1.12.3"
       },
       "Assemblies": [
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Interop.Domino.UiPath.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Office.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.Package.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.dll",
-        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.MainSessionServer.Shared.dll"
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Interop.Domino.UiPath.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\Office.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.Mail.dll",
+        "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\lib\\net461\\UiPath.MainSessionServer.Shared.dll"
       ],
-      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.2"
+      "Path": "C:\\Users\\Aaron\\.nuget\\packages\\uipath.mail.activities\\1.12.3"
     },
     {
       "Package": {

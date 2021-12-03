@@ -93,7 +93,6 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>ScrollActivity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -129,7 +128,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1325.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_20">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,189.6" sap2010:WorkflowViewState.IdRef="Sequence_133">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,1119.2" sap2010:WorkflowViewState.IdRef="Sequence_133">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,7 +241,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="712,238.4" sap2010:WorkflowViewState.IdRef="Sequence_207">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,339.2" sap2010:WorkflowViewState.IdRef="Sequence_207">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -410,20 +409,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe LinkedIn:'" sap:VirtualizedContainerService.HintSize="636,1675.2" sap2010:WorkflowViewState.IdRef="BrowserScope_31" InformativeScreenshot="1c37a63c7d82bc2e9b750721c4209bf6" Selector="&lt;html app='msedge.exe' title='*LinkedIn*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe LinkedIn:'" sap:VirtualizedContainerService.HintSize="450.4,532.8" sap2010:WorkflowViewState.IdRef="BrowserScope_31" InformativeScreenshot="1c37a63c7d82bc2e9b750721c4209bf6" Selector="&lt;html app='msedge.exe' title='*LinkedIn*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602.4,1528" sap2010:WorkflowViewState.IdRef="Sequence_208">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416.8,385.6" sap2010:WorkflowViewState.IdRef="Sequence_208">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Sign In activity" sap:VirtualizedContainerService.HintSize="560.8,1435.2" sap2010:WorkflowViewState.IdRef="Sequence_193">
+            <Sequence DisplayName="Sign In activity" sap:VirtualizedContainerService.HintSize="375.2,292.8" sap2010:WorkflowViewState.IdRef="Sequence_193">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="Bool_signedIn" />
               </Sequence.Variables>
@@ -433,16 +432,22 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:UiElementExists DisplayName="Element Exists 'BUTTON  ember30'" Exists="[Bool_signedIn]" sap:VirtualizedContainerService.HintSize="519.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_23">
+              <ui:UiElementExists DisplayName="Element Exists 'BUTTON  ember30'" Exists="[Bool_signedIn]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_23">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de55d1a5-c816-4a30-854c-59f1a998656f" InformativeScreenshot="135504a6c07acf7426cd9253744cd60d" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='                  Me                     ' innertext='                  Me                     ' /&gt;" TimeoutMS="750">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de55d1a5-c816-4a30-854c-59f1a998656f" InformativeScreenshot="135504a6c07acf7426cd9253744cd60d" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='                  Me                     ' innertext='                  Me                     ' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[Bool_signedIn = true]" sap:VirtualizedContainerService.HintSize="519.2,1195.2" sap2010:WorkflowViewState.IdRef="If_47">
+              <If Condition="[Bool_signedIn = true]" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_47">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Else>
                   <Sequence sap:VirtualizedContainerService.HintSize="375.2,1036" sap2010:WorkflowViewState.IdRef="Sequence_242">
                     <sap:WorkflowViewStateService.ViewState>
