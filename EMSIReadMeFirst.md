@@ -19,3 +19,8 @@ Tried to swap delay with 'Element Attribute Change Trigger' activity
 
 Tried to use simulated click/type
     did not work
+
+# 12/03/2021
+    replaced the 15 second delay with Do While loop
+        checks to verify that the postings data changed before continuing
+    EMSI website now opens and closes for each company searched
