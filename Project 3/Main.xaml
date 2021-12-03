@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="881.6,825.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1168,825.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="49">
       <x:String>System.Activities</x:String>
@@ -91,7 +91,6 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Integreted Workflow" sap:VirtualizedContainerService.HintSize="675.2,760.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -197,7 +196,9 @@
                 <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Transition.Condition>[seleted = True]</Transition.Condition>
+            <Transition.Condition>
+              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="seleted = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+            </Transition.Condition>
             <Transition.To>
               <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Read data and make sure the data is corrected.&#xA;" DisplayName="Add Data to Queue State" sap:VirtualizedContainerService.HintSize="133.6,137.6" sap2010:WorkflowViewState.IdRef="State_2">
                 <State.Entry>
@@ -264,7 +265,9 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">35</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>[EndProgram = True]</Transition.Condition>
+                    <Transition.Condition>
+                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EndProgram = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                    </Transition.Condition>
                     <Transition.To>
                       <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="End Program&#xA;" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="133.6,105.6" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
                         <sap:WorkflowViewStateService.ViewState>
@@ -286,9 +289,11 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>[EndProgram = False]</Transition.Condition>
+                    <Transition.Condition>
+                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EndProgram = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+                    </Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Scraping data state. &#xA;" DisplayName="Scrape data" sap:VirtualizedContainerService.HintSize="960.8,1408" sap2010:WorkflowViewState.IdRef="State_4">
+                      <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Scraping data state. &#xA;" DisplayName="Scrape data" sap:VirtualizedContainerService.HintSize="133.6,121.6" sap2010:WorkflowViewState.IdRef="State_4">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="916,1002.4" sap2010:WorkflowViewState.IdRef="Sequence_52">
                             <sap:WorkflowViewStateService.ViewState>
@@ -558,7 +563,7 @@
                                             <av:PointCollection x:Key="ConnectorLocation">510,353.6 510,260 400,260</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="855.2,606.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                        <Sequence sap2010:Annotation.AnnotationText="Only Indeed, Dice, monster, and Zip Recruiter " DisplayName="Job Searching" sap:VirtualizedContainerService.HintSize="200,112.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -780,7 +785,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                       <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
-                                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  ember31'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  ember31'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                                                                         <ui:Click.CursorPosition>
                                                                           <ui:CursorPosition OffsetX="57" OffsetY="23" Position="TopLeft" />
                                                                         </ui:Click.CursorPosition>
@@ -788,12 +793,16 @@
                                                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6107da58-e70b-4dc0-8a9f-0f7f3c235b5f" InformativeScreenshot="806a5c42cd77ee5064dee289fd24cb6d" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='                  Me                     ' innertext='                  Me                     ' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
                                                                         </ui:Click.Target>
                                                                       </ui:Click>
-                                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /m/logout/'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /m/logout/'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                                                                         <ui:Click.CursorPosition>
                                                                           <ui:CursorPosition OffsetX="113" OffsetY="24" Position="TopLeft" />
                                                                         </ui:Click.CursorPosition>
                                                                         <ui:Click.Target>
-                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d6c87d2-b0c1-4290-b04e-94afedf6b707" InformativeScreenshot="c396fa1535c33d6889b325c53e042ed1" Selector="&lt;webctrl aaname='           Sign Out         ' tag='A' innertext='           Sign Out         ' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d6c87d2-b0c1-4290-b04e-94afedf6b707" InformativeScreenshot="c396fa1535c33d6889b325c53e042ed1" Selector="&lt;webctrl aaname='           Sign Out         ' tag='A' innertext='           Sign Out         ' /&gt;" WaitForReady="COMPLETE">
+                                                                            <ui:Target.TimeoutMS>
+                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                            </ui:Target.TimeoutMS>
+                                                                          </ui:Target>
                                                                         </ui:Click.Target>
                                                                       </ui:Click>
                                                                       <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'BUTTON  ember253'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
