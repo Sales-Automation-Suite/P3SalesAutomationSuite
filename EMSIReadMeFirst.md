@@ -24,3 +24,12 @@ Tried to use simulated click/type
     replaced the 15 second delay with Do While loop
         checks to verify that the postings data changed before continuing
     EMSI website now opens and closes for each company searched
+    fixed Do While loop to exit if element doesn't change
+        added a time out to exit loop
+    added if statement after Do While
+        logs informative message if Do While times out
+        exits For Each loop and continues with next item
+    now reads company names from Excel sheet
+    gets the company name that was found
+    disabled unnecessary data scrape
+    
