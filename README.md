@@ -3,7 +3,35 @@ Revature UiPath 0927 batch repo for Sales Automation Suite.
 
 ## Program Overview
 
-The Sales Automation Suite (SAS) primarily utilizes a state machine to handle different workflows for job search platforms and EMSI. The states included are (1) Initial State, (2) Add Data to Queue State, (3) Scrape data, (4) Final State. Each of these states are handled with various transitions, each being triggered under certain conditions.
+The UiPath Sales Automation Suite (SAS) is a robot used for automating job searches for users. This robot collects data from various job postings across multiple job search platforms and consolidates that information into one document.
+These sites currently include:
+ - LinkedIn
+ - Indeed
+ - Dice
+ - Monster
+ - ZipRecruiter
+ - CareerBuilder
+ - EMSI (for labor market data acquisition)
+
+
+
+## Compatibility:
+
+SAS currently supports Windows 10 and Windows 11. 
+
+
+
+## Program Flow Details
+
+The Sales Automation Suite (SAS) primarily utilizes a state machine to handle different workflows for job search platforms and EMSI. The states included are
+
+(1) Initial State
+(2) Add Data to Queue State
+(3) Scrape data
+(4) Final State
+
+Each of these states are handled with various transitions, each being triggered under certain conditions.
+
 
 
 (1) Initial State
@@ -24,6 +52,7 @@ Exit:
     - When "selected" variable evaluates to False, T2 transition is made to Final State.
 
 
+
 (2) Add Data to Queue State
 
 Destinations:
@@ -38,6 +67,7 @@ Entry:
 Exit:
 - Assign EndProgram to False to T4 transition is made to Scrape data state.
 - Assign EndProgram to True to T3 transition is made to Final State.
+
 
 
 (3) Scrape data
@@ -79,7 +109,7 @@ Entry:
                     EMSI
                      |
                      v
-	          Set Transaction Status
+	    Set Transaction Status
 
  - True evaluates to Log Message sequence 
   - Fatal: Program must terminate during queue processing.
@@ -97,9 +127,12 @@ Exit:
 Upon Scrape data State completion, T5 transition is made to Final State
 
 
+
 (4) Final State
+
 Entry:
 - Terminates program.
+
 
 
 ## Runtime:
