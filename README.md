@@ -45,6 +45,8 @@ The Sales Automation Suite (SAS) primarily utilizes a state machine to handle di
 <br>
 <br>
 
+![SAS State Machine](https://user-images.githubusercontent.com/51932270/144765042-c82f7896-88a5-4033-b5a0-e37fd60d449b.JPG)
+
 
 Each of these states are handled with various transitions, each being triggered under certain conditions:
 
