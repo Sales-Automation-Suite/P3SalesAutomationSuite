@@ -29,3 +29,9 @@
 10. Select the 'Start a Job' icon from the right to begin the automation.
 
 11. When prompted with File Explorer window, select the Template.xlsx file to begin job data collection.
+
+* NOTE: Searches can be modified within the Template.xlsx file. To do so, open the file
+  1. Before program runtime
+  2. During program runtime (ex. right-click -> Open)
+        
+12. During runtime, SAS creates a folder on your system's root directory. This is where the collected job data will be stored.
