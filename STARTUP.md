@@ -1,4 +1,5 @@
 ## Installation & Startup:
+<br>
 
 1. Make sure you are running Windows 10 or 11 and the latest updates are installed for the system
  * Windows 10
