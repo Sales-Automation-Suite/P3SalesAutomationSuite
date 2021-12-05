@@ -30,8 +30,21 @@
 
 11. When prompted with File Explorer window, select the Template.xlsx file to begin job data collection.
 
+![SAS RunTime Excel](https://user-images.githubusercontent.com/51932270/144765302-faccbd2e-e625-45be-84d2-1193086ff7e9.JPG)
+
+
 * NOTE: Searches can be modified within the Template.xlsx file. To do so, open the file
   1. Before program runtime
   2. During program runtime (ex. right-click -> Open)
         
-12. During runtime, SAS creates a folder on your system's root directory. This is where the collected job data will be stored.
+12. During runtime, SAS creates a several folders on your system's root directory (revature\Project 3\excelsheet). 
+
+13. Separate Excel files will be created during runtime. This is where collected job data will be printed:
+  * CompanyName(Filter).xlsx
+  * Job(Filtered).xlsx
+  * Job.xlsx
+
+![SAS Folder Path   File Creation](https://user-images.githubusercontent.com/51932270/144765489-11a943cd-88aa-4d78-bad8-a0a16339a3fa.JPG)
+
+
+
