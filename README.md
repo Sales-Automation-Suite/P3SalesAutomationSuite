@@ -1,5 +1,7 @@
 # P3SalesAutomationSuite
 
+<br>
+	
 ## Program Overview
 
 The UiPath Sales Automation Suite (SAS) is a robot used for automating job searches for users. This robot collects data from various job postings across multiple job search platforms and consolidates that information into one document.
@@ -12,28 +14,37 @@ These sites currently include:
  - CareerBuilder
  - EMSI (for labor market data acquisition)
 
-
+<br>
+<br>
 
 ## Compatibility:
 
 SAS currently supports Windows 10 and Windows 11. 
 
-
+<br>
+<br>
 
 ## Program Flow Details
 
-The Sales Automation Suite (SAS) primarily utilizes a state machine to handle different workflows for job search platforms and EMSI. The states included are
+The Sales Automation Suite (SAS) primarily utilizes a state machine to handle different workflows for job search platforms and EMSI. The states included are:
+<br>
+<br>
 
 (1) Initial State
+<br>
 (2) Add Data to Queue State
+<br>
 (3) Scrape data
+<br>
 (4) Final State
+<br>
+<br>
 
-Each of these states are handled with various transitions, each being triggered under certain conditions.
+Each of these states are handled with various transitions, each being triggered under certain conditions:
 
+<br>
 
-
-(1) Initial State
+<b>(1) Initial State</b>
 
 Destinations:
 T1 --> Destination: Add Data to Queue State
@@ -50,9 +61,11 @@ Exit:
     - When "selected" variable evaluates to True, T1 transition is made to Add Data to Queue State
     - When "selected" variable evaluates to False, T2 transition is made to Final State.
 
+<br>
+<br>
 
-
-(2) Add Data to Queue State
+<b>(2) Add Data to Queue State</b>
+<br>
 
 Destinations:
 T3 --> Destination: Final State
@@ -67,9 +80,10 @@ Exit:
 - Assign EndProgram to False to T4 transition is made to Scrape data state.
 - Assign EndProgram to True to T3 transition is made to Final State.
 
+<br>
+<br>
 
-
-(3) Scrape data
+<b>(3) Scrape data</b>
 
 Destinations:
 T5 --> Destination: Final State
@@ -125,14 +139,17 @@ Entry:
 Exit: 
 Upon Scrape data State completion, T5 transition is made to Final State
 
+<br>
+<br>
 
-
-(4) Final State
+<b>(4) Final State</b>
 
 Entry:
 - Terminates program.
 
-
+<br>
+<br>
+<br>
 
 ## Runtime:
 When running Sales Automation Suite (SAS), a window will display where SAS is installed. SAS will read job search keywords you wish to search from within the Template.xlsx file. The user must select this file to begin the automation process.
