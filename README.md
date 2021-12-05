@@ -1,4 +1,9 @@
 # P3SalesAutomationSuite
+Revature UiPath 0927 batch repo for Sales Automation Suite.
+
+### Flow Chart:
+![Diagram](https://github.com/Sales-Automation-Suite/P3SalesAutomationSuite/blob/main/Diagram.JPG)
+
 
 <br>
 	
@@ -39,6 +44,8 @@ The Sales Automation Suite (SAS) primarily utilizes a state machine to handle di
 (4) Final State
 <br>
 <br>
+
+![SAS State Machine](https://user-images.githubusercontent.com/51932270/144765042-c82f7896-88a5-4033-b5a0-e37fd60d449b.JPG)
 
 
 Each of these states are handled with various transitions, each being triggered under certain conditions:
