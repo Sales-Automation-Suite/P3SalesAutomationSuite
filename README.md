@@ -75,7 +75,7 @@ Entry:
                      v
                 ZipRecruiter
                      |
-		                 v
+		     v
                     EMSI
                      |
                      v
