@@ -27,11 +27,11 @@ These sites currently include:
 SAS currently supports:
 
 * Operting systems:
- - Windows 10
- - Windows 11.
+ 1. Windows 10
+ 2. Windows 11.
 * Devices/Platforms:
- - Desktop
- - Laptop
+ 1. Desktop
+ 2. Laptop
 
 <br>
 <br>
