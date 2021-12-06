@@ -1,7 +1,7 @@
 ## Installation & Startup:
 <br>
 
-1. Make sure you are running Windows 10 or 11 and the latest updates are installed for the system
+1. Make sure you are running Windows 10 or 11 on a desktop or laptop with the latest updates are installed for the system
  * Windows 10
   - https://www.microsoft.com/en-us/software-download/windows10
  * Windows 11
