@@ -24,7 +24,14 @@ These sites currently include:
 
 ## Compatibility:
 
-SAS currently supports Windows 10 and Windows 11. 
+SAS currently supports:
+
+* Operting systems:
+ - Windows 10
+ - Windows 11.
+* Devices/Platforms:
+ - Desktop
+ - Laptop
 
 <br>
 <br>
