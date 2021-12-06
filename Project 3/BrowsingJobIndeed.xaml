@@ -989,6 +989,7 @@
                     <av:Size x:Key="ShapeSize">60,75.2</av:Size>
                     <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,127.7</av:PointCollection>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Double x:Key="Width">610</x:Double>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <Flowchart.StartNode>
@@ -1080,7 +1081,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">260.641666666667,230.5</av:Point>
                           <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                          <av:PointCollection x:Key="FalseConnector">339.041666666667,274.1 430,274.1 430,154.1 400,154.1</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">339.841666666667,274.1 430,274.1 430,154.1 400,154.1</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.False>
