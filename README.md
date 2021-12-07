@@ -148,7 +148,7 @@ Entry:
 
 ## Automation Inputs
 
-Before, or at the start of, running Sales Automation Suite (SAS), the user will have the option to modify their search criteria in the Tempalte.xlsx file. Users can modify:
+Before, or at the start of, running Sales Automation Suite (SAS), the user will have the option to modify their search criteria in the Template.xlsx file. Users can modify:
 1. Number of job keywords to search for (JobTitle column)
 2. Number of searches made for each keyword (Number-Of_Job_Search column)
 
