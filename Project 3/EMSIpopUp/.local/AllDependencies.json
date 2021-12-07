@@ -14,18 +14,6 @@
           "lib/net40/ClosedXML.dll": {}
         }
       },
-      "CredentialManagement/1.0.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "CredentialManagement"
-        ],
-        "compile": {
-          "lib/net35/_._": {}
-        },
-        "runtime": {
-          "lib/net35/CredentialManagement.dll": {}
-        }
-      },
       "CsvHelper/16.0.0": {
         "type": "package",
         "dependencies": {
@@ -46,22 +34,6 @@
         },
         "runtime": {
           "lib/DocumentFormat.OpenXml.dll": {}
-        }
-      },
-      "EMSIpopUp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.11.4",
-          "UiPath.Mail.Activities": "1.12.3",
-          "UiPath.System.Activities": "21.10.2",
-          "UiPath.UIAutomation.Activities": "21.11.0-preview"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/EMSIpopUp.dll": {},
-          "lib/net45/EMSIpopUp_Expressions_38839134.dll": {}
         }
       },
       "Google.Apis/1.43.0": {
@@ -152,22 +124,6 @@
           "lib/net45/Google.Apis.PeopleService.v1.dll": {}
         }
       },
-      "login/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Credentials.Activities": "1.1.6479.13204",
-          "UiPath.Excel.Activities": "2.5.3",
-          "UiPath.Mail.Activities": "1.4.0",
-          "UiPath.System.Activities": "19.4.0",
-          "UiPath.UIAutomation.Activities": "19.4.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/login.dll": {}
-        }
-      },
       "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -184,19 +140,6 @@
         },
         "runtime": {
           "lib/net46/MailKit.dll": {}
-        }
-      },
-      "Microsoft.Activities.Extensions/2.0.6.9": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Activities"
-        ],
-        "compile": {
-          "lib/Net45/_._": {}
-        },
-        "runtime": {
-          "lib/Net45/Microsoft.Activities.Extensions.Design.dll": {},
-          "lib/Net45/Microsoft.Activities.Extensions.dll": {}
         }
       },
       "Microsoft.AspNet.SignalR.Client/2.4.0": {
@@ -918,15 +861,6 @@
           "lib/net45/NPOI.dll": {}
         }
       },
-      "Oracle.ManagedDataAccess/19.11.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/_._": {}
-        },
-        "runtime": {
-          "lib/net40/Oracle.ManagedDataAccess.dll": {}
-        }
-      },
       "Portable.BouncyCastle/1.8.8": {
         "type": "package",
         "compile": {
@@ -934,18 +868,6 @@
         },
         "runtime": {
           "lib/net40/BouncyCastle.Crypto.dll": {}
-        }
-      },
-      "ScrollActivity/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Activities.Extensions": "2.0.6.9"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/ScrollActivity.dll": {}
         }
       },
       "SharpZipLib/1.2.0": {
@@ -1009,30 +931,6 @@
         },
         "runtime": {
           "lib/net45/_._": {}
-        }
-      },
-      "System.Data.SqlClient/4.8.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "System.IO.Abstractions/3.0.10": {
@@ -1117,25 +1015,6 @@
         },
         "runtime": {
           "lib/net461/System.Reflection.Metadata.dll": {}
-        }
-      },
-      "System.Resources.Extensions/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/System.Resources.Extensions.dll": {}
-        },
-        "build": {
-          "build/net461/_._": {}
         }
       },
       "System.Runtime.Caching/5.0.0": {
@@ -1351,136 +1230,6 @@
         },
         "runtime": {
           "lib/net461/ConnectionClient.dll": {}
-        }
-      },
-      "UiPath.Credentials.Activities/1.1.6479.13204": {
-        "type": "package",
-        "dependencies": {
-          "CredentialManagement": "1.0.2"
-        },
-        "compile": {
-          "lib/net40-client/_._": {}
-        },
-        "runtime": {
-          "lib/net40-client/UiPath.Credentials.Activities.dll": {}
-        }
-      },
-      "UiPath.Database.Activities/1.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Oracle.ManagedDataAccess": "19.11.0",
-          "System.Data.SqlClient": "4.8.2",
-          "System.Resources.Extensions": "5.0.0"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/UiPath.Data.ConnectionUI.Dialog.dll": {},
-          "lib/net461/UiPath.Database.Activities.Design.dll": {},
-          "lib/net461/UiPath.Database.Activities.dll": {},
-          "lib/net461/UiPath.Database.dll": {}
-        },
-        "resource": {
-          "lib/net461/de/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/de/UiPath.Database.Activities.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/de/UiPath.Database.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/es-MX/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es-MX/UiPath.Database.Activities.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es-MX/UiPath.Database.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/es/UiPath.Database.Activities.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/es/UiPath.Database.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/fr/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/fr/UiPath.Database.Activities.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/fr/UiPath.Database.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/ja/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ja/UiPath.Database.Activities.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ja/UiPath.Database.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ko/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/ko/UiPath.Database.Activities.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/ko/UiPath.Database.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/pt-BR/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt-BR/UiPath.Database.Activities.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt-BR/UiPath.Database.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/pt/UiPath.Database.Activities.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/pt/UiPath.Database.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/ru/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/ru/UiPath.Database.Activities.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/ru/UiPath.Database.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/tr/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/tr/UiPath.Database.Activities.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/tr/UiPath.Database.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/zh-CN/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "lib/net461/zh-CN/UiPath.Database.Activities.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "lib/net461/zh-CN/UiPath.Database.resources.dll": {
-            "locale": "zh-CN"
-          }
         }
       },
       "UiPath.Excel.Activities/2.11.4": {
@@ -2295,18 +2044,6 @@
           "lib/net40/ClosedXML.dll": {}
         }
       },
-      "CredentialManagement/1.0.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "CredentialManagement"
-        ],
-        "compile": {
-          "lib/net35/_._": {}
-        },
-        "runtime": {
-          "lib/net35/CredentialManagement.dll": {}
-        }
-      },
       "CsvHelper/16.0.0": {
         "type": "package",
         "dependencies": {
@@ -2327,22 +2064,6 @@
         },
         "runtime": {
           "lib/DocumentFormat.OpenXml.dll": {}
-        }
-      },
-      "EMSIpopUp/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Excel.Activities": "2.11.4",
-          "UiPath.Mail.Activities": "1.12.3",
-          "UiPath.System.Activities": "21.10.2",
-          "UiPath.UIAutomation.Activities": "21.11.0-preview"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/EMSIpopUp.dll": {},
-          "lib/net45/EMSIpopUp_Expressions_38839134.dll": {}
         }
       },
       "Google.Apis/1.43.0": {
@@ -2433,22 +2154,6 @@
           "lib/net45/Google.Apis.PeopleService.v1.dll": {}
         }
       },
-      "login/1.0.1": {
-        "type": "package",
-        "dependencies": {
-          "UiPath.Credentials.Activities": "1.1.6479.13204",
-          "UiPath.Excel.Activities": "2.5.3",
-          "UiPath.Mail.Activities": "1.4.0",
-          "UiPath.System.Activities": "19.4.0",
-          "UiPath.UIAutomation.Activities": "19.4.1"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/login.dll": {}
-        }
-      },
       "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -2465,19 +2170,6 @@
         },
         "runtime": {
           "lib/net46/MailKit.dll": {}
-        }
-      },
-      "Microsoft.Activities.Extensions/2.0.6.9": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Activities"
-        ],
-        "compile": {
-          "lib/Net45/_._": {}
-        },
-        "runtime": {
-          "lib/Net45/Microsoft.Activities.Extensions.Design.dll": {},
-          "lib/Net45/Microsoft.Activities.Extensions.dll": {}
         }
       },
       "Microsoft.AspNet.SignalR.Client/2.4.0": {
@@ -3196,15 +2888,6 @@
           "lib/net45/NPOI.dll": {}
         }
       },
-      "Oracle.ManagedDataAccess/19.11.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/_._": {}
-        },
-        "runtime": {
-          "lib/net40/Oracle.ManagedDataAccess.dll": {}
-        }
-      },
       "Portable.BouncyCastle/1.8.8": {
         "type": "package",
         "compile": {
@@ -3212,18 +2895,6 @@
         },
         "runtime": {
           "lib/net40/BouncyCastle.Crypto.dll": {}
-        }
-      },
-      "ScrollActivity/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Activities.Extensions": "2.0.6.9"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/ScrollActivity.dll": {}
         }
       },
       "SharpZipLib/1.2.0": {
@@ -3287,20 +2958,6 @@
         },
         "runtime": {
           "lib/net45/_._": {}
-        }
-      },
-      "System.Data.SqlClient/4.8.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {}
         }
       },
       "System.IO.Abstractions/3.0.10": {
@@ -3385,25 +3042,6 @@
         },
         "runtime": {
           "lib/net461/System.Reflection.Metadata.dll": {}
-        }
-      },
-      "System.Resources.Extensions/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.4"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/System.Resources.Extensions.dll": {}
-        },
-        "build": {
-          "build/net461/_._": {}
         }
       },
       "System.Runtime.Caching/5.0.0": {
@@ -3607,136 +3245,6 @@
         },
         "runtime": {
           "lib/net461/ConnectionClient.dll": {}
-        }
-      },
-      "UiPath.Credentials.Activities/1.1.6479.13204": {
-        "type": "package",
-        "dependencies": {
-          "CredentialManagement": "1.0.2"
-        },
-        "compile": {
-          "lib/net40-client/_._": {}
-        },
-        "runtime": {
-          "lib/net40-client/UiPath.Credentials.Activities.dll": {}
-        }
-      },
-      "UiPath.Database.Activities/1.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Oracle.ManagedDataAccess": "19.11.0",
-          "System.Data.SqlClient": "4.8.2",
-          "System.Resources.Extensions": "5.0.0"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/UiPath.Data.ConnectionUI.Dialog.dll": {},
-          "lib/net461/UiPath.Database.Activities.Design.dll": {},
-          "lib/net461/UiPath.Database.Activities.dll": {},
-          "lib/net461/UiPath.Database.dll": {}
-        },
-        "resource": {
-          "lib/net461/de/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/de/UiPath.Database.Activities.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/de/UiPath.Database.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net461/es-MX/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es-MX/UiPath.Database.Activities.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es-MX/UiPath.Database.resources.dll": {
-            "locale": "es-MX"
-          },
-          "lib/net461/es/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/es/UiPath.Database.Activities.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/es/UiPath.Database.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net461/fr/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/fr/UiPath.Database.Activities.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/fr/UiPath.Database.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net461/ja/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ja/UiPath.Database.Activities.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ja/UiPath.Database.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net461/ko/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/ko/UiPath.Database.Activities.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/ko/UiPath.Database.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net461/pt-BR/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt-BR/UiPath.Database.Activities.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt-BR/UiPath.Database.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net461/pt/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/pt/UiPath.Database.Activities.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/pt/UiPath.Database.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net461/ru/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/ru/UiPath.Database.Activities.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/ru/UiPath.Database.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net461/tr/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/tr/UiPath.Database.Activities.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/tr/UiPath.Database.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net461/zh-CN/UiPath.Database.Activities.Design.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "lib/net461/zh-CN/UiPath.Database.Activities.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "lib/net461/zh-CN/UiPath.Database.resources.dll": {
-            "locale": "zh-CN"
-          }
         }
       },
       "UiPath.Excel.Activities/2.11.4": {
@@ -4557,17 +4065,6 @@
         "lib/net40/ClosedXML.xml"
       ]
     },
-    "CredentialManagement/1.0.2": {
-      "sha512": "VkP04/jFXaxT3TkcRhzETYtOrznQxRmQ2J1XJdbXz47Bir7hIzPR7mFZk4GJQ4An4gozW+vonpf+iqTHomAkQw==",
-      "type": "package",
-      "path": "credentialmanagement/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        "credentialmanagement.1.0.2.nupkg.sha512",
-        "credentialmanagement.nuspec",
-        "lib/net35/CredentialManagement.dll"
-      ]
-    },
     "CsvHelper/16.0.0": {
       "sha512": "ZHuVi+c8T/3ksqqCvY6nOWlJvOK+W+0Hnnlucg7lIZA6iSGQ162+998gwXxoBfSaDUp0/cDlrTMq2wnRohErOQ==",
       "type": "package",
@@ -4600,35 +4097,12 @@
         "lib/DocumentFormat.OpenXml.dll"
       ]
     },
-    "EMSIpopUp/1.1.0": {
-      "sha512": "+EyXCIk2iDQHW6kprABHxWy0qKhQsgEMW5EDiyNa7LxYGx+QbC8xD9y7sspDMCvAD6WqHC1RE+KCxdWehI20bA==",
-      "type": "package",
-      "path": "emsipopup/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        "emsipopup.1.1.0.nupkg.sha512",
-        "emsipopup.nuspec",
-        "lib/net45/.settings/Design/settings-afad0842.json",
-        "lib/net45/.settings/Release/settings-1a5b880a.json",
-        "lib/net45/.settings/Release/settings-5190454b.json",
-        "lib/net45/.settings/Release/settings-590bb27b.json",
-        "lib/net45/.settings/Release/settings-9e9290da.json",
-        "lib/net45/.settings/Release/settings-a1b2dac1.json",
-        "lib/net45/.settings/Release/settings-afad0842.json",
-        "lib/net45/EMSIpopUp.dll",
-        "lib/net45/EMSIpopUp.xaml",
-        "lib/net45/EMSIpopUp_Expressions_38839134.dll",
-        "lib/net45/bindings.json",
-        "lib/net45/project.json"
-      ]
-    },
     "Google.Apis/1.43.0": {
       "sha512": "obrhmOs3G1NdKb6vJukj5nls3FJ8qcheSugvUDA5fHA+4sb9hOvSgtR4rzSiBFTSn30d8C9aJAUFlBtcFi4ltA==",
       "type": "package",
       "path": "google.apis/1.43.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
         "google.apis.1.43.0.nupkg.sha512",
@@ -4703,7 +4177,6 @@
       "path": "google.apis.core/1.43.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
         "google.apis.core.1.43.0.nupkg.sha512",
@@ -4773,19 +4246,6 @@
         "lib/netstandard2.0/Google.Apis.PeopleService.v1.xml"
       ]
     },
-    "login/1.0.1": {
-      "sha512": "hYGnqEzw4jm5cQkr7JjbmOt6jTBHBvJJYS9SLmNrxBVDLecLcp3MkJMJ1RHtg6iK277AG4ZUAKRoDWWNOSxZCw==",
-      "type": "package",
-      "path": "login/1.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/login.dll",
-        "lib/net45/project.json",
-        "login.1.0.1.nupkg.sha512",
-        "login.nuspec"
-      ]
-    },
     "MailKit/2.10.0": {
       "sha512": "+MuVBWstHANt4iescbL0zzOZX+OllALJQf+uDdIPsCx+mE3LsNthpJv/8em93VzGoFev1WGLMJfLjCBreg8STg==",
       "type": "package",
@@ -4811,28 +4271,6 @@
         "lib/netstandard2.0/MailKit.xml",
         "mailkit.2.10.0.nupkg.sha512",
         "mailkit.nuspec"
-      ]
-    },
-    "Microsoft.Activities.Extensions/2.0.6.9": {
-      "sha512": "yGwK3gYUzzGIzgybBtXsCbcWIj+Dv+gadnaWkmG0WpBs22AV8ZS7deFhAb2pznDoGz0Pj4M7Tt9RwK9VrNzf4A==",
-      "type": "package",
-      "path": "microsoft.activities.extensions/2.0.6.9",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "help/Microsoft.Activities.Extensions Documentation.chm",
-        "lib/Net40/Microsoft.Activities.Extensions.Design.dll",
-        "lib/Net40/Microsoft.Activities.Extensions.dll",
-        "lib/Net401/Microsoft.Activities.Extensions.Design.dll",
-        "lib/Net401/Microsoft.Activities.Extensions.dll",
-        "lib/Net45/Microsoft.Activities.Extensions.Design.dll",
-        "lib/Net45/Microsoft.Activities.Extensions.dll",
-        "microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
-        "microsoft.activities.extensions.nuspec",
-        "tools/Microsoft.Activities.Extensions.NuGet.dll",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.AspNet.SignalR.Client/2.4.0": {
@@ -6101,30 +5539,6 @@
         "npoi.nuspec"
       ]
     },
-    "Oracle.ManagedDataAccess/19.11.0": {
-      "sha512": "E1d+kp34TAS5BVM1vmPGc+jc+psG5gc+JkP6GmHVB26HUfOdKxz/8axsLMl63h2uxe2IQzVXWWXt823pM+15oQ==",
-      "type": "package",
-      "path": "oracle.manageddataaccess/19.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "PerfCounters/register_odpm_perfmon_counters.ps1",
-        "PerfCounters/unregister_odpm_perfmon_counters.ps1",
-        "bin/x64/Oracle.ManagedDataAccessIOP.dll",
-        "bin/x86/Oracle.ManagedDataAccessIOP.dll",
-        "content/net40/App.config.install.xdt",
-        "content/net40/App.config.transform",
-        "content/net40/App.config.uninstall.xdt",
-        "content/net40/Web.config.install.xdt",
-        "content/net40/Web.config.transform",
-        "content/net40/Web.config.uninstall.xdt",
-        "info.txt",
-        "lib/net40/Oracle.ManagedDataAccess.dll",
-        "oracle.manageddataaccess.19.11.0.nupkg.sha512",
-        "oracle.manageddataaccess.nuspec",
-        "readme.txt"
-      ]
-    },
     "Portable.BouncyCastle/1.8.8": {
       "sha512": "1rxdf8NfyAxLlqIEciCl/yNhmz1YiLkmp6rrF8p3/NVmyHHzPWLx8djtDvSAwhPLg64BXvsRcM3+5bP1HAUdYg==",
       "type": "package",
@@ -6138,18 +5552,6 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.8.8.nupkg.sha512",
         "portable.bouncycastle.nuspec"
-      ]
-    },
-    "ScrollActivity/1.0.2": {
-      "sha512": "ETsveSJzZInICJGEF6F0SdnEB0oeYCvxMb36QGPsMmzriLc1jVZ9CJQziBKkLBklTNNuhXu0GoEhkU1+AhcE5g==",
-      "type": "package",
-      "path": "scrollactivity/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/ScrollActivity.dll",
-        "scrollactivity.1.0.2.nupkg.sha512",
-        "scrollactivity.nuspec"
       ]
     },
     "SharpZipLib/1.2.0": {
@@ -6334,92 +5736,6 @@
         "version.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.2": {
-      "sha512": "80vGtW6uLB4AkyrdVuKTXYUyuXDPAsSKbTVfvjndZaRAYxzFzWhJbvUfeAKrN+128ycWZjLIAl61dFUwWHOOTw==",
-      "type": "package",
-      "path": "system.data.sqlclient/4.8.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net451/System.Data.SqlClient.dll",
-        "lib/net46/System.Data.SqlClient.dll",
-        "lib/net461/System.Data.SqlClient.dll",
-        "lib/net461/System.Data.SqlClient.xml",
-        "lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "lib/netstandard1.2/System.Data.SqlClient.dll",
-        "lib/netstandard1.2/System.Data.SqlClient.xml",
-        "lib/netstandard1.3/System.Data.SqlClient.dll",
-        "lib/netstandard1.3/System.Data.SqlClient.xml",
-        "lib/netstandard2.0/System.Data.SqlClient.dll",
-        "lib/netstandard2.0/System.Data.SqlClient.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net451/System.Data.SqlClient.dll",
-        "ref/net46/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.xml",
-        "ref/netcoreapp2.1/System.Data.SqlClient.dll",
-        "ref/netcoreapp2.1/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/System.Data.SqlClient.dll",
-        "ref/netstandard1.2/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/System.Data.SqlClient.dll",
-        "ref/netstandard1.3/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard2.0/System.Data.SqlClient.dll",
-        "ref/netstandard2.0/System.Data.SqlClient.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.xml",
-        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net461/System.Data.SqlClient.xml",
-        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.xml",
-        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
-        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
-        "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.2.nupkg.sha512",
-        "system.data.sqlclient.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.IO.Abstractions/3.0.10": {
       "sha512": "15N2bCO8DLGzrnDyPwQ0653bTCmyJW4Ajw6yeFkJR74VptVvnGINcU5ibX4isxGkvi+YevK7JyVyjiJh6X91kA==",
       "type": "package",
@@ -6564,27 +5880,6 @@
         "lib/portable-net45+win8/System.Reflection.Metadata.xml",
         "system.reflection.metadata.5.0.0.nupkg.sha512",
         "system.reflection.metadata.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Resources.Extensions/5.0.0": {
-      "sha512": "KBiqY/+W6hWVwucHBHO76JkgBGyawlxCcP946MhK8dNjalaBgZkyHaux8ko58PENTqQHHjoDa7cfIkAchfJPPA==",
-      "type": "package",
-      "path": "system.resources.extensions/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "build/net461/System.Resources.Extensions.targets",
-        "lib/net461/System.Resources.Extensions.dll",
-        "lib/net461/System.Resources.Extensions.xml",
-        "lib/netstandard2.0/System.Resources.Extensions.dll",
-        "lib/netstandard2.0/System.Resources.Extensions.xml",
-        "system.resources.extensions.5.0.0.nupkg.sha512",
-        "system.resources.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -7095,129 +6390,6 @@
         "lib/net5.0/ConnectionClient.dll",
         "uipath.connectionclient.1.0.0-20210921.1.nupkg.sha512",
         "uipath.connectionclient.nuspec"
-      ]
-    },
-    "UiPath.Credentials.Activities/1.1.6479.13204": {
-      "sha512": "2C7e17Lk1G6QenZQwA5q0DETGdAb9K34p6SqPcAOdHHyr+BtYSWLWhXn+zNlMF8ZCr51pHCiBPNp33nok2B3Qw==",
-      "type": "package",
-      "path": "uipath.credentials.activities/1.1.6479.13204",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net40-client/UiPath.Credentials.Activities.dll",
-        "uipath.credentials.activities.1.1.6479.13204.nupkg.sha512",
-        "uipath.credentials.activities.nuspec"
-      ]
-    },
-    "UiPath.Database.Activities/1.5.0": {
-      "sha512": "CF4RfC2wgGwn0/2/2MFp1mJ1Kog6pqPykEoZ6SrrB4bpBhyF1zGjwO/w3NdcFQUoEOo53BXkQSvdZb6dbRlRyw==",
-      "type": "package",
-      "path": "uipath.database.activities/1.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/UiPath.Data.ConnectionUI.Dialog.dll",
-        "lib/net461/UiPath.Database.Activities.Design.dll",
-        "lib/net461/UiPath.Database.Activities.dll",
-        "lib/net461/UiPath.Database.dll",
-        "lib/net461/de/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/de/UiPath.Database.Activities.resources.dll",
-        "lib/net461/de/UiPath.Database.resources.dll",
-        "lib/net461/es-MX/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/es-MX/UiPath.Database.Activities.resources.dll",
-        "lib/net461/es-MX/UiPath.Database.resources.dll",
-        "lib/net461/es/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/es/UiPath.Database.Activities.resources.dll",
-        "lib/net461/es/UiPath.Database.resources.dll",
-        "lib/net461/fr/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/fr/UiPath.Database.Activities.resources.dll",
-        "lib/net461/fr/UiPath.Database.resources.dll",
-        "lib/net461/ja/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/ja/UiPath.Database.Activities.resources.dll",
-        "lib/net461/ja/UiPath.Database.resources.dll",
-        "lib/net461/ko/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/ko/UiPath.Database.Activities.resources.dll",
-        "lib/net461/ko/UiPath.Database.resources.dll",
-        "lib/net461/pt-BR/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/pt-BR/UiPath.Database.Activities.resources.dll",
-        "lib/net461/pt-BR/UiPath.Database.resources.dll",
-        "lib/net461/pt/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/pt/UiPath.Database.Activities.resources.dll",
-        "lib/net461/pt/UiPath.Database.resources.dll",
-        "lib/net461/ru/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/ru/UiPath.Database.Activities.resources.dll",
-        "lib/net461/ru/UiPath.Database.resources.dll",
-        "lib/net461/runtimes/win-x86/native/sni.dll",
-        "lib/net461/tr/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/tr/UiPath.Database.Activities.resources.dll",
-        "lib/net461/tr/UiPath.Database.resources.dll",
-        "lib/net461/zh-CN/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net461/zh-CN/UiPath.Database.Activities.resources.dll",
-        "lib/net461/zh-CN/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/UiPath.Data.ConnectionUI.Dialog.dll",
-        "lib/net5.0-windows7.0/UiPath.Database.Activities.Design.dll",
-        "lib/net5.0-windows7.0/UiPath.Database.Activities.dll",
-        "lib/net5.0-windows7.0/UiPath.Database.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/de/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es-MX/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/es/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/fr/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ja/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ko/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt-BR/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/pt/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/ru/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/runtimes/win-x64/native/sni.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/tr/UiPath.Database.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Database.Activities.Design.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0-windows7.0/zh-CN/UiPath.Database.resources.dll",
-        "lib/net5.0/UiPath.Database.Activities.dll",
-        "lib/net5.0/UiPath.Database.dll",
-        "lib/net5.0/de/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/de/UiPath.Database.resources.dll",
-        "lib/net5.0/es-MX/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/es-MX/UiPath.Database.resources.dll",
-        "lib/net5.0/es/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/es/UiPath.Database.resources.dll",
-        "lib/net5.0/fr/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/fr/UiPath.Database.resources.dll",
-        "lib/net5.0/ja/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/ja/UiPath.Database.resources.dll",
-        "lib/net5.0/ko/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/ko/UiPath.Database.resources.dll",
-        "lib/net5.0/pt-BR/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/pt-BR/UiPath.Database.resources.dll",
-        "lib/net5.0/pt/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/pt/UiPath.Database.resources.dll",
-        "lib/net5.0/ru/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/ru/UiPath.Database.resources.dll",
-        "lib/net5.0/runtimes/win-x64/native/sni.dll",
-        "lib/net5.0/tr/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/tr/UiPath.Database.resources.dll",
-        "lib/net5.0/zh-CN/UiPath.Database.Activities.resources.dll",
-        "lib/net5.0/zh-CN/UiPath.Database.resources.dll",
-        "uipath.database.activities.1.5.0.nupkg.sha512",
-        "uipath.database.activities.nuspec"
       ]
     },
     "UiPath.Excel.Activities/2.11.4": {
@@ -8402,45 +7574,26 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "EMSIpopUp >= 1.1.0 <= 1.1.0",
-      "ScrollActivity >= 1.0.2 <= 1.0.2",
-      "UiPath.Database.Activities >= 1.5.0 <= 1.5.0",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
       "UiPath.System.Activities >= 21.10.2 <= 21.10.2",
-      "UiPath.UIAutomation.Activities >= 21.11.0-preview <= 21.11.0-preview",
-      "login >= 1.0.1 <= 1.0.1"
+      "UiPath.UIAutomation.Activities >= 21.11.0-preview <= 21.11.0-preview"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aaron\\.nuget\\packages\\": {}
+    "C:\\Users\\aaron\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "Project 3",
-      "projectName": "Project 3",
-      "projectPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local",
-      "packagesPath": "C:\\Users\\Aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local"
+      "projectUniqueName": "EMSIpopUp",
+      "projectName": "EMSIpopUp",
+      "projectPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\EMSIpopUp\\.local",
+      "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
+      "outputPath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\EMSIpopUp\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
-          "EMSIpopUp": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.1.0, 1.1.0]"
-          },
-          "ScrollActivity": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.0.2, 1.0.2]"
-          },
-          "UiPath.Database.Activities": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.5.0, 1.5.0]"
-          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -8460,11 +7613,6 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[21.11.0-preview, 21.11.0-preview]"
-          },
-          "login": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.0.1, 1.0.1]"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
