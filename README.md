@@ -7,7 +7,7 @@ Revature UiPath 0927 batch repo for Sales Automation Suite.
 
 <br>
 	
-## Program Overview
+## General Information
 
 The UiPath Sales Automation Suite (SAS) is a robot used for automating job searches for users. This robot collects data from various job postings across multiple job search platforms and consolidates that information into one document.
 These sites currently include:
@@ -21,22 +21,6 @@ These sites currently include:
 
 <br>
 <br>
-
-## Compatibility:
-
-SAS currently supports:
-
-* Operting systems:
- 1. Windows 10
- 2. Windows 11.
-* Devices/Platforms:
- 1. Desktop
- 2. Laptop
-
-<br>
-<br>
-
-## Program Flow Details
 
 The Sales Automation Suite (SAS) primarily utilizes a state machine to handle different workflows for job search platforms and EMSI. The states included are:
 <br>
@@ -58,7 +42,6 @@ The Sales Automation Suite (SAS) primarily utilizes a state machine to handle di
 Each of these states are handled with various transitions, each being triggered under certain conditions:
 
 <br>
-<br>
 
 <b>(1) Initial State</b>
 
@@ -78,7 +61,6 @@ Exit:
     - When "selected" variable evaluates to False, T2 transition is made to Final State.
 
 <br>
-<br>
 
 <b>(2) Add Data to Queue State</b>
 <br>
@@ -96,7 +78,6 @@ Exit:
 - Assign EndProgram to False to T4 transition is made to Scrape data state.
 - Assign EndProgram to True to T3 transition is made to Final State.
 
-<br>
 <br>
 
 <b>(3) Scrape data</b>
@@ -156,7 +137,6 @@ Exit:
 Upon Scrape data State completion, T5 transition is made to Final State
 
 <br>
-<br>
 
 <b>(4) Final State</b>
 
@@ -165,12 +145,73 @@ Entry:
 
 <br>
 <br>
+
+## Automation Inputs
+
+Before, or at the start of, running Sales Automation Suite (SAS), the user will have the option to modify their search criteria in the Tempalte.xlsx file. Users can modify:
+1. Number of job keywords to search for (JobTitle column)
+2. Number of searches made for each keyword (Number-Of_Job_Search column)
+
 <br>
 
-## Runtime:
-When running Sales Automation Suite (SAS), a window will display where SAS is installed. SAS will read job search keywords you wish to search from within the Template.xlsx file. The user must select this file to begin the automation process.
+These modifications must be made underneath each column as such:
+<br>
 
-NOTE: To view or modify the current job search keyword(s), users must either:
- 1. Open the file (ex. right click -> Open)
- OR
- 2. Open the file outside of SAS runtime.
+ ![image](https://user-images.githubusercontent.com/51932270/144953500-bef02c27-621d-45d1-8eb5-a2de34520c52.png)
+
+In the example provided, the job keywords the user has decided to search for are "Engineer" and "Developer" jobs, and they wish to find the first 10 jobs under each search term.
+When the user runs the program, SAS will run through each job platform and enter the keywords provided into the sites' search engines. 
+
+<br>
+<br>
+
+## Automation Outputs
+
+SAS will collect various job information on each site's Results page. This information includes:
+
+* Company name
+* Job location
+* Job type
+* Company size
+* Number of unique jobs provided by the company
+* Date the job was first posted
+* Date the job was searched
+* Company contact information
+* Site where the job was originally posted
+* URL for the found job
+
+After SAS runtime completes, the job information will be stored in 3 different files:
+ 1. Job.xlsx - Shows various job data for each job keyword searched (see various job information listed above). Sheets will be created in this file for each site and the respective keywords used when searching those sites. 
+ 2. Job(Filtered).xlsx - Shows unique jobs found during search.
+ 3. CompanyName(Filter).xlsx - Shows unique company names found during search.
+
+These files can be accessed via SystemRootDirectory\revature\Project 3\excelsheet. 
+
+![image](https://user-images.githubusercontent.com/51932270/144967610-90018bb3-79e5-418e-85ef-38caf6f3a75e.png)
+
+<i>Ex. Opened Job.xlsx file</i>
+
+<br>
+<br>
+
+## Software Requirements
+
+* UiPath Studio
+* UiPath Orchestrator 
+* UiPath Assistant
+* Windows 10/11
+* Microsoft Edge Browser
+
+<br>
+<br>
+
+## License Requirements
+
+* UiPath Community License
+
+<br>
+<br>
+
+## UiPath Studio Project Dependencies
+
+* Scroll Activity
