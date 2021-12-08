@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ywVBG7IxK73AC9KbtsYWf8XRMAN8XhHG7kFZ+CBLo4Sw8Y3Eab2k8LAOK8fDIf1nuuouqfMC8y1OC+aSHX9A3Q==",
+  "dgSpecHash": "6HQfGgtzePstWny3irG18oVMROCbobtVtADw2KKt59IQSBfy4eJKRzGJqhC8ZqritEmMiGbAx7PUs7ZIIzrQYQ==",
   "success": true,
   "projectFilePath": "H:\\revature\\p3\\EMSI\\P3SalesAutomationSuite\\.local\\",
   "expectedPackageFiles": [
@@ -92,7 +92,7 @@
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\uipath.ocr.activities.3.3.2.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\uipath.ocr.contracts.2.9.1.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.platform\\21.10.0\\uipath.platform.21.10.0.nupkg.sha512",
-    "C:\\Users\\aaron\\.nuget\\packages\\uipath.system.activities\\21.10.2\\uipath.system.activities.21.10.2.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\uipath.system.activities\\21.10.3\\uipath.system.activities.21.10.3.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\uipath.telemetry.client.1.5.3.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.uiautomation.activities\\21.11.0-preview\\uipath.uiautomation.activities.21.11.0-preview.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\uipath.vision\\3.1.4\\uipath.vision.3.1.4.nupkg.sha512"

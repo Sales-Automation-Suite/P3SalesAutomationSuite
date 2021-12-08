@@ -1624,7 +1624,7 @@
           "lib/net461/UiPath.Platform.dll": {}
         }
       },
-      "UiPath.System.Activities/21.10.2": {
+      "UiPath.System.Activities/21.10.3": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3655,7 +3655,7 @@
           "lib/net461/UiPath.Platform.dll": {}
         }
       },
-      "UiPath.System.Activities/21.10.2": {
+      "UiPath.System.Activities/21.10.3": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -7047,10 +7047,10 @@
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/21.10.2": {
-      "sha512": "hWeXvkTGIUiItukWpANW0TS4y+UMPAaDYCGdTXhZIfUeocmOi/XTKj938V/RhvCPzQIU/j6ROS+GUrsMTPrxYQ==",
+    "UiPath.System.Activities/21.10.3": {
+      "sha512": "FQm/Ik5f1vGdD4ZhEMKRkxJlpK3MBs+wwoVNYSzdoIL+dgTnTDv4CSt/2069LwaPUxYcNPhf5aR3PUM8QYA3WQ==",
       "type": "package",
-      "path": "uipath.system.activities/21.10.2",
+      "path": "uipath.system.activities/21.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7130,7 +7130,7 @@
         "lib/net5.0/ru/UiPath.System.Activities.resources.dll",
         "lib/net5.0/tr/UiPath.System.Activities.resources.dll",
         "lib/net5.0/zh-CN/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.21.10.2.nupkg.sha512",
+        "uipath.system.activities.21.10.3.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
@@ -7631,7 +7631,7 @@
       "EMSIpopUp >= 1.1.0 <= 1.1.0",
       "UiPath.Excel.Activities >= 2.11.4 <= 2.11.4",
       "UiPath.Mail.Activities >= 1.12.3 <= 1.12.3",
-      "UiPath.System.Activities >= 21.10.2 <= 21.10.2",
+      "UiPath.System.Activities >= 21.10.3 <= 21.10.3",
       "UiPath.UIAutomation.Activities >= 21.11.0-preview <= 21.11.0-preview"
     ]
   },
@@ -7667,7 +7667,7 @@
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[21.10.2, 21.10.2]"
+            "version": "[21.10.3, 21.10.3]"
           },
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",

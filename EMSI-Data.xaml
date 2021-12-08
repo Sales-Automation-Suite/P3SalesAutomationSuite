@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1918,6151" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:EMSIpopUp;assembly=EMSIpopUp" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2292,6321" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:EMSIpopUp;assembly=EMSIpopUp" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
@@ -80,7 +80,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EMSI data" sap:VirtualizedContainerService.HintSize="1928,6086" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EMSI data" sap:VirtualizedContainerService.HintSize="2302,6256" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Postings" />
       <Variable x:TypeArguments="x:String" Name="str_ChangeLastMonth" />
@@ -98,29 +98,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_companyList]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1886,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="companyList" WorkbookPath="companyList.xls" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_companyList]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1886,5867" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_companyList]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="2260,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="companyList" WorkbookPath="companyList.xls" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_companyList]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2260,6037" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1852,5747" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2226,5917" sap2010:WorkflowViewState.IdRef="Sequence_28">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_CompanyName" />
               <Variable x:TypeArguments="x:Int32" Name="int_ErrorTimer" />
-              <Variable x:TypeArguments="x:Int32" Name="int_ErrorThreshold">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Int32" Value="30" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Int32" Default="30" Name="int_ErrorThreshold" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="1810,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="2184,60" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_CompanyName]</OutArgument>
               </Assign.To>
@@ -128,7 +124,7 @@
                 <InArgument x:TypeArguments="x:String">[Row.item(0).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1810,116" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[closeEdge]" Url="https://www.economicmodeling.com/job-posting-dashboard/">
+            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="2184,116" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[closeEdge]" Url="https://www.economicmodeling.com/job-posting-dashboard/">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -137,13 +133,13 @@
                 </ActivityAction>
               </ui:OpenBrowser.Body>
             </ui:OpenBrowser>
-            <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[closeEdge]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="1810,2290" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
+            <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[closeEdge]" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="2184,2460" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,2182" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="532,2352" sap2010:WorkflowViewState.IdRef="Sequence_24">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="bool_SiteLoaded" />
                       <Variable x:TypeArguments="x:Boolean" Name="bool_ListLoaded" />
@@ -155,8 +151,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <e:EMSIpopUp sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="EMSIpopUp_7" />
-                    <ui:InterruptibleDoWhile Condition="[bool_SiteLoaded = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,363" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_6">
+                    <e:EMSIpopUp sap:VirtualizedContainerService.HintSize="490,22" sap2010:WorkflowViewState.IdRef="EMSIpopUp_7" />
+                    <ui:InterruptibleDoWhile Condition="[bool_SiteLoaded = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="490,363" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_6">
                       <ui:InterruptibleDoWhile.Body>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <sap:WorkflowViewStateService.ViewState>
@@ -176,7 +172,7 @@
                         </Sequence>
                       </ui:InterruptibleDoWhile.Body>
                     </ui:InterruptibleDoWhile>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="490,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -198,7 +194,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type  Company Name" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[str_CompanyName]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type  Company Name" sap:VirtualizedContainerService.HintSize="490,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[str_CompanyName]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="146dd5a7-27cc-4e06-b518-3a4b1bfb46f3" InformativeScreenshot="e6ff5118c0ce8e7be1bf6ecb6d8c4660" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' parentid='root' tag='DIV' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -210,16 +206,16 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[bool_Exists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                    <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[bool_Exists]" sap:VirtualizedContainerService.HintSize="490,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                       <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="399097c5-c0ee-4e2a-840d-05812611d5e6" InformativeScreenshot="0f1eb02ec1e0c8c05b60368b46f07796" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl aaname='15,907,681 ' tag='SPAN' /&gt;" TimeoutMS="2000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="399097c5-c0ee-4e2a-840d-05812611d5e6" InformativeScreenshot="0f1eb02ec1e0c8c05b60368b46f07796" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl omit:aaname='*' tag='SPAN' /&gt;" TimeoutMS="2000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[bool_Exists = False]" sap:VirtualizedContainerService.HintSize="484,374" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[bool_Exists = False]" sap:VirtualizedContainerService.HintSize="490,374" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_32">
                           <sap:WorkflowViewStateService.ViewState>
@@ -261,9 +257,9 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="490,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
                       <ui:GetValue.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70be2e89-3816-4469-bf76-c34812a86b71" InformativeScreenshot="0f1eb02ec1e0c8c05b60368b46f07796" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl aaname='15,907,681 ' tag='SPAN' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70be2e89-3816-4469-bf76-c34812a86b71" InformativeScreenshot="0f1eb02ec1e0c8c05b60368b46f07796" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl tag='SPAN' idx='7' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -276,28 +272,39 @@
                         <OutArgument x:TypeArguments="x:String">[str_CheckElement]</OutArgument>
                       </ui:GetValue.Value>
                     </ui:GetValue>
-                    <e:EMSIpopUp sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="EMSIpopUp_8" />
-                    <ui:InterruptibleDoWhile Condition="[bool_ListLoaded = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,363" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
-                      <ui:InterruptibleDoWhile.Body>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <e:EMSIpopUp sap:VirtualizedContainerService.HintSize="490,22" sap2010:WorkflowViewState.IdRef="EMSIpopUp_8" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="490,533" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="454,455" sap2010:WorkflowViewState.IdRef="Sequence_39">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:UiElementExists DisplayName="Element Exists 'DIV  react-select-5-opt...'" Exists="[bool_ListLoaded]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
-                            <ui:UiElementExists.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="142770d7-730e-4a32-8136-ddd3a86ae5bb" InformativeScreenshot="11947d1a632fb7fd7a62fe19aeaff5d5" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl id='react-select-5-option-0' tag='DIV' /&gt;" TimeoutMS="2000">
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:UiElementExists.Target>
-                          </ui:UiElementExists>
+                          <ui:InterruptibleDoWhile Condition="[bool_ListLoaded = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="412,363" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
+                            <ui:InterruptibleDoWhile.Body>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:UiElementExists DisplayName="Element Exists 'DIV  react-select-5-opt...'" Exists="[bool_ListLoaded]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="142770d7-730e-4a32-8136-ddd3a86ae5bb" InformativeScreenshot="11947d1a632fb7fd7a62fe19aeaff5d5" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl id='react-select-5-option-0' tag='DIV' /&gt;" TimeoutMS="2000">
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:UiElementExists.Target>
+                                </ui:UiElementExists>
+                              </Sequence>
+                            </ui:InterruptibleDoWhile.Body>
+                          </ui:InterruptibleDoWhile>
                         </Sequence>
-                      </ui:InterruptibleDoWhile.Body>
-                    </ui:InterruptibleDoWhile>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type enter to search" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="%[k(enter)]">
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type enter to search" sap:VirtualizedContainerService.HintSize="490,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="%[k(enter)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="146dd5a7-27cc-4e06-b518-3a4b1bfb46f3" InformativeScreenshot="e6ff5118c0ce8e7be1bf6ecb6d8c4660" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' parentid='root' tag='DIV' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -313,7 +320,7 @@
                 </ActivityAction>
               </ui:BrowserScope.Body>
             </ui:BrowserScope>
-            <Assign sap:VirtualizedContainerService.HintSize="1810,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="2184,60" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[int_ErrorTimer]</OutArgument>
               </Assign.To>
@@ -321,7 +328,7 @@
                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1810,956" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_8">
+            <ui:InterruptibleDoWhile Condition="[str_Postings = str_CheckElement]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="2184,956" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_8">
               <ui:InterruptibleDoWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,791" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
@@ -377,12 +384,9 @@
                   </If>
                 </Sequence>
               </ui:InterruptibleDoWhile.Body>
-              <ui:InterruptibleDoWhile.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="str_Postings = str_CheckElement" />
-              </ui:InterruptibleDoWhile.Condition>
             </ui:InterruptibleDoWhile>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1810,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[int_ErrorTimer.ToString]" />
-            <If Condition="[int_ErrorTimer &gt; 5]" sap:VirtualizedContainerService.HintSize="1810,484" sap2010:WorkflowViewState.IdRef="If_1">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2184,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[int_ErrorTimer.ToString]" />
+            <If Condition="[int_ErrorTimer &gt; 5]" sap:VirtualizedContainerService.HintSize="2184,484" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,307" sap2010:WorkflowViewState.IdRef="Sequence_30">
                   <sap:WorkflowViewStateService.ViewState>
@@ -405,7 +409,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Parallel sap:VirtualizedContainerService.HintSize="1810,807" sap2010:WorkflowViewState.IdRef="Parallel_2">
+            <Parallel sap:VirtualizedContainerService.HintSize="2184,807" sap2010:WorkflowViewState.IdRef="Parallel_2">
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Change from last month" sap:VirtualizedContainerService.HintSize="334,761" sap2010:WorkflowViewState.IdRef="GetValue_7">
                 <ui:GetValue.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b493b7d2-2ef5-439d-9283-3c03fc9a82fd" InformativeScreenshot="e48b62fb8b0f1c6ab6da305de739d6cc" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl aaname='month over month' tag='SPAN' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' idx='1' /&gt;">
@@ -434,6 +438,21 @@
                 </ui:GetValue.Target>
                 <ui:GetValue.Value>
                   <OutArgument x:TypeArguments="x:String">[str_CompanyFound]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="334,761" sap2010:WorkflowViewState.IdRef="GetValue_10">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="32ddffaf-adac-46b1-a2d8-2bca7978ab32" InformativeScreenshot="7843d777f31084d3353f96a137cb81a3" Selector="&lt;html app='msedge.exe' title='Job Posting Dashboard - Emsi' /&gt;&lt;webctrl src='https://daily-postings-dashboard.netlify.app/' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='2' tag='SPAN' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' idx='1' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[str_Postings]</OutArgument>
                 </ui:GetValue.Value>
               </ui:GetValue>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Change from last year" sap:VirtualizedContainerService.HintSize="334,761" sap2010:WorkflowViewState.IdRef="GetValue_8">
@@ -502,8 +521,8 @@
                 </ui:CommentOut.Body>
               </ui:CommentOut>
             </Parallel>
-            <ui:BuildDataTable DataTable="[dt_JobsData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1810,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Company&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Postings&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Month&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CompanyFound&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_CompanyName, str_Postings, str_ChangeLastMonth, str_ChangeLastYear, str_CompanyFound}]" DataTable="[dt_JobsData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="1810,185" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+            <ui:BuildDataTable DataTable="[dt_JobsData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="2184,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Company&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Postings&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Month&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CompanyFound&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_CompanyName, str_Postings, str_ChangeLastMonth, str_ChangeLastYear, str_CompanyFound}]" DataTable="[dt_JobsData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="2184,185" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
             <ui:AppendRange DataTable="[dt_JobsData]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="1810,115" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="data" WorkbookPath="dataTest.xls" />
             <ui:CloseTab Browser="[closeEdge]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="1810,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
           </Sequence>
