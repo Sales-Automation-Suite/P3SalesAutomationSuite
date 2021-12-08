@@ -229,7 +229,7 @@
                             <InArgument x:TypeArguments="x:Int32">[Int_LoopNum + 1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:SendHotkey Activate="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" DelayMS="500" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="pgdn" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                        <ui:SendHotkey Activate="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" DelayMS="500" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="pgdn" KeyModifiers="None" SpecialKey="True">
                           <ui:SendHotkey.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="245b3ca310bfc5f99d6345e766a2d437" Selector="&lt;webctrl idx='1' tag='DIV' /&gt;">
                               <ui:Target.TimeoutMS>

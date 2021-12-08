@@ -8419,9 +8419,9 @@
     "restore": {
       "projectUniqueName": "Project 3",
       "projectName": "Project 3",
-      "projectPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local",
+      "projectPath": "C:\\revature\\P3\\Main\\Project 3\\.local",
       "packagesPath": "C:\\Users\\Aaron\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\P3\\Indeed\\Project 3\\.local"
+      "outputPath": "C:\\revature\\P3\\Main\\Project 3\\.local"
     },
     "frameworks": {
       "net461": {
