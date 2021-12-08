@@ -192,6 +192,13 @@ These files can be accessed via SystemRootDirectory\revature\Project 3\excelshee
 <i>Ex. Opened Job.xlsx file</i>
 
 <br>
+
+NOTE: Due to the way EMSI handles elements on the page, error detecting has been put in place to indicate when incorrect data has been scraped. This is indicated by rows highlighted in red.
+
+![image](https://user-images.githubusercontent.com/51932270/145142594-497a3ae5-1ed8-40bb-991a-d65239d1139f.png)
+
+
+<br>
 <br>
 
 ## Software Requirements
